@@ -8,81 +8,89 @@ overflow: hidden;
 white-space: nowrap;" id="h4-title">My Video</h4> -->
 <h4 id="h4-title">My Video</h4>
 <div class="container-fluid">
-   
+  <!--
  <app-user-side-bar>
-        
- </app-user-side-bar>
+
+ </app-user-side-bar> -->
 
 
-    <div id="rows" class="rows">
-        <div class="offset-lg-2 offset-md-2 col-sm-8 brd">
+  <div id="rows" class="rows">
+    <div class="offset-lg-2 offset-md-2 col-sm-8 brd">
 
-            <div class="row row-flex">
-                <form>
-                    <div class="col-sm-6" style="padding-left: 0;padding-right: 7px;">
-                        
-                        <div class="widget">
-                           
-                            <div class="widget-body">
-                              <div class="thumbnail">
-                                <video width="" height="240" id="vid1" controls style="width: 100%;">
-                                    <ng-container *ngIf="strImageURL[1] != ''">
-                                        <source [attr.src]="strImageURL[1]" type="video/mp4">
-                                    </ng-container>
-                                    <ng-container *ngIf="strImageURL[1] == ''">
-                                        <source [attr.src]="imageURL" type="video/mp4">
-                                    </ng-container>
-                                    <input type="file" id="fileUpload1" [accept]="requiredFileType" class="file-input" (change)="onFileSelected($event, 1);" #fileUpload1>
-                                </video>
-                            </div>
-                              <div class="row btn-demo animation-demo">
-                                <div class="col-xs-6" style="padding-left: 0 !important;">
-                                  <button type="button" (click)="fileUpload1.click()" class="btn btn-sm btn-block btn-outline btn-primary" style="margin: 0px !important;">Add Video</button>
-                                </div>
-                                <div class="col-xs-6">
-                                  <button type="button" (click)="clearFile(1);" class="btn btn-sm btn-block btn-outline btn-danger">Remove Video</button>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6" style="padding-right: 0;padding-left: 8px;">
-                        
-                        <div class="widget">
-                          
-                            <div class="widget-body">
-                                <div class="thumbnail">
-                                    <video width="" height="240" id="vid2" controls style="width: 100%;">
-                                        <ng-container *ngIf="strImageURL[2] != ''">
-                                            <source [attr.src]="strImageURL[2]" type="video/mp4">
-                                        </ng-container>
-                                        <ng-container *ngIf="strImageURL[2] == ''">
-                                            <source [attr.src]="imageURL" type="video/mp4">
-                                        </ng-container>
-                                        <input type="file" [accept]="requiredFileType" class="file-input" (change)="onFileSelected($event, 2);" #fileUpload2>
-                                    </video>
-                                </div>
-                                <div class="row btn-demo animation-demo">
-                                    <div class="col-xs-6" style="padding-left: 0 !important;">
-                                    <button type="button" (click)="fileUpload2.click()" class="btn btn-sm btn-block btn-outline btn-primary" style="margin: 0px !important;">Add Video</button>
-                                    </div>
-                                    <div class="col-xs-6">
-                                    <button type="button" (click)="clearFile(2);" class="btn btn-sm btn-block btn-outline btn-danger">Remove Video</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      <div class="row row-flex">
+        <form>
+          <div class="col-sm-6" style="padding-left: 0;padding-right: 7px;">
 
-                        <div class="form-group row">
-                            <div class="col-sm-12" style="padding: 0px;">
-                                <button type="button" (click)="SaveData()" class="btn btn-primary"> Save </button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+            <div class="widget">
+
+              <div class="widget-body">
+                <div class="thumbnail">
+                  <video width="" height="240" id="vid1" controls style="width: 100%;">
+                    <ng-container *ngIf="strImageURL[1] != ''">
+                      <source [attr.src]="strImageURL[1]" type="video/mp4">
+                    </ng-container>
+                    <ng-container *ngIf="strImageURL[1] == ''">
+                      <source [attr.src]="imageURL" type="video/mp4">
+                    </ng-container>
+                    <input type="file" id="fileUpload1" [accept]="requiredFileType" class="file-input"
+                      (change)="onFileSelected($event, 1);" #fileUpload1>
+                  </video>
+                </div>
+                <div class="row btn-demo animation-demo">
+                  <div class="col-xs-6" style="padding-left: 0 !important;">
+                    <button type="button" (click)="fileUpload1.click()"
+                      class="btn btn-sm btn-block btn-outline btn-primary" style="margin: 0px !important;">Add
+                      Video</button>
+                  </div>
+                  <div class="col-xs-6">
+                    <button type="button" (click)="clearFile(1);"
+                      class="btn btn-sm btn-block btn-outline btn-danger">Remove Video</button>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>    
+          </div>
+          <div class="col-sm-6" style="padding-right: 0;padding-left: 8px;">
+
+            <div class="widget">
+
+              <div class="widget-body">
+                <div class="thumbnail">
+                  <video width="" height="240" id="vid2" controls style="width: 100%;">
+                    <ng-container *ngIf="strImageURL[2] != ''">
+                      <source [attr.src]="strImageURL[2]" type="video/mp4">
+                    </ng-container>
+                    <ng-container *ngIf="strImageURL[2] == ''">
+                      <source [attr.src]="imageURL" type="video/mp4">
+                    </ng-container>
+                    <input type="file" [accept]="requiredFileType" class="file-input"
+                      (change)="onFileSelected($event, 2);" #fileUpload2>
+                  </video>
+                </div>
+                <div class="row btn-demo animation-demo">
+                  <div class="col-xs-6" style="padding-left: 0 !important;">
+                    <button type="button" (click)="fileUpload2.click()"
+                      class="btn btn-sm btn-block btn-outline btn-primary" style="margin: 0px !important;">Add
+                      Video</button>
+                  </div>
+                  <div class="col-xs-6">
+                    <button type="button" (click)="clearFile(2);"
+                      class="btn btn-sm btn-block btn-outline btn-danger">Remove Video</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-12" style="padding: 0px;">
+                <button type="button" (click)="SaveData()" class="btn btn-primary"> Save </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 <app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
 

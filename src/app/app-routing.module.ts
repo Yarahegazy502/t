@@ -1,3 +1,4 @@
+import { AuthModuleModule } from './Core/Layouts/auth-layout/auth-module/auth-module.module';
 import { AppComponent } from './app.component';
 import { core } from '@angular/compiler';
 import { NgModule } from '@angular/core';
@@ -39,6 +40,13 @@ const routes: Routes = [
       ),
   },
 
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./Core/Layouts/auth-layout/auth-module/auth-module.module').then(
+        (m) => m.AuthModuleModule
+      ),
+  },
 ]
 
 @NgModule({

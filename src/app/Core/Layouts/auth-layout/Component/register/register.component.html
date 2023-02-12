@@ -1,0 +1,289 @@
+<!-- <div class="container d-flex justify-content-center align-items-center">
+  <div class="card media-register">
+    <div class="text-center mt-5">
+      <img
+        src="assets/images/logo-08.png"
+        alt="logo"
+        width="100px"
+        height="100px"
+      />
+    </div>
+    <div class="text-center">
+      <span class="logotitle">D-<span class="ttext">T</span>opia</span>
+    </div>
+
+    <hr style="border-color: white" />
+
+    <form [formGroup]="myForm">
+
+      <div class="p-3 px-4 py-4 border-bottom">
+        <div class="form-group">
+          <label for="username" class="text-info">Full name:</label>
+          <label style="color: red">*</label>
+          <input
+            formControlName="cFullName"
+            type="text"
+            name="username"
+            maxlength="300"
+            id="username"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="username" class="text-info">Telephone Number</label>
+          <label style="color: red">*</label>
+          <input
+            formControlName="cPhone"
+            type="text"
+            name="username"
+            maxlength="11"
+            id="username"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group m-auto">
+
+          <div class="row mt-3">
+            <div class="col-lg-6">
+              <label for="text lg" class="text-info district"
+                >Account Type</label
+              >
+              <label style="color: red">*</label>
+              <select
+                (change)="LoadAccountCategory($event)"
+                formControlName="cAccountType"
+                class="form-control"
+                style="width: 108%"
+              >
+                <option value="0">::: Please Select :::</option>
+                <option
+                  *ngFor="let a of _AccountType"
+                  [value]="a.accountTypeID"
+                >
+                  {{ a.accountTypeName }}
+                </option>
+              </select>
+            </div>
+            <div class="col-lg-6">
+              <label for="text lg" class="text-info district"
+                >Account Category</label
+              >
+              <label style="color: red">*</label>
+              <select
+                formControlName="cAccountCategory"
+                class="form-control"
+                style="width: 108%"
+              >
+                <option value="0">::: Please Select :::</option>
+                <option
+                  *ngFor="let ac of _AccountCategory"
+                  [value]="ac.accountCategoryID"
+                >
+                  {{ ac.accountCategoryName }}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-lg-6">
+              <label for="text lg" class="text-info district">Gender</label>
+              <label style="color: red">*</label>
+              <select
+                formControlName="cGender"
+                class="form-control"
+                style="width: 108%"
+              >
+                <option value="0">::: Please Select :::</option>
+                <option *ngFor="let g of _Gender" [value]="g.genderID">
+                  {{ g.genderName }}
+                </option>
+              </select>
+            </div>
+            <div class="col-lg-6">
+              <label for="text lg" class="text-info district"
+                >How did you Know Us?</label
+              >
+              <select
+                formControlName="cKnowUs"
+                class="form-control"
+                style="width: 108%"
+              >
+                <option value="0">::: Please Select :::</option>
+                <option *ngFor="let k of _KnowUs" [value]="k.knowUsID">
+                  {{ k.knowUsName }}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="E-Mail" class="text-info">E-Mail:</label>
+          <label style="color: red">*</label>
+          <input
+            formControlName="cEMail"
+            type="text"
+            name="username"
+            maxlength="150"
+            id="username"
+            class="form-control"
+          />
+        </div>
+
+        <hr style="border-color: white" />
+        <button
+          type="button"
+          (click)="SaveData()"
+          class="btn btn-success btn-block continue login"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
+
+<div class="footer">
+  <footer class="footer">
+    <div class="row">
+     
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-4 mt-4">
+            <h3 class="text-center">HELP</h3>
+            <p class="text-center">E-Mail : Info@Dtopia-eg.com</p>
+            <p></p>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <h3 class="text-center">CopyRights</h3>
+            <p class="text-center">&copy; 2022, All Rights reserved</p>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <h3 class="text-center">Designed BY</h3>
+            <p class="text-center"><a> HashDotSoft </a></p>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </footer>
+</div> -->
+
+
+
+<div class="container-fluid">
+  <div id="rows" class="rows">
+      <div class="offset-lg-2 offset-md-2 col-sm-8">
+          <form [formGroup]="myForm" style="width: 50%;">
+              <div class="text-center">
+                  <img src="assets/images/D-Topia-1.svg" alt="logo" width="30px" height="30px">
+                  <span class="form-logo">Sign Up</span>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <!-- Input:: Full Name -->
+                      <div class="form-group">
+                          <input type="text" formControlName="cFullName" maxlength="300" class="form-control" placeholder="Enter Full Name" id="fullnameInput">
+                          <label class="control-label" for="usernameInput">Full Name</label>
+                      </div>
+                      <!-- Input:: Telephone Number -->
+                      <div class="form-group">
+                          <input type="text" formControlName="cPhone" maxlength="11" class="form-control" placeholder="Enter Telephone Number" id="phoneInput">
+                          <label class="control-label" for="phoneInput">Telephone Number</label>
+                      </div>
+                      <!-- Input:: Acc Type -->
+                      <div class="form-group">
+                          <select (change)="LoadAccountCategory($event)" formControlName="cAccountType" class="form-control" id="accTypeSelect">
+                            <option value="0">::: Please Select :::</option>
+                            <option *ngFor="let a of _AccountType" [value]="a.accountTypeID">
+                              {{ a.accountTypeName }}
+                            </option>
+                          </select>
+                          <label class="control-label" for="acctypeSelect">Acc Type</label>
+                      </div>
+                      <!-- Input:: Acc Category -->
+                      <div class="form-group">
+                          <select formControlName="cAccountCategory" multiple class="form-control" id="accCategorySelect" rows="3">
+                            <option value="0">::: Please Select :::</option>
+                            <option *ngFor="let ac of _AccountCategory" [value]="ac.accountCategoryID">
+                              {{ ac.accountCategoryName }}
+                            </option>
+                          </select>
+                          <label class="control-label label-multiple" for="accCategorySelect">Acc Category</label>
+                      </div>
+                      <!-- Input:: Gender -->
+                      <div class="form-group">
+                          <select formControlName="cGender" class="form-control" id="genderSelect">
+                            <option value="0">::: Please Select :::</option>
+                            <option *ngFor="let g of _Gender" [value]="g.genderID">
+                              {{ g.genderName }}
+                            </option>
+                          </select>
+                          <label class="control-label" for="genderSelect">Gender</label>
+                      </div>
+                      <!-- Input:: How did you know us? -->
+                      <div class="form-group">
+                          <select formControlName="cKnowUs" class="form-control" id="experienceSelect">
+                            <option value="0">::: Please Select :::</option>
+                            <option *ngFor="let k of _KnowUs" [value]="k.knowUsID">
+                              {{ k.knowUsName }}
+                            </option>
+                          </select>
+                          <label class="control-label" for="genderSelect">How did you know us?</label>
+                      </div>
+                      <!-- Input:: E-mail -->
+                      <div class="form-group">
+                          <input type="email" formControlName="cEMail" maxlength="150" class="form-control" placeholder="Enter Email" id="emailInput">
+                          <label class="control-label" for="emailInput">E-mail</label>
+                      </div>
+                  </div>
+              </div>
+              <p></p>
+              <p></p>
+              <!-- Terms -->
+              <!-- <div class="clearfix" style="display: flex;">
+                  <div class="form-group form-check pull-left" style="margin-bottom: 20px;flex: 1;">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label text-muted" for="exampleCheck1">Agree the terms and policy</label>
+                  </div>
+              </div> -->
+              <!-- Input:: Sign Up -->
+              <button type="button" (click)="SaveData()" class="btn btn-primary"> Sign Up </button>
+
+              <hr>
+
+              <!-- Links -->
+              <div class="clearfix">
+                  <p class="text-muted mb-0 pull-left">Already have an account?</p>
+                  <a routerLink="/Auth/Login" class="inline-block pull-right text-primary">Sign In</a>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+<app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
+
+<!-- <footer class="footer">
+  <div class="row get-connected">
+      <span>Get connected with us:</span> <a href="#"> <i class="fab fa-facebook-f fa-1x ml-4"></i> </a>
+  </div>
+  <div class="row help">
+      <div class="col-lg-6 text-right">
+          <span>Help: </span>
+          <a href="#" class="fs-14">Info@Dtopia-eg.com</a>
+      </div>
+      <div class="col-lg-6 text-left">
+          <span>Designed By: </span>
+          <a href="#" class="fs-14">HashDotSoft</a>
+      </div>
+  </div>
+  <div class="row copyright">
+      © 2022, All Rights reserved
+  </div>
+</footer> -->

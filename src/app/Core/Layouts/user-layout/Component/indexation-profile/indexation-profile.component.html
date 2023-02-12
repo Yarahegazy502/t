@@ -1,69 +1,69 @@
 <h4 id="h4-title">Indexations</h4>
 <div class="container-fluid">
-    <!-- Begin:: Sidebar -->
-   
-    <app-user-side-bar>
-        
-    </app-user-side-bar>
+  <!-- Begin:: Sidebar -->
 
-    <!-- End::   Sidebar -->
+  <!-- <app-user-side-bar>
 
-    <div id="rows" class="rows">
-        <!-- <div class="offset-lg-4 offset-md-4 col-sm-4"> -->
-            <div class="col-sm-12">
-            <button type="button" class="btn btn-primary" (click)="CreateIndexation()"> Add New Indexation </button>
-            <div class="table-responsive">
+    </app-user-side-bar> -->
 
-                <mat-form-field appearance="standard">
-                    <mat-label>Filter</mat-label>
-                    <input matInput (keyup)="applyFilter($event)" />
-                </mat-form-field>
-            
-                    <table mat-table [dataSource]="dataSource" matSort style="background-color: transparent;">
-                      <!-- <ng-container matColumnDef="id">
+  <!-- End::   Sidebar -->
+
+  <div id="rows" class="rows">
+    <!-- <div class="offset-lg-4 offset-md-4 col-sm-4"> -->
+    <div class="col-sm-12">
+      <button type="button" class="btn btn-primary" (click)="CreateIndexation()"> Add New Indexation </button>
+      <div class="table-responsive">
+
+        <mat-form-field appearance="standard">
+          <mat-label>Filter</mat-label>
+          <input matInput (keyup)="applyFilter($event)" />
+        </mat-form-field>
+
+        <table mat-table [dataSource]="dataSource" matSort style="background-color: transparent;">
+          <!-- <ng-container matColumnDef="id">
                         <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
                         <td mat-cell *matCellDef="let row">{{ row.id }}</td>
                       </ng-container> -->
-            
-                      <ng-container matColumnDef="address">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Address</th>
-                        <td mat-cell *matCellDef="let row">{{ row.address }}</td>
-                      </ng-container>
-            
-                      <ng-container matColumnDef="area">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Area</th>
-                        <td mat-cell *matCellDef="let row">{{ row.area }}</td>
-                      </ng-container>
-            
-                      <ng-container matColumnDef="floor">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Floor</th>
-                        <td mat-cell *matCellDef="let row">{{ row.floor }}</td>
-                      </ng-container>
-            
-                      <ng-container matColumnDef="Display">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header>
-                          Action
-                        </th>
-                        <td mat-cell *matCellDef="let row">
-                          <!-- <button type="button" (click)="OpenIndexation(row.siteDataID)" class="btn btn-success btn-rounded" style="margin: 7px;">Display</button>
+
+          <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Address</th>
+            <td mat-cell *matCellDef="let row">{{ row.address }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="area">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Area</th>
+            <td mat-cell *matCellDef="let row">{{ row.area }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="floor">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Floor</th>
+            <td mat-cell *matCellDef="let row">{{ row.floor }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Display">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              Action
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <!-- <button type="button" (click)="OpenIndexation(row.siteDataID)" class="btn btn-success btn-rounded" style="margin: 7px;">Display</button>
                           <button type="button" (click)="EditIndexation(row.siteDataID)" class="btn btn-info btn-rounded" style="margin: 7px;">Edit</button>
                           <button type="button" (click)="DeleteIndexation(row.siteDataID)" class="btn btn-danger btn-rounded" style="margin: 7px;">Delete</button> -->
-                          <a (click)="OpenIndexation(row.siteDataID)" class="mr-2">
-                            <i class="fa fa-laptop" style="font-size: 20px"></i>
-                          </a>
-                          <a (click)="EditIndexation(row.siteDataID)" class="mr-2">
-                            <i class="fa fa-edit" style="font-size: 20px"></i>
-                          </a>
-                          <a (click)="DeleteSpaceOrBand(row.siteDataID)" class="mr-2">
-                            <i class="fa fa-bars" style="font-size: 20px"></i>
-                          </a>
-                          <a (click)="DeleteIndexation(row.siteDataID)" class="mr-2">
-                            <i class="fa fa-trash" style="font-size: 20px"></i>
-                          </a>
-                        </td>
-                      </ng-container>
-            
-                      <!-- <ng-container matColumnDef="Edit">
+              <a (click)="OpenIndexation(row.siteDataID)" class="mr-2">
+                <i class="fa fa-laptop" style="font-size: 20px"></i>
+              </a>
+              <a (click)="EditIndexation(row.siteDataID)" class="mr-2">
+                <i class="fa fa-edit" style="font-size: 20px"></i>
+              </a>
+              <a (click)="DeleteSpaceOrBand(row.siteDataID)" class="mr-2">
+                <i class="fa fa-bars" style="font-size: 20px"></i>
+              </a>
+              <a (click)="DeleteIndexation(row.siteDataID)" class="mr-2">
+                <i class="fa fa-trash" style="font-size: 20px"></i>
+              </a>
+            </td>
+          </ng-container>
+
+          <!-- <ng-container matColumnDef="Edit">
                         <th mat-header-cell *matHeaderCellDef mat-sort-header>
                           Edit Design Offer
                         </th>
@@ -74,8 +74,8 @@
                           </a>
                         </td>
                       </ng-container> -->
-            
-                      <!-- <ng-container matColumnDef="Delete">
+
+          <!-- <ng-container matColumnDef="Delete">
                         <th mat-header-cell *matHeaderCellDef mat-sort-header>
                           Delete Design Offer
                         </th>
@@ -86,27 +86,23 @@
                           </a>
                         </td>
                       </ng-container> -->
-            
-                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-            
-                      <!-- <tr class="mat-row" *matNoDataRow>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+          <!-- <tr class="mat-row" *matNoDataRow>
                         <td class="mat-cell" colspan="4">لا يوجد عروض تصميم</td>
                       </tr> -->
-                    </table>
-            
-                    <mat-paginator
-                      [pageSizeOptions]="[7]"
-                      showFirstLastButtons
-                      aria-label="Select page of users"
-                      style="background-color: transparent;"
-                    ></mat-paginator>
-              </div>
-        </div>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[7]" showFirstLastButtons aria-label="Select page of users"
+          style="background-color: transparent;"></mat-paginator>
+      </div>
     </div>
+  </div>
 
 
-    
+
 </div>
 
 <!-- <footer class="footer">

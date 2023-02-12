@@ -1,0 +1,159 @@
+<!-- <div class="container d-flex justify-content-center align-items-center">
+  <div class="card media-login">
+    <div class="text-center mt-5">
+      <img
+        src="assets/images/logo-08.png"
+        alt="logo"
+        width="100px"
+        height="100px"
+      />
+    </div>
+    <div class="text-center">
+      <span class="logotitle">D-<span class="ttext">T</span>opia</span>
+    </div>
+    <form [formGroup]="myForm">
+      <div class="p-3 px-4 py-4 border-bottom">
+        <div class="form-group">
+          <label for="username" class="text-info">Email:</label>
+          <input
+            type="text"
+            formControlName="cUserName"
+            name="username"
+            maxlength="100"
+            id="username"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="username" class="text-info">Password:</label>
+          <input
+            type="password"
+            formControlName="cPassword"
+            name="username"
+            maxlength="100"
+            id="username"
+            class="form-control"
+          />
+        </div>
+        <hr style="border-color: white" />
+        <button
+          (click)="SaveData()"
+          class="btn btn-success btn-block continue login"
+        >
+          Login
+        </button>
+        <br />
+        <label for="Sign Up" class="text-info">
+          Don't have account (<a routerLink="/Auth/Register"> Sign Up </a>)
+        </label>
+
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
+
+<div class="footer">
+  <footer class="footer">
+    <div class="row">
+
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-4 mt-4">
+            <h3 class="text-center">HELP</h3>
+            <p class="text-center">E-Mail : Info@Dtopia-eg.com</p>
+            <p></p>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <h3 class="text-center">CopyRights</h3>
+            <p class="text-center">&copy; 2022, All Rights reserved</p>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <h3 class="text-center">Designed BY</h3>
+            <p class="text-center"><a> HashDotSoft </a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+</div> -->
+
+
+
+<div class="container-fluid">
+  <div id="rows" class="rows">
+      <div class="offset-lg-4 offset-md-4 col-sm-4">
+          <form [formGroup]="myForm" style="width: 21rem;">
+              <div class="text-center">
+                  <img src="assets/images/D-Topia-1.svg" alt="logo" width="30px" height="30px">
+                  <span class="form-logo">Sign In</span>
+              </div>
+              <!-- Username -->
+              <div class="form-group">
+                  <input type="text" formControlName="cUserName" maxlength="100" class="form-control" placeholder="Enter Email" id="usernameInput">
+                  <label class="control-label" for="usernameInput">E-mail</label>
+              </div>
+              <!-- E-mail -->
+              <div class="form-group">
+                  <input type="password" formControlName="cPassword" maxlength="100" class="form-control" placeholder="Enter Password" id="emailInput">
+                  <label class="control-label" for="emailInput">Password</label>
+              </div>
+              <!-- Password -->
+              <!-- <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Enter Password" id="passwordInput">
+                  <label class="control-label" for="passwordInput">Password</label>
+              </div> -->
+
+              <p></p>
+              <p></p>
+              <p></p>
+
+              <!-- Remember me -->
+              <div class="clearfix" style="display: flex;">
+                  <!-- <a href="forgot-password.html" class="inline-block pull-left text-primary" style="flex: 1;    margin-bottom: 20px;">Forgot Password</a> -->
+              </div>
+
+              <!-- Input:: Login -->
+              <button type="button" (click)="SaveData()" class="btn btn-primary"> Sign In </button>
+
+              <!-- <hr>
+
+              <p class="text-muted">Sign in with your Facebook or Google accounts</p>
+              <div class="clearfix">
+                  <div class="pull-left">
+                    <button type="button" class="btn btn-outline btn-rounded btn-primary" style="color: #1877F2;border-color: #1877F2 !important;font-size: 14px;font-weight: 300;display: flex;justify-content: center;align-items: center;">
+                      <i class="ti-facebook mr-5" style="font-size: 14px;"></i> 
+                      <span style="color: #1877F2 !important;">Facebook</span>
+                  </button>
+                  </div>
+                  <div class="pull-right">
+                    <button type="button" class="btn btn-outline btn-rounded btn-info" style="font-size: 14px !important;font-weight: 300 !important;display: flex;justify-content: center;align-items: center;">
+                      <i class="ti-google mr-5" style="color: #EA4335 !important;"></i> 
+                      <div style="letter-spacing: -2px;margin-left: 10px;">
+                          <span style="color: #4285F4 !important;">G</span>
+                          <span style="color: #EA4335 !important;">o</span>
+                          <span style="color: #FBBC05 !important;">o</span>
+                          <span style="color: #4285F4 !important;">g</span>
+                          <span style="color: #34A853 !important;">l</span>
+                          <span style="color: #EA4335 !important;">e</span>
+                      </div>
+                      </button>
+                  </div>
+                </div> -->
+
+                <p></p>
+
+                <hr>
+
+                <div class="clearfix">
+                  <p class="text-muted mb-0 pull-left">Want new account?</p>
+                  <a routerLink="/Auth/Register" class="inline-block pull-right text-primary">Sign Up</a>
+                </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+<app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
