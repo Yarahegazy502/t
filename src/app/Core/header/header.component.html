@@ -1,0 +1,133 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img src="assets/images/logo-08.png" alt="logo" width="50px" height="50px" />
+  <span class="logotitle">D-<span class="ttext">T</span>opia</span>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+    </ul>
+
+    <form class="d-flex" style="width: 150px">
+      <ul style="padding-left: 0px">
+        <ng-container *ngIf="IsLogin == false">
+          <a routerLink="/Auth/Login">
+            <li style="display: inline-block; font-size: 19px" class="mr-1">
+              Log-In
+            </li>
+          </a>
+        </ng-container>
+
+        <ng-container *ngIf="IsLogin == true">
+          <a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Hi<span> {{ UserName }} </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a (click)="GotoProfile()" class="dropdown-item">My Profile </a>
+                <div class="dropdown-divider"></div>
+                <a (click)="LogOut()" class="dropdown-item">Log-Out </a>
+              </div>
+            </li>
+          </a>
+        </ng-container>
+      </ul>
+    </form>
+
+  </div>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <img src="assets/images/logo-08.png" alt="logo" width="50px" height="50px">
+  <span class="logotitle">D-<span class="ttext">T</span>opia</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <a class="nav-link " href="index.html">About Us <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">DT-Options</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DT-Service </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="DT-Order.html">DT-Order</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="Contact-DT.html">Contact DT</a>
+          </li>
+      </ul>
+      <!--form for the modal-->
+
+      <form class="d-flex" style="width: 200px;">
+
+          <ul style="padding-left: 0px">
+
+            <ng-container *ngIf="IsLogin == false">
+              <a routerLink="/Auth/Login">
+                <li style="display: inline-block; font-size: 19px" class="mr-1">
+                  Log-In
+                </li>
+              </a>
+            </ng-container>
+
+            <ng-container *ngIf="IsLogin == true">
+              <a>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Hi<span> {{ UserName }} </span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a (click)="GotoProfile()" class="dropdown-item">My Profile </a>
+                    <div class="dropdown-divider"></div>
+                    <a (click)="LogOut()" class="dropdown-item">Log-Out </a>
+                  </div>
+                </li>
+              </a>
+            </ng-container>
+          </ul>
+      </form>
+      <!-- <ul style="padding: 0px !important;">
+          <li> <span> <a class="nav-link" href="#"> عربي </a></span></li>
+      </ul> -->
+  </div>
+</nav>

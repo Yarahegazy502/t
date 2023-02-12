@@ -1,0 +1,171 @@
+<!-- Begin:: Main Page -->
+<h4 id="h4-title">My Photo</h4>
+<div class="container-fluid">
+  <!-- Begin:: Sidebar -->
+
+  <!-- <app-user-side-bar>
+
+ </app-user-side-bar> -->
+
+  <!-- End::   Sidebar -->
+
+  <div id="rows" class="rows">
+    <div class="offset-lg-2 offset-md-2 col-sm-8 brd">
+      <div class="row row-flex">
+        <form [formGroup]="myForm">
+          <div class="col-sm-6" style="padding-left: 0;padding-right: 7px;">
+            <!-- Begin:: widget -->
+            <div class="widget">
+              <!-- <div class="widget-heading">
+                                 <h3 class="widget-title">Flippers</h3>
+                               </div> -->
+              <div class="widget-body">
+                <div class="thumbnail">
+                  <ng-container *ngIf="strImageURL[1] != ''">
+                    <img [src]="strImageURL[1]" height="240px" id="img1" alt="...">
+                  </ng-container>
+                  <ng-container *ngIf="strImageURL[1] == ''">
+                    <img [src]="imageURL" height="240px" id="img1" alt="...">
+                  </ng-container>
+                  <input type="file" [accept]="requiredFileType" class="file-input"
+                    (change)="onFileSelected($event, 1);" #fileUpload1>
+                </div>
+                <div class="row btn-demo animation-demo">
+                  <div class="col-xs-6" style="padding-left: 0 !important;">
+                    <button type="button" (click)="fileUpload1.click()"
+                      class="btn btn-sm btn-block btn-outline btn-primary" style="margin: 0px !important;">Add
+                      Image</button>
+                  </div>
+                  <div class="col-xs-6">
+                    <button type="button" (click)="clearFile(1);"
+                      class="btn btn-sm btn-block btn-outline btn-danger">Remove Image</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End::   widget -->
+            <!-- Begin:: widget -->
+            <div class="widget">
+              <!-- <div class="widget-heading">
+                                 <h3 class="widget-title">Flippers</h3>
+                               </div> -->
+              <div class="widget-body">
+                <div class="thumbnail">
+                  <ng-container *ngIf="strImageURL[2] != ''">
+                    <img [src]="strImageURL[2]" height="240px" id="img2" alt="...">
+                  </ng-container>
+                  <ng-container *ngIf="strImageURL[2] == ''">
+                    <img [src]="imageURL" height="240px" id="img2" alt="...">
+                  </ng-container>
+                  <input type="file" [accept]="requiredFileType" class="file-input"
+                    (change)="onFileSelected($event, 2);" #fileUpload2>
+                </div>
+                <div class="row btn-demo animation-demo">
+                  <div class="col-xs-6" style="padding-left: 0 !important;">
+                    <button type="button" (click)="fileUpload2.click()"
+                      class="btn btn-sm btn-block btn-outline btn-primary" style="margin: 0px !important;">Add
+                      Image</button>
+                  </div>
+                  <div class="col-xs-6">
+                    <button type="button" (click)="clearFile(2);"
+                      class="btn btn-sm btn-block btn-outline btn-danger">Remove Image</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End::   widget -->
+          </div>
+          <div class="col-sm-6" style="padding-right: 0;padding-left: 8px;">
+            <!-- Begin:: widget -->
+            <div class="widget">
+              <!-- <div class="widget-heading">
+                                 <h3 class="widget-title">Flippers</h3>
+                               </div> -->
+              <div class="widget-body">
+                <div class="thumbnail">
+                  <ng-container *ngIf="strImageURL[3] != ''">
+                    <img [src]="strImageURL[3]" height="240px" id="img3" alt="...">
+                  </ng-container>
+                  <ng-container *ngIf="strImageURL[3] == ''">
+                    <img [src]="imageURL" height="240px" id="img3" alt="...">
+                  </ng-container>
+                  <input type="file" [accept]="requiredFileType" class="file-input"
+                    (change)="onFileSelected($event, 3);" #fileUpload3>
+                </div>
+                <div class="row btn-demo animation-demo">
+                  <div class="col-xs-6" style="padding-left: 0 !important;">
+                    <button type="button" (click)="fileUpload3.click()"
+                      class="btn btn-sm btn-block btn-outline btn-primary" style="margin: 0px !important;">Add
+                      Image</button>
+                  </div>
+                  <div class="col-xs-6">
+                    <button type="button" (click)="clearFile(3);"
+                      class="btn btn-sm btn-block btn-outline btn-danger">Remove Image</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End::   widget -->
+            <!-- Begin:: widget -->
+            <div class="widget">
+              <!-- <div class="widget-heading">
+                                 <h3 class="widget-title">Flippers</h3>
+                               </div> -->
+              <div class="widget-body">
+                <div class="thumbnail">
+                  <ng-container *ngIf="strImageURL[4] != ''">
+                    <img [src]="strImageURL[4]" height="240px" id="img4" alt="...">
+                  </ng-container>
+                  <ng-container *ngIf="strImageURL[4] == ''">
+                    <img [src]="imageURL" height="240px" id="img4" alt="...">
+                  </ng-container>
+                  <input type="file" [accept]="requiredFileType" class="file-input"
+                    (change)="onFileSelected($event, 4);" #fileUpload4>
+                </div>
+                <div class="row btn-demo animation-demo">
+                  <div class="col-xs-6" style="padding-left: 0 !important;">
+                    <button type="button" (click)="fileUpload4.click()"
+                      class="btn btn-sm btn-block btn-outline btn-primary" style="margin: 0px !important;">Add
+                      Image</button>
+                  </div>
+                  <div class="col-xs-6">
+                    <button type="button" (click)="clearFile(4);"
+                      class="btn btn-sm btn-block btn-outline btn-danger">Remove Image</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End::   widget -->
+            <!-- Input:: Submit -->
+            <div class="form-group row">
+              <div class="col-sm-12" style="padding: 0px;">
+                <button type="button" (click)="SaveData()" class="btn btn-primary"> Save </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
+<!-- End::   Main Page -->
+
+<!-- <footer class="footer">
+    <div class="row get-connected">
+        <span>Get connected with us:</span> <a href="https://www.facebook.com/Dtopiaeg"> <i class="fab fa-facebook-f fa-1x ml-4"></i> </a>
+    </div>
+    <div class="row help">
+        <div class="col-lg-6 text-right">
+            <span>Help: </span>
+            <a href="#" class="fs-14">Info@Dtopia-eg.com</a>
+        </div>
+        <div class="col-lg-6 text-left">
+            <span>Designed By: </span>
+            <a href="#" class="fs-14">HashDotSoft</a>
+        </div>
+    </div>
+    <div class="row copyright">
+        © 2022, All Rights reserved
+    </div>
+  </footer> -->

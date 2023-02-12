@@ -1,0 +1,236 @@
+<section>
+  <div class="row">
+    <div class="col-lg-2 col-sm-12 sideLink">
+      <!-- <div class="my-indexations">
+        <a href="#"> <h3 class="text-center">My Profile</h3> </a>
+      </div> -->
+      <div class="my-indexations">
+        <a routerLink="/User/Profile">
+          <h3 class="text-center">My Indexations</h3>
+        </a>
+      </div>
+      <!-- <div class="my-indexations">
+        <a href="#"> <h3 class="text-center">Change Password</h3> </a>
+      </div> -->
+    </div>
+
+    <div class="col-lg-10 col-sm-12 profileLogo" style="text-align: left">
+      <br />
+      <h2 style="text-align: center; text-decoration: underline">
+        My Indexations
+      </h2>
+
+      <!-- <a
+        class="btn btn-secondary text-black-50 hover text-black-50 mt-4 text-center"
+        href="#"
+        role="button"
+        style="text-align: left; width: 120px"
+        >Add New</a
+      > -->
+
+      <button
+        class="btn btn-secondary text-black-50 hover text-black-50 mt-4 text-center"
+        style="text-align: left; width: 200px"
+        (click)="CreateIndexation()"
+      >
+        Add New Indexation
+      </button>
+
+      <!-- Mat-Table -->
+      <mat-form-field appearance="standard">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" />
+      </mat-form-field>
+
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+          <!-- <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+            <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+          </ng-container> -->
+
+          <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Address</th>
+            <td mat-cell *matCellDef="let row">{{ row.address }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="area">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Area</th>
+            <td mat-cell *matCellDef="let row">{{ row.area }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="floor">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Floor</th>
+            <td mat-cell *matCellDef="let row">{{ row.floor }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Display">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              Display Index.
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <a (click)="OpenIndexation(row.siteDataID)" class="mr-2">
+                <i class="fa fa-laptop" style="font-size: 20px"></i>
+              </a>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Edit">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              Edit Index.
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <a (click)="EditIndexation(row.siteDataID)" class="mr-2">
+                <i class="fas fa-edit" style="font-size: 20px"></i>
+              </a>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="DeleteSpace">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              Delete Space/Band
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <a (click)="DeleteSpaceOrBand(row.siteDataID)" class="mr-2">
+                <i class="fa fa-bars" style="font-size: 20px"></i>
+              </a>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Delete">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              Delete Index.
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <a (click)="DeleteIndexation(row.siteDataID)" class="mr-2">
+                <i class="fa fa-trash" style="font-size: 20px"></i>
+              </a>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">لا يوجد مقايسات</td>
+          </tr>
+        </table>
+
+        <mat-paginator
+          [pageSizeOptions]="[7]"
+          showFirstLastButtons
+          aria-label="Select page of users"
+        ></mat-paginator>
+      </div>
+
+      <!-- <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th scope="col">Address</th>
+            <th scope="col">Area</th>
+            <th scope="col">Floor</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+
+        <ng-container *ngIf="_SiteData.length == 0">
+          <tbody>
+            <tr style="text-align: center">
+              <td></td>
+              <td style="text-align: center">
+                <h4>لا يوجد مقايسات</h4>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </ng-container>
+
+        <ng-container *ngIf="_SiteData.length != 0">
+          <tbody>
+            <tr *ngFor="let SD of _SiteData">
+              <td>{{ SD.address }}</td>
+              <td>{{ SD.area }}</td>
+              <td>{{ SD.floor }}</td>
+              <td>
+                <a (click)="OpenIndexation(SD.siteDataID)" class="mr-2">
+                  <i class="fa fa-laptop" style="font-size: 20px"></i>
+                </a>
+                <a class="mr-2">
+                  <i class="fas fa-edit" style="font-size: 20px"></i>
+                </a>
+                <a class="mr-2">
+                  <i class="fa fa-trash" style="font-size: 20px"></i>
+                </a>
+                <a class="mr-2">
+                  <i class="fa fa-bars" style="font-size: 20px"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </ng-container>
+      </table> -->
+      <!-- <div class="row m-auto">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <nav aria-label="Page navigation example">
+            <ul class="paging mt-5">
+              <li class="page-item">
+                <a class="page-link">Previous</a>
+              </li>
+              <li class="page-item" style="width: 50px">
+                <a class="page-link">1</a>
+              </li>
+              <li class="page-item" style="width: 50px">
+                <a class="page-link">2</a>
+              </li>
+              <li class="page-item" style="width: 50px">
+                <a class="page-link">3</a>
+              </li>
+              <li class="page-item"><a class="page-link">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-4"></div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <footer class="footer">
+    <div class="row">
+      <!-- <div class="col-lg-3 mt-4 text-center">
+        <i class="fab fa-apple fa-3x mr-4"> </i>
+        <i class="fab fa-facebook-f fa-3x mr-4"></i>
+      </div> -->
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-4 mt-4">
+            <h3 class="text-center">HELP</h3>
+            <p class="text-center">E-Mail : Info@Dtopia-eg.com</p>
+            <p></p>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <h3 class="text-center">CopyRights</h3>
+            <p class="text-center">&copy; 2022, All Rights reserved</p>
+          </div>
+          <div class="col-lg-4 mt-4">
+            <h3 class="text-center">Designed BY</h3>
+            <p class="text-center"><a> HashDotSoft </a></p>
+          </div>
+          <!-- <div class="col-lg-3 mt-4">
+            <h6 class="text-center">Help</h6>
+            <p>E-Mail : Info@Dtopia-eg.com</p> -->
+          <!-- <h6 class="text-center">HELP</h6>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem, ipsum dolor.</p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- <div class="bottom-footer text-center">All Right Reserve to D-Topia</div> -->
+  </footer>
+</div>
+
+<app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>

@@ -1,0 +1,317 @@
+<div class="container-fluid bg-dark">
+    <h5 class="text-center text-light mb-2" style="font-size: 1.5rem ;">Offer</h5>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-2" style="display: flex; justify-content: flex-end; align-items: center !important;">
+            <a class="btn btn-secondary text-black-50 hover text-black-50 float-right" role="button">Back</a>
+        </div>
+        <div class="col-4" style="display: flex; justify-content: center; align-items: center !important;">
+            <div class="container">
+                <ul class="pagination">
+                    <li class="active" style="margin: 0px; margin: 0 auto;"><a>1<span class="sr-only"></span></a></li>
+                    <li style="margin: 0px; margin: 0 auto;"><a>2</a></li>
+                    <li style="margin: 0px; margin: 0 auto;"><a>3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-2" style="display: flex; justify-content: flex-start; align-items: center !important;">
+            <a class="btn btn-secondary text-black-50 hover text-black-50" role="button" (click)="getFirstStepData()">Next </a>
+        </div>
+        <div class="col-2 "></div>
+    </div><br>
+</div>
+
+    <!---------------------------------Site type---------------------------------------------------->
+    <form [formGroup]="myForm">
+
+    <h3 class="text-center" style="background-color: #9dc15b; color: white; padding: 10px 0px; margin-bottom: 20px;">Site Data</h3>
+
+    <div class="row justify-content-center align-items-center">
+        <div style="width: 530px" class="alert alert-dark" role="alert">
+             
+          <ul style="text-align: right">
+            <li style="font-size: medium; text-align: right">
+              يجب كتابة الأرقام باللغة الانجليزية
+              <i class="fas fa-circle ml-3"></i>
+            </li>
+            <li style="font-size: medium; text-align: right">
+              كتابة الأبعاد بالمتر (م)
+              <i class="fas fa-circle ml-3"></i>
+            </li>
+            <!-- <li style="font-size: medium; text-align: right">
+              بعد الانتهاء من المقايسة، يمكن التعديل عليها بداية من خطوة رقم 3 فقط<i
+                class="fas fa-circle ml-3"
+              ></i>
+            </li> -->
+          </ul>
+    
+          <p class="mb-0"></p>
+        </div>
+    </div>
+
+    <div class="site-data1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 sponsers-left"></div>
+                <div class="col-6 text-center d-md-flex">
+          
+                    <div class="input-group col-6" style="padding-right: 0px; padding-left: 0px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text ml-1" id="btnGroupAddon" style="font-size: 14px !important;">Address</div>
+                        </div>
+                        <input type="text" class="form-control" minlength="7" maxlength="100" formControlName="cAddress" aria-describedby="btnGroupAddon" style="padding: 5px;">
+                    </div>
+                    <div class="input-group col-3" style="padding-right: 0px; padding-left: 0px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text ml-2" id="btnGroupAddon2" style="font-size: 14px !important;">Area</div>
+                        </div>
+                        <input type="text" class="form-control" minlength="1" maxlength="5" formControlName="cArea" aria-describedby="btnGroupAddon2" style="padding: 5px;">
+                    </div>
+                    <div class="input-group col-3" style="padding-right: 0px; padding-left: 0px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text ml-2" id="btnGroupAddon3" style="font-size: 14px !important;">Floor</div>
+                        </div>
+                        <input type="text" class="form-control" minlength="1" maxlength="3" formControlName="cFloor" aria-describedby="btnGroupAddon3" style="padding: 5px;">
+                    </div>
+                    <!-- ///////////////////////////////////////////////////////////////////// -->
+                    <!-- ///////////////////////////////////////////////////////////////////// -->
+                </div>
+                <div class="col-lg-3 sponsers-right"></div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------space type--------------------------------------------->
+    <h3 class="text-center mt-3" style="background-color: #9dc15b; color: white; padding: 10px 0px; margin-bottom: 20px;"> Space Type</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 sponsers-left">
+                <!-- <div class="commercial float-left" style="height: 210px;">
+                    <h4>Commercials</h4>
+                    <img src="images/commercial-wallpaper-10.jpg" alt="" width="180" height="210">
+                </div> -->
+            </div>
+
+            <app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
+
+            <div class="col-6 text-center">
+              
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Site Type</label>
+                    </div>
+                    <select 
+                    formControlName="cSiteType"
+                    (change)="onSiteTypeChange($event)"
+                    class="custom-select" 
+                    id="inputGroupSelect01">
+                        <option selected value="0">::: إختر نوع الموقع :::</option>
+                        <option *ngFor="let ST of SType" [value]="ST.siteTypeID">
+                        {{ ST.siteTypeName }}
+                        </option>
+                    </select>
+                  </div>
+                <!-- ///////////////////////////////////////////////////////////////////// -->
+                <!-- ///////////////////////////////////////////////////////////////////// -->
+            <form [formGroup]="DynamicForm">
+                <div class="table">
+                    <table class="table table-striped table-hover table-page1-1">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Site Type</th>
+                                <th scope="col">Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let SI of SItem">
+                                <th scope="row">{{ SI.siteItemName }}</th>
+                                <td>
+                                  <input
+                                    class="inputpage1-1-2"
+                                    type="text"
+                                    maxlength="2"
+                                    [formControlName]="SI.siteItemID"
+                                    [value]="0"
+                                  />
+                                </td>
+                                <!-- <td><a href=""><i class="fas fa-trash-alt text-dark"></i></a></td> -->
+                              </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+            </div>
+
+            <div class="col-lg-3 sponsers-right">
+                <!-- <div class="commercial float-right" style="height: 210px;">
+                    <h4>Commercials</h4>
+                    <img src="images/commercial-wallpaper-10.jpg" alt="" width="180" height="210">
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------------->
+
+    <h3 class="text-center mt-3" style="background-color: #9dc15b; color: white; padding: 10px 0px; margin-bottom: 20px;"> رسم كروكي للوحدة(ان وجد)</h3>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3">
+                <!-- <div class="commercial float-left" style="height: 210px;">
+                    <h4>Commercials</h4>
+                    <img src="images/commercial-wallpaper-10.jpg" alt="" width="180" height="210">
+                </div> -->
+            </div>
+
+            <div class="col-lg-3 col-md-12 col-sm-12" style="display: flex !important; justify-content: center;">
+                <div class="card" style="width: 17rem;">
+                    <img [src]="imageURL1 | sanitizerUrl" class="card-img-top img-fluid" alt="...">
+                    <div class="card-footer" style="display: flex; justify-content: space-between; background-color: transparent !important; border-top: 1px solid #9dc15b;">
+                        <input type="file" [accept]="requiredFileType" class="file-input" (change)="onFileSelected($event, 1);" #fileUpload>
+                        <a class="btn btn-primary" (click)="fileUpload.click()" style="min-width: 75px; color: #fff!important;">Add</a> <!--btn btn-primary-->
+                        <a class="btn btn-danger" (click)="clearFile(1);" style="min-width: 75px; color: #fff!important;">Delete</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-12 col-sm-12" style="display: flex !important; justify-content: center;">
+                <div class="card" style="width: 17rem;">
+                    <img [src]="imageURL2 | sanitizerUrl" class="card-img-top img-fluid" alt="...">
+                    <div class="card-footer" style="display: flex; justify-content: space-between; background-color: transparent !important; border-top: 1px solid #9dc15b;">
+                        <input type="file" [accept]="requiredFileType" class="file-input" (change)="onFileSelected($event, 2);" #fileUpload1>
+                        <a class="btn btn-primary" (click)="fileUpload1.click()" style="min-width: 75px; color: #fff!important;">Add</a>
+                        <a class="btn btn-danger" (click)="clearFile(2);" style="min-width: 75px; color: #fff!important;">Delete</a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+           
+    <!------------------------------------------------------------------->
+    <h3 class="text-center mt-3" style="background-color: #9dc15b; color: white; padding: 10px 0px; margin-bottom: 20px;"> تصنيف المهندس</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 sponsers-left">
+                <!-- <div class="commercial float-left" style="height: 30px;">
+                    <h4>Commercials</h4>
+                    <img src="images/commercial-wallpaper-10.jpg" alt="" width="180" height="30">
+                </div> -->
+            </div>
+
+            <div class="col-6 text-center">
+                <!--  -->
+                <ng-container *ngIf="EngClass.length < 3">
+                    <div class="row mt-4 mb-4">
+                        <ng-container *ngFor="let itm of EngClass; let i = index">
+                            <div class=" col-4 form-check electricity">
+                                <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;"> {{ itm.engineerClassificationName }} </label>
+                                <input class="form-check-input" (change)="getSelectedIDs(itm.engineerClassificationID, $event)" [formControlName]="'EC_' + (i + 1)" type="checkbox">  <!-- 'EC_' + (i + 1) -->
+                            </div>
+                        </ng-container>
+                    </div>
+                </ng-container>
+
+                <!--  -->
+                <ng-container *ngIf="EngClass.length >= 3 && EngClass.length % 3 == 0">
+                    <div class="row mt-4 mb-4" *ngFor="let num of GetNumbers(GetIntegerNumber(EngClass.length / 3)); let i = index">
+                        <ng-container *ngIf="EngClass.length <= 3 && i == 0">
+                            <ng-container *ngFor="let itm of EngClass; let y = index">
+                                <div class=" col-4 form-check electricity">
+                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;"> {{ itm.engineerClassificationName }} </label>
+                                    <input class="form-check-input" (change)="getSelectedIDs(itm.engineerClassificationID, $event)" [formControlName]="'EC_' + (i + 1) + '_' + (y + 1)" type="checkbox" id="flexCheckDefault">
+                                </div>
+                            </ng-container>
+                        </ng-container>
+
+                        <ng-container *ngIf="EngClass.length > 3 && i == 0">
+                            <ng-container *ngFor="let itm of EngClass; let y = index">
+                                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                    <div class=" col-4 form-check electricity">
+                                        <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;"> {{ itm.engineerClassificationName }} </label>
+                                        <input class="form-check-input" (change)="getSelectedIDs(itm.engineerClassificationID, $event)" [formControlName]="'EC_' + (i + 1) + '_' + (y + 1)" type="checkbox" id="flexCheckDefault">
+                                    </div>
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+
+                        <ng-container *ngIf="EngClass.length - i * 3 >= 3 && i > 0">
+                            <ng-container *ngFor="let itm of EngClass; let y = index">
+                                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                    <div class=" col-4 form-check electricity">
+                                        <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;"> {{ itm.engineerClassificationName }} </label>
+                                        <input class="form-check-input" (change)="getSelectedIDs(itm.engineerClassificationID, $event)" [formControlName]="'EC_' + (i + 1) + '_' + (y + 1)" type="checkbox" id="flexCheckDefault">
+                                    </div>
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+
+                        <ng-container *ngIf="EngClass.length - i * 3 < 3 && i > 0">
+                            <ng-container *ngFor="let itm of EngClass; let y = index">
+                                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                    <div class=" col-4 form-check electricity">
+                                        <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;"> {{ itm.engineerClassificationName }} </label>
+                                        <input class="form-check-input" (change)="getSelectedIDs(itm.engineerClassificationID, $event)" [formControlName]="'EC_' + (i + 1) + '_' + (y + 1)" type="checkbox" id="flexCheckDefault">
+                                    </div>
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+                    </div>
+                </ng-container>
+
+                <!--  -->
+                <ng-container *ngIf="EngClass.length >= 3 && EngClass.length % 3 > 0">
+                    <div class="row mt-4 mb-4" *ngFor="let num of GetNumbers(GetIntegerNumber(EngClass.length / 3) + 1); let i = index">
+                        <ng-container *ngIf="EngClass.length <= 3 && i == 0">
+                            <ng-container *ngFor="let itm of EngClass; let y = index">
+                                <div class=" col-4 form-check electricity">
+                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;"> {{ itm.engineerClassificationName }} </label>
+                                    <input class="form-check-input" (change)="getSelectedIDs(itm.engineerClassificationID, $event)" [formControlName]="'EC_' + (i + 1) + '_' + (y + 1)" type="checkbox" id="flexCheckDefault">
+                                </div>
+                            </ng-container>
+                        </ng-container>
+
+                        <ng-container *ngIf="EngClass.length > 3 && i == 0">
+                            <ng-container *ngFor="let itm of EngClass; let y = index">
+                                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                    <div class=" col-4 form-check electricity">
+                                        <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;"> {{ itm.engineerClassificationName }} </label>
+                                        <input class="form-check-input" (change)="getSelectedIDs(itm.engineerClassificationID, $event)" [formControlName]="'EC_' + (i + 1) + '_' + (y + 1)" type="checkbox" id="flexCheckDefault">
+                                    </div>
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+
+                        <ng-container *ngIf="EngClass.length - i * 3 >= 3 && i > 0">
+                            <ng-container *ngFor="let itm of EngClass; let y = index">
+                                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                    <div class=" col-4 form-check electricity">
+                                        <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;"> {{ itm.engineerClassificationName }} </label>
+                                        <input class="form-check-input" (change)="getSelectedIDs(itm.engineerClassificationID, $event)" [formControlName]="'EC_' + (i + 1) + '_' + (y + 1)" type="checkbox" id="flexCheckDefault">
+                                    </div>
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+
+                        <ng-container *ngIf="EngClass.length - i * 3 < 3 && i > 0">
+                            <ng-container *ngFor="let itm of EngClass; let y = index">
+                                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                    <div class=" col-4 form-check electricity">
+                                        <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;"> {{ itm.engineerClassificationName }} </label>
+                                        <input class="form-check-input" (change)="getSelectedIDs(itm.engineerClassificationID, $event)" [formControlName]="'EC_' + (i + 1) + '_' + (y + 1)" type="checkbox" id="flexCheckDefault">
+                                    </div>
+                                </ng-container>
+                            </ng-container>
+                        </ng-container>
+                    </div>
+                </ng-container>
+            </div>
+
+            <div class="col-lg-3 sponsers-right">
+                <!-- <div class="commercial float-right" style="height: 30px;">
+                    <h4>Commercials</h4>
+                    <img src="images/commercial-wallpaper-10.jpg" alt="" width="180" height="30">
+                </div> -->
+            </div>
+        </div>
+    </div>
+</form>

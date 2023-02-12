@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  height: 100vh;
+}
+
+#login .container #login-row #login-column #login-box {
+  border-radius: 50px;
+  margin-top: 40px;
+  max-width: 600px;
+  /* height: 475px; */
+  margin-bottom: 40px;
+  background-color: #343a40;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.box {
+  margin-top: 20px !important;
+  height: 1030px !important;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+
+#login
+  .container
+  #login-row
+  #login-column
+  #login-box
+  #login-form
+  #register-link {
+  margin-top: -85px;
+}
+
+.register-p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.register-link,
+.login-link {
+  text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
+}
+
+.country,
+.gender,
+.phone-num {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+
+/***********/
+.logotitle {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.ttext {
+  color: #9dc15b;
+}
+
+.text-info {
+  color: #9dc15b !important;
+}
+
+a.text-info:hover {
+  color: #9dc15b !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #9dc15b;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #9dc15b;
+  border-color: #9dc15b;
+}
+
+/* .footer {
+    margin-top: 50px;
+
+} */
+
+.register-link .facebook {
+  width: 45px;
+  height: 45px;
+}
+
+.register-link .google {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+/*********new one with face and google************/
+.media-login {
+  width: 370px;
+  margin: 50px 0 0;
+  border-color: #343a40;
+  background-color: #343a40;
+}
+
+.media-login .login {
+  color: white;
+  background-color: #9dc15b;
+  border-color: #9dc15b;
+}
+
+.media-login .login:hover {
+  color: #9dc15b;
+  background-color: #343a40;
+  border-color: #9dc15b;
+}
+
+.facebook-button {
+  background-color: #295396;
+  border-color: #295396;
+}
+
+.facebook-button:hover {
+  background-color: #295396;
+  border-color: #295396;
+}
+
+.fa-facebook-square {
+  font-size: 21px;
+}
+
+.google-button {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.google-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.facebook-button img {
+  width: 45px;
+  height: 45px;
+}
+
+.google-button:hover {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+/********/
+.media-register {
+  margin-top: 50px;
+  width: 400px;
+  background-color: #343a40;
+}
+
+.delete-update .btn-primary {
+  width: 49%;
+}

@@ -1,0 +1,15 @@
+<!-- <app-new-header></app-new-header>
+
+<router-outlet></router-outlet>
+
+<app-new-footer></app-new-footer> -->
+
+
+
+<app-new-side-bar (onToggleSideNav)="onToggleSideNav($event)"></app-new-side-bar>
+<!-- <app-user-side-bar (onToggleSideNav)="onToggleSideNav($event)"></app-user-side-bar> -->
+<app-new-header [collapsed]=" isSideNavCollapsed" [screenWidth]="screenWidth"></app-new-header>
+<div class="main dash" [ngClass]="getDashClass()">
+  <router-outlet></router-outlet>
+</div>
+<app-new-footer [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth"></app-new-footer>

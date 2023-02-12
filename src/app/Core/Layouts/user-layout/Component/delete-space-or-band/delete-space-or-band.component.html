@@ -1,0 +1,673 @@
+<h3
+  class="text-center mb-4"
+  style="color: white; background-color: #9dc15b; font-size: 20px"
+>
+  حذف فراغ أو بند
+</h3>
+
+<!------------------------------------------------------------------------>
+
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-2"></div>
+
+    <div class="col-8">
+      <!-- 
+                ========================================
+             -->
+      <form [formGroup]="FixForm">
+        <h4 class="project-info1">بيانات الوحدة</h4>
+        <div class="address-details d-flex">
+          <div class="input-group m-2">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Address</span
+            >
+            <input
+              type="text"
+              formControlName="cAddress"
+              readonly
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+          <div class="input-group m-2">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Floor</span
+            >
+            <input
+              type="text"
+              formControlName="cFloor"
+              readonly
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Area(m2)</span
+            >
+            <input
+              type="text"
+              formControlName="cArea"
+              readonly
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+        </div>
+        <div class="unit-type d-flex">
+          <div class="input-group m-2">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Site Type</span
+            >
+            <input
+              type="text"
+              formControlName="cSiteType"
+              readonly
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+        </div>
+
+        <div class="unit-type d-flex">
+          <div class="input-group m-2">
+            <span class="input-group-text">حالة المشروع</span>
+            <input
+              type="text"
+              formControlName="cProjectStatus"
+              readonly
+              aria-label="First name"
+              class="form-control"
+              placeholder="condition-1"
+            />
+            <span class="input-group-text">الإشراف</span>
+            <input
+              type="text"
+              formControlName="cEngSupervision"
+              readonly
+              aria-label="First name"
+              class="form-control"
+              placeholder="Included"
+            />
+          </div>
+        </div>
+
+        <!-- Dynamic -->
+
+        <ng-container *ngIf="strSpaceData.length < 3">
+          <div class="row d-flex mt-4">
+            <div class="col-lg-3">
+              <h4 class="m-1">تفاصيل الموقع</h4>
+            </div>
+            <ng-container *ngFor="let itm of strSpaceData">
+              <div class="col-lg-2">
+                <input
+                  type="text"
+                  style="width: 110px"
+                  [value]="itm.name"
+                  readonly
+                  class="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                  placeholder="Room"
+                />
+              </div>
+              <div class="col-lg-1">
+                <p class="text-center mt-2">
+                  {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                </p>
+              </div>
+            </ng-container>
+          </div>
+        </ng-container>
+
+        <ng-container
+          *ngIf="strSpaceData.length >= 3 && strSpaceData.length % 3 == 0"
+        >
+          <div
+            class="row d-flex mt-4"
+            *ngFor="
+              let num of GetNumbers(GetIntegerNumber(strSpaceData.length / 3));
+              let i = index
+            "
+          >
+            <ng-container *ngIf="strSpaceData.length <= 3 && i == 0">
+              <div class="col-lg-3">
+                <h4 class="m-1">تفاصيل الموقع</h4>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData">
+                <div class="col-lg-2">
+                  <input
+                    type="text"
+                    style="width: 110px"
+                    [value]="itm.name"
+                    readonly
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    placeholder="Room"
+                  />
+                </div>
+                <div class="col-lg-1">
+                  <p class="text-center mt-2">
+                    {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                  </p>
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length > 3 && i == 0">
+              <div class="col-lg-3">
+                <h4 class="m-1">تفاصيل الموقع</h4>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length - i * 3 >= 3 && i > 0">
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length - i * 3 < 3 && i > 0">
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+
+        <ng-container
+          *ngIf="strSpaceData.length >= 3 && strSpaceData.length % 3 > 0"
+        >
+          <div
+            class="row d-flex mt-4"
+            *ngFor="
+              let num of GetNumbers(
+                GetIntegerNumber(strSpaceData.length / 3) + 1
+              );
+              let i = index
+            "
+          >
+            <ng-container *ngIf="strSpaceData.length <= 3 && i == 0">
+              <div class="col-lg-3">
+                <h4 class="m-1">تفاصيل الموقع</h4>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData">
+                <div class="col-lg-2">
+                  <input
+                    type="text"
+                    style="width: 110px"
+                    [value]="itm.name"
+                    readonly
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    placeholder="Room"
+                  />
+                </div>
+                <div class="col-lg-1">
+                  <p class="text-center mt-2">
+                    {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                  </p>
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length > 3 && i == 0">
+              <div class="col-lg-3">
+                <h4 class="m-1">تفاصيل الموقع</h4>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length - i * 3 > 3 && i > 0">
+              <div class="col-lg-3">
+                <p></p>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length - i * 3 < 3 && i > 0">
+              <div class="col-lg-3">
+                <p></p>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+
+        <!-- Dynamic -->
+      </form>
+
+      <hr />
+
+      <!---------------------------------------------------->
+      <div class="container mb-3">
+        <div class="row">
+          <div class="col-2"></div>
+
+          <div class="col-8">
+            <form [formGroup]="ChoiceForm">
+              <div class="row m-4">
+                <div class="col-3">
+                  <div class="form-check" style="text-align: end">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      حذف بند
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      formControlName="cIndxFormChoice"
+                      (change)="DisplayIndexationDataForm($event.target)"
+                      value="1"
+                    />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-check" style="text-align: end">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      حذف فراغ
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      formControlName="cIndxFormChoice"
+                      (change)="DisplayIndexationDataForm($event.target)"
+                      value="2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-2"></div>
+        </div>
+      </div>
+
+      <!-- 
+                ========================================
+             -->
+      <form [formGroup]="SiteForm">
+        <ng-container *ngIf="dblIndxChoiceNo == 1">
+          <div>
+            <div
+              class="input-group mb-2"
+              *ngFor="let itm of strRepProjectAssay_TotalItems; let j = index"
+            >
+              <div style="background: #e9ecef; padding: 6px 12px">
+                <span class="span-left">
+                  <div class="form-check">
+                    <input
+                      name="IndexItmID"
+                      formControlName="cIndexItmID{{ j + 1 }}"
+                      [value]="itm.indexationItemID"
+                      class="form-check-input"
+                      type="checkbox"
+                    />
+                  </div>
+                </span>
+              </div>
+              <input
+                type="text"
+                [value]="itm.indexationItemName"
+                readonly
+                class="form-control text-left"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="ELECTRICITY"
+              />
+              <input
+                type="text"
+                [value]="itm.total"
+                readonly
+                class="form-control text-right"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="120.000Le"
+              />
+            </div>
+          </div>
+        </ng-container>
+
+        <!-------------------------------------->
+
+        <ng-container *ngIf="dblIndxChoiceNo == 2">
+          <div
+            class="input-group mb-2"
+            *ngFor="let itm of strRepProjectAssay_TotalSpaces; let k = index"
+          >
+            <div style="background: #e9ecef; padding: 6px 12px">
+              <!-- <mat-checkbox
+                name="SpaceDataID"
+                formControlName="cspaceDataID"
+                [value]="itm.spaceDataID"
+                color="primary"
+              ></mat-checkbox> -->
+              <span class="span-left">
+                <div class="form-check">
+                  <input
+                    name="SpaceDataID"
+                    formControlName="cspaceDataID{{ k + 1 }}"
+                    [value]="itm.spaceDataID"
+                    class="form-check-input"
+                    type="checkbox"
+                  />
+                </div>
+              </span>
+            </div>
+            <input
+              type="text"
+              [value]="itm.spaceDataName"
+              readonly
+              class="form-control text-left"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              placeholder="RECEPTION"
+            />
+            <input
+              type="text"
+              [value]="itm.total"
+              readonly
+              class="form-control text-right"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              placeholder="120.000Le"
+            />
+          </div>
+        </ng-container>
+      </form>
+    </div>
+
+    <div class="col-2"></div>
+  </div>
+</div>
+<!------------------------------------------------------------------------>
+
+<div style="text-align: left; margin-left: 250px">
+  <button
+    (click)="DeleteIndexation()"
+    class="btn btn primary mt-3"
+    type="button"
+    style="width: 200px; background-color: #9dc15b"
+  >
+    Delete
+  </button>
+
+  <button
+    (click)="CloseIndexation()"
+    class="btn btn primary mt-3"
+    type="button"
+    style="width: 200px; margin-left: 250px; background-color: #9dc15b"
+  >
+    Close
+  </button>
+</div>
+
+<app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
+
+<!-- <div class="container mb-3">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-3">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button
+          class="btn btn-primary me-md-2 buttonpage4-2"
+          type="button"
+          style="width: 200px"
+          (click)="GoToProfile()"
+        >
+          Go To My Profile
+        </button>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+      </div>
+    </div>
+
+    <div class="col-3"></div>
+  </div>
+</div> -->
+
+<!-- <div class="col-8">
+  <h4 class="text-center" style="background-color: #9dc15b; color: white">
+    حذف فراغ او بند
+  </h4>
+
+  <div class="row m-4">
+    <div class="col-3">
+      <div class="form-check" style="text-align: end">
+        <label class="form-check-label" for="flexRadioDefault1">
+          حذف بند
+        </label>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+        />
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="form-check" style="text-align: end">
+        <label class="form-check-label" for="flexRadioDefault2">
+          حذف فراغ
+        </label>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          checked
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-1 tag-accordion">
+    <span class="span-left">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+        />
+      </div>
+    </span>
+    <h5 class="d-inline ml-5">تاسيس</h5>
+    <span class="span-right">15000</span>
+  </div>
+  <div class="mb-1 tag-accordion">
+    <span class="span-left">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+        />
+      </div>
+    </span>
+    <h5 class="d-inline ml-5">تاسيس</h5>
+    <span class="span-right">15000</span>
+  </div>
+  <div class="mb-1 tag-accordion">
+    <span class="span-left">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+        />
+      </div>
+    </span>
+    <h5 class="d-inline ml-5">تاسيس</h5>
+    <span class="span-right">15000</span>
+  </div>
+  <div class="mb-1 tag-accordion">
+    <span class="span-left">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+        />
+      </div>
+    </span>
+    <h5 class="d-inline ml-5">تاسيس</h5>
+    <span class="span-right">15000</span>
+  </div>
+
+  <div style="text-align: center">
+    <button
+      class="btn btn primary mt-3"
+      type="button"
+      style="width: 200px; background-color: #9dc15b"
+    >
+      Delete
+    </button>
+  </div>
+</div> -->

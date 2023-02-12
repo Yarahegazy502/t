@@ -1,0 +1,23 @@
+.btn-secondary {
+  background-color: #9dc15b;
+  border-color: #9dc15b;
+}
+
+.text-black-50 {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+::ng-deep snack-bar-container.blue-snackbar {
+  background-color: #9dc15b;
+  color: black;
+}
+
+.example-margin {
+  left: 50%;
+  margin-left: -4em;
+  // margin: 0 10px;
+  // align-items: center;
+}
+
+
+

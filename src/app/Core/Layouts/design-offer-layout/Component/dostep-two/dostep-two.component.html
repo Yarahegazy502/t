@@ -1,0 +1,556 @@
+<div class="container-fluid bg-dark">
+    <h5 class="text-center text-light mb-2" style="font-size: 1.5rem ;">Offer</h5>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-2" style="display: flex; justify-content: flex-end; align-items: center !important;">
+            <a class="btn btn-secondary text-black-50 hover text-black-50 float-right" role="button">Back</a>
+        </div>
+        <div class="col-4" style="display: flex; justify-content: center; align-items: center !important;">
+            <div class="container">
+                <ul class="pagination">
+                    <li style="margin: 0px; margin: 0 auto;"><a>1<span class="sr-only"></span></a></li>
+                    <li class="active" style="margin: 0px; margin: 0 auto;"><a>2</a></li>
+                    <li style="margin: 0px; margin: 0 auto;"><a>3</a></li>
+                    <!-- <li class="mt-3"><a href="DT-Option-4.html">4</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="col-2" style="display: flex; justify-content: flex-start; align-items: center !important;">
+            <a class="btn btn-secondary text-black-50 hover text-black-50" (click)="getSecondStepData()" role="button">Next </a>
+        </div>
+        <div class="col-2 "></div>
+    </div><br>
+</div>
+
+<!------------------------------------------------------------------------------------------------------>
+
+<h4 class="text-center" style="background-color: #9dc15b; color: white; padding: 10px 0px; margin-bottom: 20px;">Name Of Space And Dimensions</h4>
+
+<div class="row justify-content-center align-items-center">
+    <div style="width: 715px" class="alert alert-dark" role="alert">
+      <!-- <h4
+        style="text-align: right; text-decoration: underline"
+        class="alert-heading"
+      >
+        ملاحظات عامة
+      </h4> -->
+  
+      <ul style="text-align: right">
+        <li style="font-size: medium; text-align: right">
+          يجب كتابة الأرقام باللغة الانجليزية
+          <i class="fas fa-circle ml-3"></i>
+        </li>
+        <li style="font-size: medium; text-align: right">
+          كتابة الأبعاد بالمتر (م)
+          <i class="fas fa-circle ml-3"></i>
+        </li>
+        <!-- <li style="font-size: medium; text-align: right">
+          بعد الانتهاء من المقايسة، يمكن التعديل عليها بداية من خطوة رقم 3 فقط<i
+            class="fas fa-circle ml-3"
+          ></i>
+        </li> -->
+      </ul>
+  
+      <p class="mb-0"></p>
+    </div>
+  </div>
+
+
+<div class="container main-Sponsers mb-2">
+    <div class="row">
+        <div class="col-lg-2 sponsers-left">
+            <!-- <div class="commercial float-left" style="height: 70px; width: 180px;">
+                <h4>Commercials</h4>
+                <img src="images/commercial-wallpaper-10.jpg" alt="" width="180" height="170">
+            </div> -->
+        </div>
+
+
+        <div class="col-lg-8">
+            <form [formGroup]="myForm">
+                <div class="row" style="margin-right: 0% !important; margin-left: 0% !important;">
+                    <div *ngFor="let RSID of RealSID; let k = index" class="accordion" id="accordionExample" style="width: 100% !important;">
+
+                        <div class="card" style="margin-bottom: 10px; border-radius: 0.25rem !important;">
+                        <div class="card-header" id="headingOne" style="background-color: rgba(157, 193, 91, 0.03) !important; border-bottom: 1px solid rgba(157, 193, 91, 0.125) !important;     padding: 0px; min-width: 100% !important;">
+                            <h2 class="mb-0" style="background: #9DC15B;">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" attr.data-target="#collapseOne{{ k + 1 }}" aria-expanded="false" aria-controls="collapseOne" style="text-align: center !important;">
+                                Space {{ k + 1 }} for {{ RSID.siteItemName }}
+                            </button>
+                            </h2>
+                        </div>
+                    
+                        <div id="collapseOne{{ k + 1 }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 ">
+                                        <div class="input-group">
+                                            <span class="input-group-text m-3" id="inputGroup-sizing-default">Space
+                                                Name</span>
+                                            <input type="text" maxlength="200" [formControlName]="'N' + '_' + (k + 1)" class="form-control m-3" aria-label="Sizing example input"
+                                                aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <input type="hidden" [formControlName]="'HD' + '_' + (k + 1)">
+                                        <div class="measure">
+                                            <div class="row m-auto">
+                                                <div class="col-lg-4 col-md-4 col-sm-4 ">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">Length</span>
+                                                        <input type="text" class="form-control"
+                                                            maxlength="5"
+                                                            [formControlName]="'L' + '_' + (k + 1)"
+                                                            aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4 pl-0">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">width</span>
+                                                        <input type="text" class="form-control"
+                                                            maxlength="5"
+                                                            [formControlName]="'W' + '_' + (k + 1)"
+                                                            aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4 pl-0">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">Height</span>
+                                                        <input type="text" class="form-control"
+                                                            maxlength="5"
+                                                            [formControlName]="'H' + '_' + (k + 1)"
+                                                            aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" >
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="card ml-3" style="width: 17rem;">
+                                            <ng-container *ngIf="StrImageURL1[k + 1] != ''">
+                                                <img [src]="StrImageURL1[k + 1]" [id]="'img_' + (k + 1) + '_1'" class="card-img-top img-fluid" alt="...">
+                                            </ng-container>
+                                            <ng-container *ngIf="StrImageURL1[k + 1] == ''">
+                                                <img [src]="imageURL" [id]="'img_' + (k + 1) + '_1'" class="card-img-top img-fluid" alt="...">
+                                            </ng-container>
+                                            <!-- <img src="assets/images/coming-soon-01.png" [id]="'img_' + (k + 1) + '_1'" class="card-img-top img-fluid" alt="..."> -->
+                                            <div class="card-footer" style="display: flex; justify-content: space-between; background-color: transparent !important; border-top: 1px solid #9dc15b;">
+                                                <input type="file" [accept]="requiredFileType" class="file-input" (change)="onFileSelected($event, (k + 1), 1);" #fileUpload>
+                                                <a class="btn btn-primary" (click)="fileUpload.click()" style="min-width: 75px; color: #fff!important;">Add</a> <!--btn btn-primary-->
+                                                <a class="btn btn-danger" (click)="clearFile(1, (k + 1));" style="min-width: 75px; color: #fff!important;">Delete</a>
+                                            </div>                                        
+                                        </div>
+                                    </div>  
+                                    <div class="col-6">
+                                        <div class="card" style="width: 17rem; margin-left: 38px;">
+                                            <ng-container *ngIf="StrImageURL2[k + 1] != ''">
+                                                <img [src]="StrImageURL2[k + 1]" [id]="'img_' + (k + 1) + '_2'" class="card-img-top img-fluid" alt="...">
+                                            </ng-container>
+                                            <ng-container *ngIf="StrImageURL2[k + 1] == ''">
+                                                <img [src]="imageURL" [id]="'img_' + (k + 1) + '_2'" class="card-img-top img-fluid" alt="...">
+                                            </ng-container>
+                                            <!-- <img src="assets/images/coming-soon-01.png" [id]="'img_' + (k + 1) + '_2'" class="card-img-top img-fluid" alt="..."> -->
+                                            <div class="card-footer" style="display: flex; justify-content: space-between; background-color: transparent !important; border-top: 1px solid #9dc15b;">
+                                                <input type="file" [accept]="requiredFileType" class="file-input" (change)="onFileSelected($event, (k + 1), 2);" #fileUpload1>
+                                                <a class="btn btn-primary" (click)="fileUpload1.click()" style="min-width: 75px; color: #fff!important;">Add</a>
+                                                <a class="btn btn-danger" (click)="clearFile(2, (k + 1));" style="min-width: 75px; color: #fff!important;">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row" style="margin-right: -15px !important;">
+                                    <div class="card mt-3 mb-3" style="width: 91%; height: 190px; margin: auto;">
+                                        <div>
+                                            <h4 class="text-right m-2">المخرجات المطلوبة</h4>
+                                            
+                                            <!--  -->
+                                            <ng-container *ngIf="strRequiredOutput.length < 3">
+                                                <div class="row mb-2" style="margin-right: 0% !important; margin-left: 0% !important; direction: rtl;">
+                                                    <ng-container *ngFor="let itm of strRequiredOutput; let i = index">
+                                                        <div class=" col-4 form-check electricity text-right">
+                                                            <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">{{ itm.requiredOutputName }}</label>
+                                                            <input class="form-check-input" type="checkbox" (change)="getSelectedIDs(itm.requiredOutputID, $event, (k + 1), 0)" [value]="itm.requiredOutputID" [formControlName]="'RO_' + (k + 1) + '_' + (i + 1)" id="flexCheckDefault">
+                                                        </div> 
+                                                    </ng-container>
+                                                </div>    
+                                            </ng-container>
+
+                                            <!--  -->
+                                            <ng-container *ngIf="strRequiredOutput.length >= 3 && strRequiredOutput.length % 3 == 0">
+                                                <div class="row mb-2" *ngFor="let num of GetNumbers(GetIntegerNumber(strRequiredOutput.length / 3)); let i = index" style="margin-right: 0% !important; margin-left: 0% !important; direction: rtl;">
+                                                    <ng-container *ngIf="strRequiredOutput.length <= 3 && i == 0">
+                                                        <ng-container *ngFor="let itm of strRequiredOutput; let y = index">
+                                                            <div class=" col-6 form-check electricity text-right">
+                                                                <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">{{ itm.requiredOutputName }}</label>
+                                                                <input class="form-check-input" type="checkbox" (change)="getSelectedIDs(itm.requiredOutputID, $event, (k + 1), (y + 1))" [value]="itm.requiredOutputID" [formControlName]="'RO_' + (k + 1) + '_' + (y + 1)" id="flexCheckDefault">
+                                                            </div> 
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strRequiredOutput.length > 3 && i == 0">
+                                                        <ng-container *ngFor="let itm of strRequiredOutput; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class=" col-6 form-check electricity text-right">
+                                                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">{{ itm.requiredOutputName }}</label>
+                                                                    <input class="form-check-input" type="checkbox" (change)="getSelectedIDs(itm.requiredOutputID, $event, (k + 1), (y + 1))" [value]="itm.requiredOutputID" [formControlName]="'RO_' + (k + 1) + '_' + (y + 1)" id="flexCheckDefault">
+                                                                </div> 
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strRequiredOutput.length - i * 3 >= 3 && i > 0">
+                                                        <ng-container *ngFor="let itm of strRequiredOutput; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class=" col-6 form-check electricity text-right">
+                                                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">{{ itm.requiredOutputName }}</label>
+                                                                    <input class="form-check-input" type="checkbox" (change)="getSelectedIDs(itm.requiredOutputID, $event, (k + 1), (y + 1))" [value]="itm.requiredOutputID" [formControlName]="'RO_' + (k + 1) + '_' + (y + 1)" id="flexCheckDefault">
+                                                                </div> 
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strRequiredOutput.length - i * 3 < 3 && i > 0">
+                                                        <ng-container *ngFor="let itm of strRequiredOutput; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class=" col-6 form-check electricity text-right">
+                                                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">{{ itm.requiredOutputName }}</label>
+                                                                    <input class="form-check-input" type="checkbox" (change)="getSelectedIDs(itm.requiredOutputID, $event, (k + 1), (y + 1))" [value]="itm.requiredOutputID" [formControlName]="'RO_' + (k + 1) + '_' + (y + 1)" id="flexCheckDefault">
+                                                                </div> 
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                </div>
+                                            </ng-container>
+                                            
+                                            <!--  -->
+                                            <ng-container *ngIf="strRequiredOutput.length >= 3 && strRequiredOutput.length % 3 > 0">
+                                                <div class="row mb-2" *ngFor="let num of GetNumbers(GetIntegerNumber(strRequiredOutput.length / 3) + 1); let i = index" style="margin-right: 0% !important; margin-left: 0% !important; direction: rtl;">
+                                                    <ng-container *ngIf="strRequiredOutput.length <= 3 && i == 0">
+                                                        <ng-container *ngFor="let itm of strRequiredOutput; let y = index">
+                                                            <div class=" col-6 form-check electricity text-right">
+                                                                <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">{{ itm.requiredOutputName }}</label>
+                                                                <input class="form-check-input" type="checkbox" (change)="getSelectedIDs(itm.requiredOutputID, $event, (k + 1), (y + 1))" [value]="itm.requiredOutputID" [formControlName]="'RO_' + (k + 1) + '_' + (y + 1)" id="flexCheckDefault">
+                                                            </div> 
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strRequiredOutput.length > 3 && i == 0">
+                                                        <ng-container *ngFor="let itm of strRequiredOutput; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class=" col-6 form-check electricity text-right">
+                                                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">{{ itm.requiredOutputName }}</label>
+                                                                    <input class="form-check-input" type="checkbox" (change)="getSelectedIDs(itm.requiredOutputID, $event, (k + 1), (y + 1))" [value]="itm.requiredOutputID" [formControlName]="'RO_' + (k + 1) + '_' + (y + 1)" id="flexCheckDefault">
+                                                                </div> 
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strRequiredOutput.length - i * 3 >= 3 && i > 0">
+                                                        <ng-container *ngFor="let itm of strRequiredOutput; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class=" col-6 form-check electricity text-right">
+                                                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">{{ itm.requiredOutputName }}</label>
+                                                                    <input class="form-check-input" type="checkbox" (change)="getSelectedIDs(itm.requiredOutputID, $event, (k + 1), (y + 1))" [value]="itm.requiredOutputID" [formControlName]="'RO_' + (k + 1) + '_' + (y + 1)" id="flexCheckDefault">
+                                                                </div> 
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strRequiredOutput.length - i * 3 < 3 && i > 0">
+                                                        <ng-container *ngFor="let itm of strRequiredOutput; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class=" col-6 form-check electricity text-right">
+                                                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">{{ itm.requiredOutputName }}</label>
+                                                                    <input class="form-check-input" type="checkbox" (change)="getSelectedIDs(itm.requiredOutputID, $event, (k + 1), (y + 1))" [value]="itm.requiredOutputID" [formControlName]="'RO_' + (k + 1) + '_' + (y + 1)" id="flexCheckDefault">
+                                                                </div> 
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                </div>
+                                            </ng-container>
+
+
+
+                                            <h4 class="text-right m-2">ستايل</h4>
+
+                                            <!--  -->
+                                            <ng-container *ngIf="strStyle.length < 3">
+                                                <div class="row" style="direction: rtl; display: flex; justify-content: center; justify-items: center; align-items: center;">
+                                                    <ng-container *ngFor="let itm of strStyle; let i = index">
+                                                        <div class=" col-4 form-check electricity text-right" style="padding-right: 0px; direction: rtl;">
+                                                            <input class="form-check-input" [value]="itm.styleID" [formControlName]="'cStyle' + (k + 1)" type="radio" id="exampleRadios1">
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                {{ itm.styleName }}
+                                                            </label>
+                                                        </div>
+                                                    </ng-container>                                                
+                                                </div>
+                                            </ng-container>
+
+                                            <!--  -->
+                                            <ng-container *ngIf="strStyle.length >= 3 && strStyle.length % 3 == 0">
+                                                <div class="row" *ngFor="let num of GetNumbers(GetIntegerNumber(strStyle.length / 3)); let i = index" style="direction: rtl; display: flex; justify-content: center; justify-items: center; align-items: center;">
+                                                    <ng-container *ngIf="strStyle.length <= 3 && i == 0">
+                                                        <ng-container *ngFor="let itm of strStyle; let y = index">
+                                                            <div class="col-4 form-check electricity text-right" style="padding-right: 0px; direction: rtl;">
+                                                                <input class="form-check-input" [value]="itm.styleID" [formControlName]="'cStyle' + (k + 1)" type="radio" id="exampleRadios1">
+                                                                <label class="form-check-label" for="exampleRadios1">
+                                                                    {{ itm.styleName }}
+                                                                </label>
+                                                            </div>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strStyle.length > 3 && i == 0">
+                                                        <ng-container *ngFor="let itm of strStyle; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class="col-4 form-check electricity text-right" style="padding-right: 0px; direction: rtl;">
+                                                                    <input class="form-check-input" [value]="itm.styleID" [formControlName]="'cStyle' + (k + 1)" type="radio" id="exampleRadios1">
+                                                                    <label class="form-check-label" for="exampleRadios1">
+                                                                        {{ itm.styleName }}
+                                                                    </label>
+                                                                </div>
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strStyle.length - i * 3 >= 3 && i > 0">
+                                                        <ng-container *ngFor="let itm of strStyle; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class="col-4 form-check electricity text-right" style="padding-right: 0px; direction: rtl;">
+                                                                    <input class="form-check-input" [value]="itm.styleID" [formControlName]="'cStyle' + (k + 1)" type="radio" id="exampleRadios1">
+                                                                    <label class="form-check-label" for="exampleRadios1">
+                                                                        {{ itm.styleName }}
+                                                                    </label>
+                                                                </div>
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strStyle.length - i * 3 < 3 && i > 0">
+                                                        <ng-container *ngFor="let itm of strStyle; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class="col-4 form-check electricity text-right" style="padding-right: 0px; direction: rtl;">
+                                                                    <input class="form-check-input" [value]="itm.styleID" [formControlName]="'cStyle' + (k + 1)" type="radio" id="exampleRadios1">
+                                                                    <label class="form-check-label" for="exampleRadios1">
+                                                                        {{ itm.styleName }}
+                                                                    </label>
+                                                                </div>
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+                                                </div>
+                                            </ng-container>
+
+                                            <!--  -->
+                                            <ng-container *ngIf="strStyle.length >= 3 && strStyle.length % 3 > 0">
+                                                <div class="row" *ngFor="let num of GetNumbers(GetIntegerNumber(strStyle.length / 3) + 1); let i = index" style="direction: rtl; display: flex; justify-content: center; justify-items: center; align-items: center;">
+                                                    <ng-container *ngIf="strStyle.length <= 3 && i == 0">
+                                                        <ng-container *ngFor="let itm of strStyle; let y = index">
+                                                            <div class="col-4 form-check electricity text-right" style="padding-right: 0px; direction: rtl;">
+                                                                <input class="form-check-input" [value]="itm.styleID" [formControlName]="'cStyle' + (k + 1)" type="radio" id="exampleRadios1">
+                                                                <label class="form-check-label" for="exampleRadios1">
+                                                                    {{ itm.styleName }}
+                                                                </label>
+                                                            </div>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strStyle.length > 3 && i == 0">
+                                                        <ng-container *ngFor="let itm of strStyle; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class="col-4 form-check electricity text-right" style="padding-right: 0px; direction: rtl;">
+                                                                    <input class="form-check-input" [value]="itm.styleID" [formControlName]="'cStyle' + (k + 1)" type="radio" id="exampleRadios1">
+                                                                    <label class="form-check-label" for="exampleRadios1">
+                                                                        {{ itm.styleName }}
+                                                                    </label>
+                                                                </div>
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strStyle.length - i * 3 >= 3 && i > 0">
+                                                        <ng-container *ngFor="let itm of strStyle; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class="col-4 form-check electricity text-right" style="padding-right: 0px; direction: rtl;">
+                                                                    <input class="form-check-input" [value]="itm.styleID" [formControlName]="'cStyle' + (k + 1)" type="radio" id="exampleRadios1">
+                                                                    <label class="form-check-label" for="exampleRadios1">
+                                                                        {{ itm.styleName }}
+                                                                    </label>
+                                                                </div>
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+
+                                                    <ng-container *ngIf="strStyle.length - i * 3 < 3 && i > 0">
+                                                        <ng-container *ngFor="let itm of strStyle; let y = index">
+                                                            <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                                                                <div class="col-4 form-check electricity text-right" style="padding-right: 0px; direction: rtl;">
+                                                                    <input class="form-check-input" [value]="itm.styleID" [formControlName]="'cStyle' + (k + 1)" type="radio" id="exampleRadios1">
+                                                                    <label class="form-check-label" for="exampleRadios1">
+                                                                        {{ itm.styleName }}
+                                                                    </label>
+                                                                </div>
+                                                            </ng-container>
+                                                        </ng-container>
+                                                    </ng-container>
+                                                </div>
+                                            </ng-container>
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <!-- <div class="row mt-4">
+                                                <div class=" col-lg-12 col-md-12 col-sm-12 input-group mr-3"
+                                                    style="direction: rtl;">
+                                                    <span class="input-group-text text-center">ستايل</span>
+                                                    <select [formControlName]="'cStyle' + (k + 1)" class="form-select" id="inputGroupSelect01" style="width: 88%;">
+                                                        <option value="0">::: اختر إسم الاستايل :::</option>
+                                                        <option *ngFor="let STL of strStyle" [value]="STL.styleID">
+                                                          {{ STL.styleName }}
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!------------------------------end صاله---------------------->
+                        <!-- <div class="card" style="border-radius: 0.25rem !important;">
+                        <div class="card-header" id="headingTwo" style="background-color: rgba(157, 193, 91, 0.03) !important; border-bottom: 1px solid rgba(157, 193, 91, 0.125) !important;     padding: 0px; min-width: 100% !important;">
+                            <h2 class="mb-0" style="background: #9DC15B;">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="text-align: center !important;">
+                                حمام
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 ">
+                                        <div class="input-group">
+                                            <span class="input-group-text m-3" id="inputGroup-sizing-default">Space
+                                                Name</span>
+                                            <input type="text" class="form-control m-3" aria-label="Sizing example input"
+                                                aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="measure">
+                                            <div class="row m-auto">
+                                                <div class="col-lg-4 col-md-4 col-sm-4 ">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">Height</span>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4 pl-0">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">Width</span>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4 pl-0">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text"
+                                                            id="inputGroup-sizing-default">Lingth</span>
+                                                        <input type="text" class="form-control"
+                                                            aria-label="Sizing example input"
+                                                            aria-describedby="inputGroup-sizing-default">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="card ml-3" style="width: 17rem;">
+                                            <img src="assets/images/coming-soon-01.png" class="card-img-top img-fluid" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card" style="width: 17rem; margin-left: 38px;">
+                                            <img src="assets/images/coming-soon-01.png" class="card-img-top img-fluid" alt="...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-right: -15px !important;">
+                                    <div class="card mt-3 mb-3" style="width: 91%; height: 190px; margin: auto;">
+                                        <div>
+                                            <h4 class="text-right m-3">المخرجات المطلوبة</h4>
+                                            <div class="row mb-4" style="margin-right: 0% !important; margin-left: 0% !important;">
+                                                
+                                                <div class=" col-6 form-check electricity text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">رسومات تنفيذية</label>
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                </div>
+                                                <div class=" col-6 form-check electricity text-right">
+                                                    <label class="form-check-label" for="flexCheckDefault" style="margin-right: 27px; margin-left: 0px;">مناظير ملونة</label>
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-4">
+                                                <div class=" col-lg-12 col-md-12 col-sm-12 input-group mr-3"
+                                                    style="direction: rtl;">
+                                                    <span class="input-group-text text-center">ستايل</span>
+                                                    <select class="form-select" id="inputGroupSelect01" style="width: 88%;">
+                                                        <option selected>اختار</option>
+                                                        <option value="1">مودرن </option>
+                                                        <option value="2">كلاسيك</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div> -->
+                    </div>
+                </div>
+            </form>
+            <!--end row-->
+        </div>
+        <!--end col-8-->
+
+        <div class="col-lg-2 sponsers-right">
+            <!-- <div class="commercial float-right" style="height: 70px; width: 180px;">
+                <h4>Commercials</h4>
+                <img src="images/commercial-wallpaper-10.jpg" alt="" width="180" height="170">
+            </div> -->
+        </div>
+    </div>
+    <app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
+</div>
+

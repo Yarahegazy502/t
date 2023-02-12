@@ -1,0 +1,23 @@
+body{
+    height: 1200px;
+}
+
+.coming-soon{
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+}
+
+footer {
+    color:  var(--main-green);
+    bottom: 0;
+    width: 100%;
+    background-color:var( --main-dark);
+}
+
+footer h6{
+    font-weight: bold;
+    text-decoration: underline;
+}

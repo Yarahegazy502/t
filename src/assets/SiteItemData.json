@@ -1,0 +1,58 @@
+[
+        {
+            "id" : "1",
+            "SiteTypeID" : "1",
+            "SiteTypeName" : "وحدة سكنية",
+            "SiteItemID" : "1",
+            "SiteItemName" : "صالة"
+        },
+        {
+            "id" : "2",
+            "SiteTypeID" : "1",
+            "SiteTypeName" : "وحدة سكنية",
+            "SiteItemID" : "2",
+            "SiteItemName" : "حمام"
+        },
+        {
+            "id" : "3",
+            "SiteTypeID" : "1",
+            "SiteTypeName" : "وحدة سكنية",
+            "SiteItemID" : "3",
+            "SiteItemName" : "مطبخ"
+        },
+        {
+            "id" : "4",
+            "SiteTypeID" : "1",
+            "SiteTypeName" : "وحدة سكنية",
+            "SiteItemID" : "4",
+            "SiteItemName" : "غرفة"
+        },
+        {
+            "id" : "5",
+            "SiteTypeID" : "1",
+            "SiteTypeName" : "وحدة سكنية",
+            "SiteItemID" : "5",
+            "SiteItemName" : "طرقة"
+        },
+        {
+            "id" : "6",
+            "SiteTypeID" : "1",
+            "SiteTypeName" : "وحدة سكنية",
+            "SiteItemID" : "6",
+            "SiteItemName" : "تراس"
+        },
+        {
+            "id" : "7",
+            "SiteTypeID" : "1",
+            "SiteTypeName" : "وحدة سكنية",
+            "SiteItemID" : "7",
+            "SiteItemName" : "تغيير ملابس"
+        },
+        {
+            "id" : "8",
+            "SiteTypeID" : "1",
+            "SiteTypeName" : "وحدة سكنية",
+            "SiteItemID" : "8",
+            "SiteItemName" : "أخرى"
+        }
+]

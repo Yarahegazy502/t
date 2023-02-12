@@ -1,0 +1,180 @@
+<h4 id="h4-title">My Profile</h4>
+<div class="container-fluid">
+    <!-- Begin:: Sidebar -->
+   
+    <app-user-side-bar>
+        
+    </app-user-side-bar>
+
+    <!-- End::   Sidebar -->
+
+    <div id="rows" class="rows">
+        <div class="offset-lg-2 offset-md-2 col-sm-8 brd">
+            <form [formGroup]="myForm">
+                <div class="col-sm-6">
+                    <!-- Input:: Name -->
+                    <div class="form-group">
+                        <input type="text" formControlName="cName" maxlength="250" class="form-control" id="nameInput">
+                        <label class="control-label" for="nameInput">Name</label>
+                    </div>
+                    <!-- Input:: Gender -->
+                    <div class="form-group">
+                        <select class="form-control" formControlName="cGender" id="genderSelect">
+                            <option value="0" selected>Please Choose One</option>
+                            <option *ngFor="let GND of strGender" [value]="GND.genderID">
+                                {{ GND.genderName }}
+                            </option>
+                        </select>
+                        <label class="control-label" for="genderSelect">Gender</label>
+                    </div>
+                    <!-- Input:: Job -->
+                    <div class="form-group">
+                        <input type="text" formControlName="cJob" maxlength="300" class="form-control" id="jobInput">
+                        <label class="control-label" for="jobInput">Job</label>
+                    </div>
+                    <!-- Input:: Experience -->
+                    <div class="form-group">
+                        <select class="form-control" formControlName="cExperience" id="experienceSelect">
+                            <option value="0" selected>Please Choose One</option>
+                            <option *ngFor="let EXP of strExperience" [value]="EXP.yearsOfExperienceID">
+                                {{ EXP.yearsOfExperienceName }}
+                            </option>
+                        </select>
+                        <label class="control-label" for="genderSelect">Experience</label>
+                    </div>
+                    <!-- Input:: Phone -->
+                    <div class="form-group">
+                        <input type="text" formControlName="cPhone" maxlength="15" class="form-control" id="phoneInput">
+                        <label class="control-label" for="phoneInput">Phone</label>
+                    </div>
+                    <!-- Input:: Email -->
+                    <div class="form-group">
+                        <input type="e-mail" formControlName="cEmail" readonly class="form-control" id="emailInput">
+                        <label class="control-label" for="emailInput">Email</label>
+                    </div>
+                    <!-- Input:: Website -->
+                    <div class="form-group">
+                        <input type="text" formControlName="cWebSite" class="form-control" id="websiteInput">
+                        <label class="control-label" for="websiteInput">Website</label>
+                    </div>
+                    <!-- Input:: Facebook -->
+                    <div class="form-group">
+                        <input type="text" formControlName="cFacebook" class="form-control" id="facebookInput">
+                        <label class="control-label" for="facebookInput">Facebook</label>
+                    </div>
+                    <!-- Input:: How Did You Know Us -->
+                    <div class="form-group">
+                        <select class="form-control" formControlName="cKnowUs" id="experienceSelect">
+                            <option value="0" selected>Please Choose One</option>
+                            <option *ngFor="let KNW of strKnowUs" [value]="KNW.knowUsID">
+                                {{ KNW.knowUsName }}
+                            </option>
+                        </select>
+                        <label class="control-label" for="genderSelect">How Did You Know Us</label>
+                    </div>
+                    <!-- Input:: Biography -->
+                    <div class="form-group">
+                        <textarea class="form-control" formControlName="cBiography" maxlength="2000" id="aboutMeInput" aria-label="With textarea" rows="4"></textarea>
+                        <label class="control-labels" for="aboutMeInput">Biography</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!-- Input:: Country -->
+                    <div class="form-group">
+                        <select class="form-control" (change)="getGovernorate()" formControlName="cCountry" id="countrySelect">
+                            <option value="0" selected>Please Choose One</option>
+                            <option *ngFor="let CO of strCountry" [value]="CO.countryID">
+                                {{ CO.countryName }}
+                            </option>
+                        </select>
+                        <label class="control-label" for="countrySelect">Country</label>
+                    </div>
+                    <!-- Input:: Governorate -->
+                    <div class="form-group">
+                        <select class="form-control" (change)="getDistrict()" formControlName="cGovernorate" id="citySelect">
+                            <option value="0" selected>Please Choose One</option>
+                            <option *ngFor="let GOV of strGovernorate" [value]="GOV.governorateID">
+                                {{ GOV.governorateName }}
+                            </option>
+                        </select>
+                        <label class="control-label" for="citySelect">Governorate</label>
+                    </div>
+                    <!-- Input:: Area -->
+                    <div class="form-group">
+                        <select class="form-control" formControlName="cDistrict" id="areaSelect">
+                            <option value="0" selected>Please Choose One</option>
+                            <option *ngFor="let DIS of strDistrict" [value]="DIS.districtID">
+                                {{ DIS.districtName }}
+                            </option>
+                        </select>
+                        <label class="control-label" for="areaSelect">District</label>
+                    </div>
+                    <!-- Input:: Address -->
+                    <div class="form-group">
+                        <textarea class="form-control" formControlName="cAddress" maxlength="700"  id="addressInput" aria-label="With textarea" rows="3"></textarea>
+                        <label class="address-label" for="addressInput">Address</label>
+                    </div>
+                    <!-- Input:: Acc Type -->
+                    <div class="form-group">
+                        <select class="form-control" (change)="getAccCategory()" formControlName="cAccType" id="accTypeSelect">
+                            <option value="0" selected>Please Choose One</option>
+                            <option *ngFor="let AccTpe of strAccType" [value]="AccTpe.accountTypeID">
+                                {{ AccTpe.accountTypeName }}
+                            </option>
+                        </select>
+                        <label class="control-label" for="acctypeSelect">Acc Type</label>
+                    </div>
+                    <!-- Input:: Acc Category -->
+                    <div class="form-group">
+                        <select multiple class="form-control" formControlName="cAccCategory" id="accCategorySelect" rows="3">
+                            <option value="0" selected>Please Choose One or more</option>
+                            <option *ngFor="let AccCat of strAccCategory" [value]="AccCat.accountCategoryID" [selected]="strArray">
+                                {{ AccCat.accountCategoryName }}
+                            </option>
+                        </select>
+                        <label class="label-multiple" for="accCategorySelect">Acc Category</label>
+                    </div>
+                    <!-- Input:: Upload Photo -->
+                    <div class="form-group" style="background: rgba( 150, 196, 83, 0.1 ) !important; padding: 10px !important; display: flex;">
+                        <div class="media-left avatar">
+                            <img id="imgInput" alt="" [src]="imageURL" id="imgPhoto" class="media-object img-circle">
+                            <span class="status bg-success"></span>
+                        </div>
+                        <div class="btns">
+                            <input type="file" [accept]="requiredFileType" class="file-input" (change)="onFileSelected($event);" #fileUpload>
+                            <button type="button" (click)="fileUpload.click()" class="btn btn-primary pri-hvr" style="padding: 4px 12px;"> Add Photo </button>
+                            <button type="button" (click)="clearFile();" class="btn btn-danger" style="padding: 4px 12px;"> Remove Photo </button>
+                        </div>
+                        <!-- <label class="label-img-upl" for="imgInput">Add Photo</label> -->
+                    </div>
+                    <!-- Input:: Submit -->
+                    <div class="form-group">
+                        <button type="button" (click)="SaveData()" class="btn btn-primary"> Save </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+<app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
+
+<!-- <footer class="footer">
+    <div class="row get-connected">
+        <span>Get connected with us:</span> <a href="https://www.facebook.com/Dtopiaeg"> <i class="fab fa-facebook-f fa-1x ml-4"></i> </a>
+    </div>
+    <div class="row help">
+        <div class="col-lg-6 text-right">
+            <span>Help: </span>
+            <a href="#" class="fs-14">Info@Dtopia-eg.com</a>
+        </div>
+        <div class="col-lg-6 text-left">
+            <span>Designed By: </span>
+            <a href="#" class="fs-14">HashDotSoft</a>
+        </div>
+    </div>
+    <div class="row copyright">
+        © 2022, All Rights reserved
+    </div>
+</footer> -->

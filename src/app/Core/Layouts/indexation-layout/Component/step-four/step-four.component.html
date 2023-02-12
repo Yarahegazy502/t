@@ -1,0 +1,1961 @@
+<div class="container-fluid bg-dark">
+  <h5 class="text-center text-light mb-0" style="font-size: 1.5rem ;">indexation</h5>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-2">
+      <a
+        class="btn btn-secondary text-black-50 hover text-black-50 float-right mt-4"
+        role="button"
+        >Back</a
+      >
+    </div>
+    <div class="col-4">
+      <div class="container">
+        <ul class="pagination">
+          <li class="mt-3">
+            <a>1<span class="sr-only"></span></a>
+          </li>
+          <li class="mt-3"><a>2</a></li>
+          <li class="mt-3"><a>3</a></li>
+          <li class="active mt-3"><a>4</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-2">
+      <a
+        class="btn btn-secondary text-black-50 hover text-black-50 mt-4"
+        role="button"
+        >Next
+      </a>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <br />
+</div>
+
+<h3
+  class="text-center mb-4"
+  style="color: white; background-color: #9dc15b; font-size: 20px"
+>
+  أشكال المقايسة النهائية
+</h3>
+
+<div class="row justify-content-center align-items-center">
+  <div style="width: 650px" class="alert alert-dark" role="alert">
+    <h4
+      style="text-align: right; text-decoration: underline"
+      class="alert-heading"
+    >
+      ملاحظات عامة
+    </h4>
+
+    <ul style="text-align: right">
+      <li>
+        نتمنى ان نكون اوضحنا التكلفة التقديرية المتوقعة لتشطيب وحدتك من خلال
+        المواصفات والكميات المدخله <i class="fas fa-circle ml-3"></i>
+      </li>
+
+      <li>
+        كميات المقايسة التى حصلت عليها نتيجة للابعاد والمساحات المدخلة من خلالك
+        وهى بمثابة كميات تقديرية <i class="fas fa-circle ml-3"></i>
+      </li>
+      <li>
+        الاسعار المدرجة بالمقايسة تعتبر اسعار استرشادية قابله للزيادة او النقصان
+        بنسبة (15%) <i class="fas fa-circle ml-3"></i>
+      </li>
+      <li>
+        ينصح بمراجعة مهندس او جهه استشارية متخصصة قبل بدء التنفيذ
+        <i class="fas fa-circle ml-3"></i>
+      </li>
+    </ul>
+
+    <!-- <hr /> -->
+  </div>
+</div>
+<div class="row justify-content-center align-items-center">
+  <div style="width: 650px" class="alert alert-dark" role="alert">
+    <span class="d-block" style="font-size: medium; text-align: right">
+      فى حالة وجود مشكلة او شكوى او اضافة ذات قيمة يمكن التواصل مع فريق الدعم
+      الفنى عن طريق
+    </span>
+    <span class="d-block" style="font-size: medium; text-align: right">
+      @dtopiaeg <i class="fab fa-facebook" style="color: blue"></i> الرسائل علي
+      صفحة الفيس بوك
+    </span>
+    <span class="d-block" style="font-size: medium; text-align: right">
+      Info@Dtopia-eg.com او البريد الالكتروني
+    </span>
+  </div>
+</div>
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-2">
+      <!-- <div class="commercial float-left" style="height: 150px">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="150"
+        />
+      </div> -->
+    </div>
+
+    <div class="col-8">
+      <form [formGroup]="ChoiceForm">
+        <div class="form-check ml-5">
+          <input
+            class="form-check-input"
+            type="radio"
+            id="flexRadioDefault1"
+            formControlName="cIndxFormChoice"
+            (change)="DisplayIndexationDataForm($event)"
+            value="1"
+          />
+          <h3 style="display: inline-block">تكلفة المقايسة كبنود</h3>
+        </div>
+        <div class="form-check ml-5">
+          <input
+            class="form-check-input"
+            type="radio"
+            id="flexRadioDefault2"
+            formControlName="cIndxFormChoice"
+            (change)="DisplayIndexationDataForm($event)"
+            value="2"
+          />
+          <h3 style="display: inline-block">تكلفة المقايسة كفراغات</h3>
+        </div>
+        <div class="form-check ml-5">
+          <input
+            class="form-check-input"
+            type="radio"
+            id="flexRadioDefault3"
+            formControlName="cIndxFormChoice"
+            (change)="DisplayIndexationDataForm($event)"
+            value="3"
+          />
+          <h3 style="display: inline-block">تكلفة المقايسة كاسعار تفصيلية</h3>
+        </div>
+        <!-- <div class=" form-check ml-5">
+                    <input class="form-check-input" type="radio" id="flexRadioDefault4" formControlName="cIndxFormChoice" (change)="DisplayIndexationDataForm($event)" value="4">
+                    <h4 style="display: inline-block;">Detailed item indexation + total cost</h4>
+                </div> -->
+      </form>
+    </div>
+
+    <div class="col-2">
+      <!-- <div class="commercial" style="float: right; height: 150px">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="150"
+        />
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!------------------------------------------------------------------------>
+
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-2">
+      <!-- <div class="commercial" style="float: left">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="190"
+        />
+      </div> -->
+      <!-- <div class="commercial" style="float: left">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="190"
+        />
+      </div> -->
+      <!-- <div class="commercial" style="float: left">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="190"
+        />
+      </div> -->
+      <!-- <div class="commercial" style="float: left">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="190"
+        />
+      </div> -->
+    </div>
+
+    <div class="col-8">
+      <!-- 
+                ========================================
+             -->
+      <form [formGroup]="FixForm">
+        <h4 class="project-info1">بيانات الوحدة</h4>
+        <div class="address-details d-flex">
+          <div class="input-group m-2">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Address</span
+            >
+            <input
+              type="text"
+              formControlName="cAddress"
+              readonly
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+          <div class="input-group m-2">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Floor</span
+            >
+            <input
+              type="text"
+              formControlName="cFloor"
+              readonly
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Area(m2)</span
+            >
+            <input
+              type="text"
+              formControlName="cArea"
+              readonly
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+        </div>
+        <div class="unit-type d-flex">
+          <div class="input-group m-2">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Site Type</span
+            >
+            <input
+              type="text"
+              formControlName="cSiteType"
+              readonly
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+        </div>
+
+        <div class="unit-type d-flex">
+          <div class="input-group m-2">
+            <span class="input-group-text">حالة المشروع</span>
+            <input
+              type="text"
+              formControlName="cProjectStatus"
+              readonly
+              aria-label="First name"
+              class="form-control"
+              placeholder="condition-1"
+            />
+            <span class="input-group-text">الإشراف</span>
+            <input
+              type="text"
+              formControlName="cEngSupervision"
+              readonly
+              aria-label="First name"
+              class="form-control"
+              placeholder="Included"
+            />
+          </div>
+        </div>
+
+        <!-- Dynamic -->
+
+        <ng-container *ngIf="strSpaceData.length < 3">
+          <div class="row d-flex mt-4">
+            <div class="col-lg-3">
+              <h4 class="m-1">مكونات الوحدة</h4>
+            </div>
+            <ng-container *ngFor="let itm of strSpaceData">
+              <div class="col-lg-2">
+                <input
+                  type="text"
+                  style="width: 110px"
+                  [value]="itm.name"
+                  readonly
+                  class="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                  placeholder="Room"
+                />
+              </div>
+              <div class="col-lg-1">
+                <p class="text-center mt-2">
+                  {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                </p>
+              </div>
+            </ng-container>
+          </div>
+        </ng-container>
+
+        <ng-container
+          *ngIf="strSpaceData.length >= 3 && strSpaceData.length % 3 == 0"
+        >
+          <div
+            class="row d-flex mt-4"
+            *ngFor="
+              let num of GetNumbers(GetIntegerNumber(strSpaceData.length / 3));
+              let i = index
+            "
+          >
+            <ng-container *ngIf="strSpaceData.length <= 3 && i == 0">
+              <div class="col-lg-3">
+                <h4 class="m-1">مكونات الوحدة</h4>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData">
+                <div class="col-lg-2">
+                  <input
+                    type="text"
+                    style="width: 110px"
+                    [value]="itm.name"
+                    readonly
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    placeholder="Room"
+                  />
+                </div>
+                <div class="col-lg-1">
+                  <p class="text-center mt-2">
+                    {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                  </p>
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length > 3 && i == 0">
+              <div class="col-lg-3">
+                <h4 class="m-1">مكونات الوحدة</h4>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length - i * 3 >= 3 && i > 0">
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length - i * 3 < 3 && i > 0">
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+
+        <ng-container
+          *ngIf="strSpaceData.length >= 3 && strSpaceData.length % 3 > 0"
+        >
+          <div
+            class="row d-flex mt-4"
+            *ngFor="
+              let num of GetNumbers(
+                GetIntegerNumber(strSpaceData.length / 3) + 1
+              );
+              let i = index
+            "
+          >
+            <ng-container *ngIf="strSpaceData.length <= 3 && i == 0">
+              <div class="col-lg-3">
+                <h4 class="m-1">مكونات الوحدة</h4>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData">
+                <div class="col-lg-2">
+                  <input
+                    type="text"
+                    style="width: 110px"
+                    [value]="itm.name"
+                    readonly
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    placeholder="Room"
+                  />
+                </div>
+                <div class="col-lg-1">
+                  <p class="text-center mt-2">
+                    {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                  </p>
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length > 3 && i == 0">
+              <div class="col-lg-3">
+                <h4 class="m-1">مكونات الوحدة</h4>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length - i * 3 > 3 && i > 0">
+              <div class="col-lg-3">
+                <p></p>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="strSpaceData.length - i * 3 < 3 && i > 0">
+              <div class="col-lg-3">
+                <p></p>
+              </div>
+              <ng-container *ngFor="let itm of strSpaceData; let y = index">
+                <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
+                  <div class="col-lg-2">
+                    <input
+                      type="text"
+                      style="width: 110px"
+                      [value]="itm.name"
+                      readonly
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room"
+                    />
+                  </div>
+                  <div class="col-lg-1">
+                    <p class="text-center mt-2">
+                      {{ itm.length }}*{{ itm.width }}*{{ itm.height }}
+                    </p>
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+
+        <!-- Dynamic -->
+      </form>
+      <!-- 
+                ========================================
+             -->
+
+      <ng-container *ngIf="dblIndxChoiceNo == 1">
+        <div>
+          <div class="project-measurements display-flex">
+            <h4 class="project-info2">تكلفة المقايسة</h4>
+            <p class="project-amount">{{ dblIndexationTotal }} (جم)</p>
+          </div>
+          <br />
+
+          <div
+            class="input-group mb-2"
+            *ngFor="let itm of strRepProjectAssay_TotalItems"
+          >
+            <input
+              type="text"
+              [value]="itm.indexationItemName"
+              readonly
+              class="form-control text-left"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              placeholder=""
+            />
+            <input
+              type="text"
+              [value]="itm.total"
+              readonly
+              class="form-control text-right"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              placeholder=""
+            />
+          </div>
+
+          <div class="input-group mb-2">
+            <input
+              type="text"
+              readonly
+              class="form-control text-left font-weight-bold"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              placeholder="Items Total"
+            />
+            <input
+              type="text"
+              [value]="dblIndexationTotal"
+              readonly
+              class="form-control text-right font-weight-bold"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              placeholder=""
+            />
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- <ng-container  *ngIf="dblIndxChoiceNo == 2">
+                <div>
+                    <div class="project-measurements display-flex">
+                        <h4 class="project-info2">Project Information</h4>
+                        <p class="project-amount">10.000Le</p>
+                    </div>
+                </div>
+
+                <div class="input-group mb-2 mt-4 head-details">
+                    <input type="text" class="form-control text-left" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="electricity">
+                    <input type="text" class="form-control text-right" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="120.000Le">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Quantity</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price price</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                </div>
+
+                <div class="input-group mb-2 mt-4 head-details">
+                    <input type="text" class="form-control text-left" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Plumbing">
+                    <input type="text" class="form-control text-right" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="120.000Le">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Quantity</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price price</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                </div>
+
+                <div class="input-group mb-2 mt-4 head-details">
+                    <input type="text" class="form-control text-left" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Walls">
+                    <input type="text" class="form-control text-right" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="120.000Le">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Quantity</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price price</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                </div>
+
+                <div class="input-group mb-2 mt-4 head-details">
+                    <input type="text" class="form-control text-left" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Floors">
+                    <input type="text" class="form-control text-right" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="120.000Le">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Quantity</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price price</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                </div>
+
+                <div class="input-group mb-2 mt-4 head-details">
+                    <input type="text" class="form-control text-left" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="cieling">
+                    <input type="text" class="form-control text-right" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="120.000Le">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Quantity</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price price</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                </div>
+
+                <div class="input-group mb-2 mt-4 head-details">
+                    <input type="text" class="form-control text-left" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Doors">
+                    <input type="text" class="form-control text-right" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="120.000Le">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Quantity</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price price</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                </div>
+
+                <div class="input-group mb-2 mt-4 head-details">
+                    <input type="text" class="form-control text-left" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Elictricity">
+                    <input type="text" class="form-control text-right" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="120.000Le">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Quantity</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price price</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                </div>
+
+                <div class="input-group mb-2 mt-4 head-details">
+                    <input type="text" class="form-control text-left" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Plumbing">
+                    <input type="text" class="form-control text-right" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="120.000Le">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">Quantity</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price price</span>
+                    <input type="text" aria-label="price" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                    <span class="input-group-text">Price Price</span>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="333">
+                </div>                 
+             </ng-container> -->
+
+      <ng-container *ngIf="dblIndxChoiceNo == 2">
+        <div>
+          <div class="project-measurements display-flex">
+            <h4 class="project-info2">تكلفة المقايسة</h4>
+            <p class="project-amount">{{ dblIndexationTotal }} (جم)</p>
+          </div>
+        </div>
+        <br />
+        <div
+          class="input-group mb-2"
+          *ngFor="let itm of strRepProjectAssay_TotalSpaces"
+        >
+          <input
+            type="text"
+            [value]="itm.spaceDataName"
+            readonly
+            class="form-control text-left"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="RECEPTION"
+          />
+          <input
+            type="text"
+            [value]="itm.total"
+            readonly
+            class="form-control text-right"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="120.000Le"
+          />
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="dblIndxChoiceNo == 3">
+        <div>
+          <div class="project-measurements display-flex">
+            <h4 class="project-info2">تكلفة المقايسة</h4>
+            <p class="project-amount">{{ dblIndexationTotal }} (جم)</p>
+          </div>
+        </div>
+
+        <form [formGroup]="SiteForm">
+          <div
+            class="col-lg-12 col-md-12 col-sm-12 input-group mb-3 mt-3 section-1"
+          >
+            <span class="input-group-text text-center">إسم الفراغ</span>
+            <select
+              class="form-select mr-2 selectpage3-1-1"
+              id="inputGroupSelect01"
+              formControlName="cSpaceData"
+              (click)="DisplaySpaceDetail()"
+            >
+              <option value="0">::: اختر إسم الفراغ :::</option>
+              <option
+                *ngFor="let SD of cmbstrSpaceData"
+                [value]="SD.spaceDataID"
+              >
+                {{ SD.name }}
+              </option>
+            </select>
+            <input
+              type="text"
+              readonly
+              [value]="dblSpaceTotal"
+              class="form-control"
+              formControlName="cSpaceTotal"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+        </form>
+
+        <ng-container *ngIf="strSpaceID != '' && strSpaceID != '0'">
+          <ng-container *ngFor="let space of strRepProjectAssay_DetailedSpaces">
+            <ng-container *ngIf="space.spaceID == strSpaceID">
+              <ng-container *ngFor="let IndxItm of space.indexationDataDetails">
+                <div class="mb-1 tag-accordion">
+                  <h4 class="d-inline m-2">{{ IndxItm.indexationItemName }}</h4>
+                  <span class="span-right"> {{ IndxItm.total }} (جم) </span>
+                </div>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 1"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">العدد</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+                      >
+                        <th>{{ IndxItmD.itemCount }}</th>
+                        <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                        <td>{{ IndxItmD.supplyPrice }}</td>
+                        <td>{{ IndxItmD.workmanShipPrice }}</td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              IndxItmD.itemCount | number: "1.2-2"
+                          }}
+                        </td>
+                        <td>
+                          {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                        </td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              IndxItmD.itemCount +
+                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-container>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 1 && IndxItm.calculatePrice == 2"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">المساحة - م2</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+                      >
+                        <th>
+                          {{ GetWallArea(space.spaceID) | number: "1.2-2" }}
+                        </th>
+                        <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                        <td>{{ IndxItmD.supplyPrice }}</td>
+                        <td>{{ IndxItmD.workmanShipPrice }}</td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              GetWallArea(space.spaceID) | number: "1.2-2"
+                          }}
+                        </td>
+                        <td>
+                          {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                        </td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              GetWallArea(space.spaceID) +
+                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-container>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 3 && IndxItm.calculatePrice == 6"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">المساحة - م2</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+                      >
+                        <th>
+                          {{ GetDoorArea(space.spaceID) | number: "1.2-2" }}
+                        </th>
+                        <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                        <td>{{ IndxItmD.supplyPrice }}</td>
+                        <td>{{ IndxItmD.workmanShipPrice }}</td>
+                        <td>
+                          {{
+                            IndxItmD.supplyPrice + IndxItmD.workmanShipPrice
+                              | number: "1.2-2"
+                          }}
+                        </td>
+                        <td>
+                          {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                        </td>
+                        <td>
+                          {{
+                            IndxItmD.supplyPrice +
+                              IndxItmD.workmanShipPrice +
+                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-container>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 2 && IndxItm.calculatePrice == 5"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">المساحة - م2</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+                      >
+                        <th>
+                          {{ GetWindowArea(space.spaceID) | number: "1.2-2" }}
+                        </th>
+                        <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                        <td>{{ IndxItmD.supplyPrice }}</td>
+                        <td>{{ IndxItmD.workmanShipPrice }}</td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              GetWindowArea(space.spaceID) | number: "1.2-2"
+                          }}
+                        </td>
+                        <td>
+                          {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                        </td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              GetWindowArea(space.spaceID) +
+                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-container>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 7"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">العدد</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+                      >
+                        <th>{{ IndxItmD.itemCount }}</th>
+                        <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                        <td>{{ IndxItmD.supplyPrice }}</td>
+                        <td>{{ IndxItmD.workmanShipPrice }}</td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              IndxItmD.itemCount | number: "1.2-2"
+                          }}
+                        </td>
+                        <td>
+                          {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                        </td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              IndxItmD.itemCount +
+                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-container>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 8"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">العدد</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <ng-container
+                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+                      >
+                        <tr
+                          *ngFor="
+                            let IndxItmDPrice of IndxItmD.indexationDataDetailDPrices
+                          "
+                        >
+                          <th>
+                            {{
+                              GetDependCount(
+                                space.spaceID,
+                                IndxItm.indxItmID,
+                                IndxItmDPrice.indexationItemDetailID
+                              )
+                            }}
+                          </th>
+                          <th>{{ IndxItmDPrice.indexationItemDetailName }}</th>
+                          <td>{{ IndxItmDPrice.supplyPrice }}</td>
+                          <td>{{ IndxItmDPrice.workmanShipPrice }}</td>
+                          <td>
+                            {{
+                              (IndxItmDPrice.supplyPrice +
+                                IndxItmDPrice.workmanShipPrice) *
+                                GetDependCount(
+                                  space.spaceID,
+                                  IndxItm.indxItmID,
+                                  IndxItmDPrice.indexationItemDetailID
+                                ) | number: "1.2-2"
+                            }}
+                          </td>
+                          <td>
+                            {{
+                              IndxItmDPrice.superVisionPrice | number: "1.2-2"
+                            }}
+                          </td>
+                          <td>
+                            {{
+                              (IndxItmDPrice.supplyPrice +
+                                IndxItmDPrice.workmanShipPrice) *
+                                GetDependCount(
+                                  space.spaceID,
+                                  IndxItm.indxItmID,
+                                  IndxItmDPrice.indexationItemDetailID
+                                ) +
+                                IndxItmDPrice.superVisionPrice | number: "1.2-2"
+                            }}
+                          </td>
+                        </tr>
+                      </ng-container>
+                    </tbody>
+                  </table>
+                </ng-container>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 3"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">المساحة - م2</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+                      >
+                        <th>
+                          {{
+                            GetCeilingArea(
+                              space.spaceID,
+                              IndxItm.indexationItemID
+                            ) | number: "1.2-2"
+                          }}
+                        </th>
+                        <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                        <td>{{ IndxItmD.supplyPrice }}</td>
+                        <td>{{ IndxItmD.workmanShipPrice }}</td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              GetCeilingArea(
+                                space.spaceID,
+                                IndxItm.indexationItemID
+                              ) | number: "1.2-2"
+                          }}
+                        </td>
+                        <td>
+                          {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                        </td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              GetCeilingArea(
+                                space.spaceID,
+                                IndxItm.indexationItemID
+                              ) +
+                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-container>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 1 && IndxItm.calculatePrice == 4"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">المساحة - م2</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="
+                          let IndxItmD of IndxItm.indexationDataDetailDs;
+                          let v = index
+                        "
+                      >
+                        <ng-container *ngIf="v == 0 || v == 1">
+                          <th>
+                            {{
+                              GetWallOneAndTwoArea(space.spaceID)
+                                | number: "1.2-2"
+                            }}
+                          </th>
+                          <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                          <td>{{ IndxItmD.supplyPrice }}</td>
+                          <td>{{ IndxItmD.workmanShipPrice }}</td>
+                          <td>
+                            {{
+                              (IndxItmD.supplyPrice +
+                                IndxItmD.workmanShipPrice) *
+                                GetWallOneAndTwoArea(space.spaceID)
+                                | number: "1.2-2"
+                            }}
+                          </td>
+                          <td>
+                            {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                          </td>
+                          <td>
+                            {{
+                              (IndxItmD.supplyPrice +
+                                IndxItmD.workmanShipPrice) *
+                                GetWallOneAndTwoArea(space.spaceID) +
+                                IndxItmD.superVisionPrice | number: "1.2-2"
+                            }}
+                          </td>
+                        </ng-container>
+                        <ng-container *ngIf="v == 2 || v == 3">
+                          <th>
+                            {{
+                              GetWallThreeAndFourArea(space.spaceID)
+                                | number: "1.2-2"
+                            }}
+                          </th>
+                          <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                          <td>{{ IndxItmD.supplyPrice }}</td>
+                          <td>{{ IndxItmD.workmanShipPrice }}</td>
+                          <td>
+                            {{
+                              (IndxItmD.supplyPrice +
+                                IndxItmD.workmanShipPrice) *
+                                GetWallThreeAndFourArea(space.spaceID)
+                                | number: "1.2-2"
+                            }}
+                          </td>
+                          <td>
+                            {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                          </td>
+                          <td>
+                            {{
+                              (IndxItmD.supplyPrice +
+                                IndxItmD.workmanShipPrice) *
+                                GetWallThreeAndFourArea(space.spaceID) +
+                                IndxItmD.superVisionPrice | number: "1.2-2"
+                            }}
+                          </td>
+                        </ng-container>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-container>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 4"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">المساحة - م2</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+                      >
+                        <th>
+                          {{ GetFloorArea(space.spaceID) | number: "1.2-2" }}
+                        </th>
+                        <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                        <td>{{ IndxItmD.supplyPrice }}</td>
+                        <td>{{ IndxItmD.workmanShipPrice }}</td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              GetFloorArea(space.spaceID) | number: "1.2-2"
+                          }}
+                        </td>
+                        <td>
+                          {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                        </td>
+                        <td>
+                          {{
+                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                              GetFloorArea(space.spaceID) +
+                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-container>
+
+                <ng-container
+                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 2"
+                >
+                  <table class="table table-bordered">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">العدد</th>
+                        <th scope="col">الوصف</th>
+                        <th scope="col">سعر التوريدات</th>
+                        <th scope="col">سعر المصنعيات</th>
+                        <th scope="col">سعر البند</th>
+                        <th scope="col">سعر الإشراف</th>
+                        <th scope="col">إجمالى البند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+                      >
+                        <th>1</th>
+                        <th>{{ IndxItmD.indexationItemDetailName }}</th>
+                        <td>{{ IndxItmD.supplyPrice }}</td>
+                        <td>{{ IndxItmD.workmanShipPrice }}</td>
+                        <td>
+                          {{
+                            IndxItmD.supplyPrice + IndxItmD.workmanShipPrice
+                              | number: "1.2-2"
+                          }}
+                        </td>
+                        <td>
+                          {{ IndxItmD.superVisionPrice | number: "1.2-2" }}
+                        </td>
+                        <td>
+                          {{
+                            IndxItmD.supplyPrice +
+                              IndxItmD.workmanShipPrice +
+                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+
+        <!-- <ng-container *ngFor="let space of strRepProjectAssay_DetailedSpaces">
+          <div class="project-discription">
+            <h4 class="text-right">{{ space.spaceName }}</h4>
+            <p class="project-amount">{{ space.total }}</p>
+          </div>
+
+          <ng-container *ngFor="let IndxItm of space.indexationDataDetails">
+            <div class="input-group mb-2 mt-4 head-details">
+              <input
+                type="text"
+                [value]="IndxItm.indexationItemName"
+                readonly
+                class="form-control text-left"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="electricity"
+              />
+              <input
+                type="text"
+                [value]="IndxItm.total"
+                readonly
+                class="form-control text-right"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                placeholder="120.000Le"
+              />
+            </div>
+
+            <ng-container
+              *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 1"
+            >
+              <ng-container
+                *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+              >
+                <div class="input-group">
+                  <span class="input-group-text">العدد</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.itemCount"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر التوريدات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.supplyPrice"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر المصنعيات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.workmanShipPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر الإشراف</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.superVisionPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container
+              *ngIf="IndxItm.indxType == 1 && IndxItm.calculatePrice == 2"
+            >
+              <ng-container
+                *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+              >
+                <div class="input-group">
+                  <span class="input-group-text">المساحة</span>
+                  <input
+                    type="text"
+                    [value]="GetWallArea(space.spaceID)"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر التوريدات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.supplyPrice"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر المصنعيات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.workmanShipPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر الإشراف</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.superVisionPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container
+              *ngIf="IndxItm.indxType == 3 && IndxItm.calculatePrice == 6"
+            >
+              <ng-container
+                *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+              >
+                <div class="input-group">
+                  <span class="input-group-text">المساحة</span>
+                  <input
+                    type="text"
+                    [value]="GetDoorArea(space.spaceID)"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر التوريدات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.supplyPrice"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر المصنعيات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.workmanShipPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر الإشراف</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.superVisionPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container
+              *ngIf="IndxItm.indxType == 2 && IndxItm.calculatePrice == 5"
+            >
+              <ng-container
+                *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+              >
+                <div class="input-group">
+                  <span class="input-group-text">المساحة</span>
+                  <input
+                    type="text"
+                    [value]="GetWindowArea(space.spaceID)"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر التوريدات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.supplyPrice"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر المصنعيات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.workmanShipPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر الإشراف</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.superVisionPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container
+              *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 7"
+            >
+              <ng-container
+                *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+              >
+                <div class="input-group">
+                  <span class="input-group-text">العدد</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.itemCount"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر التوريدات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.supplyPrice"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر المصنعيات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.workmanShipPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر الإشراف</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.superVisionPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container
+              *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 8"
+            >
+              <ng-container
+                *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+              >
+                <div class="input-group">
+                  <span class="input-group-text">العدد</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.itemCount"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر التوريدات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.supplyPrice"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر المصنعيات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.workmanShipPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر الإشراف</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.superVisionPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container
+              *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 3"
+            >
+              <ng-container
+                *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+              >
+                <div class="input-group">
+                  <span class="input-group-text">المساحة</span>
+                  <input
+                    type="text"
+                    [value]="
+                      GetCeilingArea(space.spaceID, IndxItm.indexationItemID)
+                    "
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر التوريدات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.supplyPrice"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر المصنعيات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.workmanShipPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر الإشراف</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.superVisionPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                </div>
+              </ng-container>
+            </ng-container>
+
+            <ng-container
+              *ngIf="IndxItm.indxType == 1 && IndxItm.calculatePrice == 4"
+            >
+              <ng-container
+                *ngFor="
+                  let IndxItmD of IndxItm.indexationDataDetailDs;
+                  let v = index
+                "
+              >
+                <ng-container *ngIf="v == 0 || v == 1">
+                  <div class="input-group">
+                    <span class="input-group-text">المساحة</span>
+                    <input
+                      type="text"
+                      [value]="GetWallOneAndTwoArea(space.spaceID)"
+                      readonly
+                      aria-label="price"
+                      class="form-control"
+                      placeholder="333"
+                    />
+                    <span class="input-group-text">سعر التوريدات</span>
+                    <input
+                      type="text"
+                      [value]="IndxItmD.supplyPrice"
+                      readonly
+                      aria-label="price"
+                      class="form-control"
+                      placeholder="333"
+                    />
+                    <span class="input-group-text">سعر المصنعيات</span>
+                    <input
+                      type="text"
+                      [value]="IndxItmD.workmanShipPrice"
+                      readonly
+                      aria-label="First name"
+                      class="form-control"
+                      placeholder="333"
+                    />
+                    <span class="input-group-text">سعر الإشراف</span>
+                    <input
+                      type="text"
+                      [value]="IndxItmD.superVisionPrice"
+                      readonly
+                      aria-label="First name"
+                      class="form-control"
+                      placeholder="333"
+                    />
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="v == 2 || v == 3">
+                  <div class="input-group">
+                    <span class="input-group-text">المساحة</span>
+                    <input
+                      type="text"
+                      [value]="GetWallThreeAndFourArea(space.spaceID)"
+                      readonly
+                      aria-label="price"
+                      class="form-control"
+                      placeholder="333"
+                    />
+                    <span class="input-group-text">سعر التوريدات</span>
+                    <input
+                      type="text"
+                      [value]="IndxItmD.supplyPrice"
+                      readonly
+                      aria-label="price"
+                      class="form-control"
+                      placeholder="333"
+                    />
+                    <span class="input-group-text">سعر المصنعيات</span>
+                    <input
+                      type="text"
+                      [value]="IndxItmD.workmanShipPrice"
+                      readonly
+                      aria-label="First name"
+                      class="form-control"
+                      placeholder="333"
+                    />
+                    <span class="input-group-text">سعر الإشراف</span>
+                    <input
+                      type="text"
+                      [value]="IndxItmD.superVisionPrice"
+                      readonly
+                      aria-label="First name"
+                      class="form-control"
+                      placeholder="333"
+                    />
+                  </div>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+
+            <ng-container
+              *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 4"
+            >
+              <ng-container
+                *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
+              >
+                <div class="input-group">
+                  <span class="input-group-text">المساحة</span>
+                  <input
+                    type="text"
+                    [value]="GetFloorArea(space.spaceID)"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر التوريدات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.supplyPrice"
+                    readonly
+                    aria-label="price"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر المصنعيات</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.workmanShipPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                  <span class="input-group-text">سعر الإشراف</span>
+                  <input
+                    type="text"
+                    [value]="IndxItmD.superVisionPrice"
+                    readonly
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="333"
+                  />
+                </div>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </ng-container> -->
+      </ng-container>
+    </div>
+
+    <div class="col-2">
+      <!-- <div class="commercial" style="float: right">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="190"
+        />
+      </div>
+      <div class="commercial" style="float: right">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="190"
+        />
+      </div>
+      <div class="commercial" style="float: right">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="190"
+        />
+      </div>
+      <div class="commercial" style="float: right">
+        <h4>Commercials</h4>
+        <img
+          src="assets/images/commercial-wallpaper-10.jpg"
+          alt=""
+          width="180"
+          height="190"
+        />
+      </div> -->
+    </div>
+  </div>
+</div>
+<!------------------------------------------------------------------------>
+
+<div class="container mb-3 mt-4">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="order">
+        <button
+          (click)="GoToProfile()"
+          class="btn btn-primary buttonpage4-2"
+          type="button"
+          style="width: 200px"
+        >
+          Go To My Profile
+        </button>
+      </div>
+    </div>
+
+    <div class="col-4"></div>
+
+    <div class="col-3"></div>
+  </div>
+
+  <app-mat-spinner-overlay [overlay]="Loading"> </app-mat-spinner-overlay>
+</div>
+
+<!-- <div class="container mb-3">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-3">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button
+          class="btn btn-primary me-md-2 buttonpage4-2"
+          type="button"
+          style="width: 200px"
+          (click)="GoToProfile()"
+        >
+          Go To My Profile
+        </button>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+      </div>
+    </div>
+
+    <div class="col-3"></div>
+  </div>
+</div> -->

@@ -1,0 +1,843 @@
+/** Main Colores used 9dc15b
+       backgrround #2A3F54
+       logo #9dc15b 
+       hover #2f465e
+    */
+:root {
+    --main-dark: #343a40;
+    --main-green: #9dc15b;
+}
+
+body {
+    font-family: "Helvetica Neue", "Roboto", Arial, "Droid Sans", sans-serif;
+    box-sizing: border-box;
+
+
+}
+
+a {
+    color: var(--main-green) !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white !important;
+    text-decoration: none;
+}
+
+.bg-light {
+    background-color: var(--main-dark) !important;
+    /*the new color*/
+}
+
+input {
+    /* width: 300px !important; */
+    text-align: center;
+
+}
+
+h2 {
+    color: var(--main-dark) !important;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+h2:hover {
+    color: var(--main-green) !important;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+.btn-secondary {
+    background-color: #9dc15b;
+    border-color: #9dc15b
+}
+
+.btn-secondary:hover {
+    color: var(--main-green);
+    background-color: #343a40 !important;
+    border-color: var(--main-green);
+}
+
+.btn-secondary:selection {
+    color: var(--main-green);
+    background-color: #343a40;
+    border-color: var(--main-green);
+
+}
+
+.pagination li.active {
+    background-color: #9dc15b;
+}
+
+/* h3 {
+    text-align: center;
+} */
+
+.float-left {
+    float: left !important;
+}
+
+.float-right {
+    float: right !important;
+    clear: both;
+}
+
+.row {
+    margin-right: 0% !important;
+}
+
+/***********End Global***********/
+
+
+/**********logo title ***********/
+
+.logotitle {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin: 0px 25px 0px 15px;
+}
+
+.ttext {
+    color: var(--main-green);
+}
+
+
+/******navbar*************/
+
+.navbar-nav .dropdown-menu {
+    background-color: var(--main-dark) !important;
+}
+
+.dropdown-item:hover {
+    background-color: #212529 !important;
+}
+
+.navbar-light .navbar-toggler {
+    border: 1px solid #9dc15b !important;
+}
+
+/********carousel*******/
+
+.carousel-indicators li {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    background-color: var(--main-green);
+}
+
+.col-form-label {
+    padding-left: 85px;
+    padding-top: 22px;
+    text-align: left;
+    font-size: 20px;
+}
+
+
+fieldset {
+    display: none
+}
+
+fieldset.show {
+    display: block
+}
+
+select:focus,
+input:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid var(--main-green) !important;
+    outline-width: 0 !important;
+    font-weight: 400
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-green);
+}
+
+.box {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px
+}
+
+/**************************end modal***************/
+
+.container-fluid {
+    padding: auto;
+}
+
+
+/****************Start our services & our option************/
+
+.commercial {
+    color: white;
+    text-align: center;
+    background-color: var(--main-dark);
+    padding: 0;
+    width: 180px;
+    height: 250px;
+    clear: both;
+}
+
+#child1,
+#child2 {
+    text-align: center;
+    color: white;
+    background-color: var(--main-dark);
+    margin: 0px -15px 0px -15px;
+}
+
+.left-child-option {
+    background-color: var(--main-green);
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+}
+
+.right-child-option {
+    background-color: var(--main-green);
+}
+
+.left-child-option .options h3,
+.right-child-option .services h3 {
+    color: white;
+    margin-top: 15px;
+    font-size: 23px;
+}
+
+.left-child-option .options img,
+.right-child-option .services img {
+    margin-top: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.options .col-lg {
+    background-color: var(--main-green);
+}
+
+
+/********End our services & our option************/
+
+
+/**************************************Start our vision************/
+
+.vision-main {
+    border: 1px solid var(--main-green);
+    box-shadow: 10px 4px 10px var(--main-dark);
+}
+
+.vision-main h2 {
+    background-color: var(--main-green);
+    color: var(--main-dark) !important;
+}
+
+.vision-main h2:hover {
+    background-color: var(--main-dark);
+    color: white !important;
+}
+
+.vision-main p {
+    text-align: justify;
+}
+
+
+/**************************************End our vision************/
+
+
+/**************************************start our sponsers******/
+
+.sponsers-main h2 {
+    background-color: var(--main-green);
+    color: var(--main-dark) !important;
+}
+
+.sponsers-main h2:hover {
+    background-color: var(--main-dark);
+    color: white !important;
+}
+
+.sponsers-details ul li {
+    display: inline-block;
+    border: 1px solid var(--main-green);
+    margin: 1%;
+    height: 75px;
+    width: 8%;
+}
+
+.sponsers-details ul li:hover {
+    border: 2px solid var(--main-dark);
+}
+
+
+/******************footer******************/
+
+footer {
+    color: var(--main-green);
+    bottom: 0;
+    width: 100%;
+    background-color: var(--main-dark);
+}
+
+footer h6 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/*************button up*****************/
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 999;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--main-green);
+    color: white;
+    border: 2px solid #343a40;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+
+/*************End button up*****************/
+
+
+/*******page-1**/
+
+.child-data {
+    text-align: center;
+    background-color: var(--main-green);
+    color: var(--main-dark);
+}
+
+.child-data form {
+    padding: 0 !important;
+}
+
+.child-data h4 {
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.child-data input {
+    width: 425px !important;
+    margin-bottom: 15px !important;
+}
+
+
+/*******page-2*************/
+
+.accordion-2 {
+    margin-top: 10px;
+}
+
+.window-text {
+    width: 349px !important;
+    margin-left: 13px;
+}
+
+.door-text {
+    width: 352px !important;
+    margin-left: 33px;
+}
+
+.full-address-left {
+    border-radius: 10px;
+    max-width: 48%;
+    margin: 1%;
+    background-color: var(--main-green);
+    float: left;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.full-address-right {
+    border-radius: 10px;
+    max-width: 48%;
+    margin: 1%;
+    background-color: var(--main-green);
+    float: right;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.full-address h4 {
+    margin: 13px 0px 0px 20px;
+    float: left;
+}
+
+.full-address input {
+    float: right;
+}
+
+.address-area {
+    clear: both;
+}
+
+/********************page 3*********************/
+.section-1 span {
+    margin-left: -15px;
+}
+
+.section-1 .form-control {
+    margin-right: -10px;
+    margin-left: -8px;
+}
+
+.accordion-3 {
+    margin-top: 10px;
+}
+
+/* .accordion-3 button {
+    width: 80%;
+} */
+
+.accordion-3 input {
+    background-color: #9dc15b;
+    color: white;
+    width: 19%;
+    height: 38px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.selectpage3-1-1 {
+    width: 60%;
+}
+
+
+.electricity label {
+    margin-left: 10px;
+}
+
+.ceiling input {
+
+    width: 50px !important;
+}
+
+
+/********************page 4 *************************/
+
+.form-check-input {
+
+    margin-left: -30px !important;
+}
+
+.project-measurements {
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #9dc15b;
+    color: #343a40;
+}
+
+.project-measurements h4 {
+
+    display: inline-block;
+}
+
+.project-measurements p {
+    display: inline-flex;
+    float: right;
+    font-size: large;
+}
+
+.project-discription {
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #343a40;
+    color: white;
+}
+
+.project-discription h4 {
+    width: 50%;
+    display: inline-block;
+}
+
+.project-discription p {
+    display: inline-flex;
+    float: right;
+    font-size: large;
+}
+
+
+.project-info1 {
+    background-color: #343a40;
+    color: white;
+}
+
+.buttonpage4-2 {
+    margin-left: 25%;
+}
+
+.head-details input {
+    background-color: #e9ecef;
+}
+
+.items-price {
+    display: inline-flex;
+
+}
+
+/************tab-section page4-4***********/
+
+.tab-section .nav-tabs .nav-link.active {
+    color: white;
+    background-color: var(--main-green);
+}
+
+
+/**********end tab-section page4-4****************/
+
+/**************end address *****************/
+
+
+/**********************Start Our Clients************************/
+
+.Our-Clients {
+    text-align: center;
+    background-color: var(--main-green);
+}
+
+.Our-Clients h4 {
+    color: #fff;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.Our-Clients img {
+    border-radius: 50%;
+    display: block;
+    opacity: 0.5;
+    filter: alpha(opacity=0.5);
+    /*IE*/
+    -webkit-transition: all 0.7s ease-in-out;
+    -MOZ-transition: all 0.7s ease-in-out;
+    -O-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+    -webkit-filter: alpha(opacity=0.5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.Our-Clients img:hover {
+    opacity: 1;
+    border: 1px solid var(--main-green);
+}
+
+.Our-Clients p {
+    margin-top: 15px;
+}
+
+
+/**********************end Our Clients************************/
+
+
+/*******start owner data ***/
+
+.owner-data {
+    overflow: hidden;
+    border: 1px solid var(--main-green);
+}
+
+.owner-data label {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.owner-data input {
+    margin: 2px;
+}
+
+/*  in page 3 floors accordion some text here*/
+.textForCeiling {
+    color: red;
+    font-size: 14px;
+}
+
+/*******End owner data***/
+
+
+/************************start owner profile**********/
+
+.owner-profile {
+    border-left: 2px solid var(--main-green);
+    border-right: 2px solid var(--main-green);
+}
+
+.owner-profile h3 {
+    font-weight: bold;
+    background-color: var(--main-green);
+    color: var(--main-dark);
+}
+
+.owner-profile h3:hover {
+    background-color: var(--main-dark);
+    color: #fff;
+}
+
+.owner-profile label {
+    width: 135px;
+    margin-right: 10px;
+    text-justify: auto;
+}
+
+.owner-profile input {
+    margin: 2px;
+}
+
+
+/******end owner profile**********/
+
+/****************plus and munis button****************************/
+
+.qty .count {
+    color: #000;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px;
+    min-width: 35px;
+    text-align: center;
+    width: 43px !important;
+    margin-top: 0px;
+
+}
+
+
+
+
+.qty .plus {
+    background-color: #9dc15b !important;
+    margin-top: 17px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial, sans-serif;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.qty .minus {
+    background-color: #9dc15b !important;
+    margin-top: 17px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial, sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+
+.minus:hover {
+    background-color: #717fe0 !important;
+}
+
+.plus:hover {
+    background-color: #717fe0 !important;
+}
+
+/*Prevent text selection*/
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:disabled {
+    background-color: white;
+}
+
+/***********radio puttons***************************/
+
+input[type="radio"],
+input[type="checkbox"] {
+
+    width: 35px !important;
+
+}
+
+input[type='radio']:after {
+    background-color: #9dc15b;
+}
+
+/************************************************************************/
+
+
+/************.fa-cart-arrow-down*****************/
+.fa-arrow-down {
+    color: #343a40 !important;
+}
+
+.fa-arrow-down:hover {
+    color: #9dc15b !important;
+}
+
+/**********************/
+
+#electricity>.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    padding: 0px;
+    max-width: 88%;
+}
+
+/************* page 2***********************/
+
+.table-dark :hover {
+    background-color: #9dc15b;
+}
+
+.space-namePage-2 p {
+    display: inline-block;
+}
+
+
+.space-namePage-2 input {
+    width: 349px !important;
+    margin-left: 39px;
+}
+
+
+.spaces-secondPage p {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+
+.spaces-secondPage input {
+    width: 98px !important;
+    height: 27px;
+}
+
+.windowMeasures .windowHeight {
+    margin-left: 25px;
+}
+
+.windowOne input {
+    width: 100px !important;
+    height: 27px;
+}
+
+/*******************plus and minus buttons in page 1 *******************************************************************/
+
+
+.input-group-btn-vertical>.btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin-left: -5px;
+    position: relative;
+    border-radius: 0;
+}
+
+.input-group-btn-vertical i {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    color: #000;
+}
+
+.fa-minus {
+    border: 1px solid black;
+    font-size: small;
+}
+
+.fa-plus {
+    border: 1px solid black;
+    font-size: small;
+}
+
+/*******************plus and minus buttons in page 1 ends here*******************************************************************/
+
+
+
+/******************************************checkAccount page*************************************************/
+
+.checkAccount .fa-check-circle {
+    margin-top: 150px;
+    font-size: 100px;
+    color: #9dc15b;
+}
+
+.checkAccount h3 {
+    margin-bottom: 190px;
+    margin-top: 30px;
+    text-align: center;
+    color: #9dc15b;
+}
+
+/******************************************************************/
+
+
+/**********************************page contact us starts here ******************************************/
+
+.contact-us .input-group-text {
+    background-color: #9dc15b;
+    color: white;
+    border: 1px solid #343a40;
+    width: 90px;
+}
+
+.contact-info {
+    width: 100px;
+    background-color: #9dc15b;
+    color: white;
+}
+
+.contact-foot {
+    margin-top: 170px;
+}
+
+.send {
+    margin: auto;
+    color: #343a40 !important;
+}
+
+/**********************************page contact us ends here ******************************************/

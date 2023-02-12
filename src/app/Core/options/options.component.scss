@@ -1,0 +1,31 @@
+.f-lex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shadows {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 15px 25px rgb(38 65 50 / 60%);
+    -moz-box-shadow: 0 15px 25px rgb(38 65 50 / 60%);
+    box-shadow: 0 15px 25px rgb(38 65 50 / 60%);
+}
+h3#child1,
+h3#child2,
+h2#chi {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px 0px;
+    margin: 0px;
+}
+.left-child-option,
+.right-child-option {
+    border: 0px;
+}
+.vision-main {
+    border: 1px solid rgba(157, 193, 91,.3);
+    border-radius: 5px;
+    -webkit-box-shadow: 0 15px 25px rgb(38 65 50 / 60%);
+    -moz-box-shadow: 0 15px 25px rgb(38 65 50 / 60%);
+    box-shadow: 0 15px 25px rgb(38 65 50 / 60%);
+}

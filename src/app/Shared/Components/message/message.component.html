@@ -1,0 +1,38 @@
+<div
+  class=""
+  style="
+    height: 190px;
+    width: 740px;
+    border: 1px solid black;
+    border-radius: 5px;
+  "
+>
+  <div class="bg-dark p-2">
+    <h3 class="text-left bg-dark text-white">{{ strTitleMessage }}</h3>
+  </div>
+  <div>
+    <div>
+      <div
+        class="text-center"
+        style="height: 50px; border-bottom: 1px solid black"
+      >
+        <!-- <span><i class="fas fa-check fa-2x mr-5 mt-3 text-light"></i></span> -->
+        <h4 class="m-3 text-left">{{ strBodyMessage }}</h4>
+      </div>
+    </div>
+  </div>
+  <div
+    class="text-right"
+    style="background-color: rgba(180, 177, 177, 0.482); height: 64px"
+  >
+    <button type="button" (click)="Agree()" class="btn btn-success mt-3">Ok</button>
+    <button
+      type="button"
+      (click)="NotAgree()"
+      class="btn btn-light mt-3 mr-3"
+      style="color: green; border: 2px solid green"
+    >
+      Cancel
+    </button>
+  </div>
+</div>

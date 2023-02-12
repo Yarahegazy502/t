@@ -1,0 +1,756 @@
+/*****************************************start head and modal*********/
+
+@media (min-width: 992px) {
+    input::placeholder {
+        display: none;
+    }
+}
+
+
+/*****************************************End head and modal*********/
+
+
+/********commercilas******/
+
+@media(max-width:1418px) {
+    .commercial {
+        display: none;
+        clear: both;
+    }
+
+
+}
+
+
+/********End commercilas******/
+
+
+/**********start our option & our services******/
+
+@media(min-width:992px) and (max-width:1418px) {
+    .option-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .left-child-option .options h3 {
+        font-size: 18px;
+    }
+
+    .right-child-option .services h3 {
+        font-size: 18px;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    .left-child-option img {
+        margin: 20px 0 20px 0 !important;
+        width: 130px;
+        height: 130px;
+    }
+
+    .left-child-option .options h3 {
+        display: inline;
+        padding: 7px;
+        font-size: 23px;
+    }
+
+    .right-child-option .services img {
+        margin-left: 37px;
+    }
+
+    .right-child-option .services h3 {
+        font-size: 23px;
+    }
+
+
+}
+
+@media (min-width:576px) and (max-width:767px) {
+    .option-img {
+        margin-left: 80px;
+    }
+
+    .left-child-option .options h3,
+    .right-child-option .services h3 {
+
+        text-align: center;
+    }
+}
+
+@media (min-width:377px)and(max-width:575px) {
+    .option-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .left-child-option .options h3 {
+        font-size: 26px;
+        margin: 30px;
+    }
+
+    .right-child-option .services h3 {
+        display: inline;
+        font-size: 33px;
+        margin: 30px;
+    }
+
+    .left-child-option .options img {
+        margin-bottom: 20px;
+    }
+
+    .right-child-option .services img {
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/***********End options part**********************/
+
+
+/***************************start Sponsers********************/
+
+@media(min-width: 576px) and (max-width: 992px) {
+    .sponsers-details ul li {
+        display: inline-block;
+        border: 1px solid #9dc15b;
+        margin: 1%;
+        height: 100px;
+        width: 8.01%;
+    }
+}
+
+@media (max-width: 575px) {
+    .sponsers-details ul li {
+        display: inline-block;
+        border: 1px solid #9dc15b;
+        margin: 1%;
+        height: 230px;
+        width: 28.01%;
+    }
+}
+
+
+/*****************************************start footer********/
+
+@media (max-width: 575px) {
+    footer .col-lg-3 {
+        display: block;
+        border-bottom: 1px dotted rgb(128, 128, 128);
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    footer {
+        text-align: center;
+    }
+}
+
+/*****************************************************start indexation*********/
+@media(min-width: 992px) {
+    .pagination {
+        padding-left: 25px;
+    }
+
+    .pagination>li {
+        background-color: #343a40;
+        border-radius: 50% !important;
+        width: 50px;
+        line-height: 50px;
+        margin-right: auto;
+        text-align: center;
+        display: inline-block;
+        border: 1px solid #9dc15b;
+    }
+
+    .pagination>li>a {
+        color: white !important;
+        font-size: 20px;
+    }
+
+    .pagination>li:hover {
+        background-color: #9dc15b;
+    }
+}
+
+@media(max-width: 991px) {
+    .pagination>li {
+        background-color: #343a40;
+        border-radius: 50% !important;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: auto;
+        text-align: center;
+        display: inline-block;
+        border: 0px;
+        max-width: 100%;
+        padding: 0px !important;
+        margin-top: 25px !important;
+    }
+
+    .pagination>li>a {
+        font-size: 15px !important;
+        color: white !important;
+    }
+
+}
+
+/************************************************************/
+/**************page 1 site data part***********/
+@media(min-width: 992px) {
+
+    .labelpage1-1-1 {
+        width: 75px !important;
+        height: 25px !important;
+    }
+
+    .labelpage1-1-2 {
+        width: 50px;
+        height: 25px;
+    }
+
+    .labelpage1-1-3 {
+        width: 52px;
+        height: 25px;
+        margin-left: 8px;
+    }
+
+    .inputpage1-1-1 {
+        height: 25px;
+        width: 37% !important;
+        margin-top: 0px !important;
+
+    }
+
+    .inputpage2-1-1 {
+        height: 25px;
+        width: 37% !important;
+        margin-top: 0px !important;
+        margin-right: 38px !important;
+    }
+
+    .inputpage1-1-2 {
+        width: 15% !important;
+        height: 25px;
+        margin-top: 0px !important;
+    }
+
+    .inputpage1-1-3 {
+        width: 11% !important;
+        height: 25px;
+        margin-top: 0px !important;
+    }
+
+    /***************************************end site data page 1 *******/
+    /*****start space type page 1 *****/
+    .labelpage1-2-1 {
+        width: 100px;
+        height: 30px;
+    }
+
+    .labelpage1-2-2 {
+        width: 90px;
+        height: 30px;
+        margin-left: -40px;
+    }
+
+    .selectpage1-2-1 {
+        /*choose menu*/
+        width: 320px;
+        height: 30px;
+    }
+
+    .inputpage1-2-1 {
+        width: 10% !important;
+        height: 30px;
+        margin-top: 0% !important;
+    }
+}
+
+/*end page 1*/
+@media(min-width: 992px) {
+
+    /****************start page 2**************************/
+    .labelpage2-1-1 {
+        height: 25px;
+    }
+
+    .selectpage2-1-1 {
+        width: 130px;
+        height: 25px;
+    }
+
+    .labelpage2-1-2 {
+        width: 110px;
+        height: 25px;
+        margin-left: 50px;
+    }
+
+    .labelpage2-1-3 {
+        width: 110px;
+        height: 25px;
+        margin-left: 50px;
+    }
+
+    .inputpage2-1-2 {
+        height: 25px;
+        width: 70px !important;
+        margin-top: 0px !important;
+    }
+
+    .labelpage2-1-4 {
+        width: 117px;
+        height: 25px;
+        margin-top: 5px;
+    }
+
+    .inputpage2-1-3 {
+        height: 25px;
+        width: 105px !important;
+        margin-top: 5px !important;
+    }
+
+    .labelpage2-1-5 {
+        width: 115px;
+        height: 25px;
+        margin-left: 50px;
+        margin-top: 5px;
+    }
+
+    .inputpage2-1-4 {
+        height: 25px;
+        width: 105px !important;
+        margin-top: 5px !important;
+    }
+
+    .arrowpage2.fa-arrow-down:before {
+        margin-left: 100px;
+        content: "\f063";
+    }
+
+    /*****page-3****/
+
+
+    #included {
+        /*radio button*/
+        margin-left: -46px;
+    }
+}
+
+/***********************************end min 992px********/
+@media(max-width: 991px) {
+    .row {
+        justify-content: center !important;
+    }
+
+    /****************site-data part page 1 *****************/
+
+    .labelpage1-1-1 {
+        width: 80px !important;
+        height: 30px !important;
+        margin-left: -40px !important;
+        margin-top: 1px;
+        margin-bottom: 5px;
+
+    }
+
+    .labelpage1-1-2 {
+        width: 80px;
+        height: 30px;
+        margin-left: -40px !important;
+        margin-bottom: 5px;
+
+    }
+
+    .labelpage1-1-3 {
+        width: 80px;
+        height: 30px;
+        margin-left: -40px !important;
+
+    }
+
+    .inputpage1-1-1 {
+        height: 30px;
+        width: 86% !important;
+        margin-top: 1px !important;
+        margin-right: -22px;
+        margin-bottom: 5px;
+    }
+
+    .inputpage1-1-2 {
+        height: 30px;
+        width: 86% !important;
+        margin-top: 1px !important;
+        margin-right: -22px;
+        margin-bottom: 5px;
+    }
+
+    .inputpage1-1-3 {
+        height: 30px;
+        width: 86% !important;
+        margin-top: 0px !important;
+        margin-right: -22px;
+    }
+
+    /****************end site-data part page 1 *****************/
+    /*****************-------space type page 1-------****************/
+    .labelpage1-2-1 {
+        width: 85px;
+        height: 30px;
+        margin-top: 0px;
+        margin-left: -40px;
+
+    }
+
+    /*choose button*/
+    .selectpage1-2-1 {
+        width: 188px;
+        height: 30px;
+        margin-right: -22px !important;
+    }
+
+    .labelpage1-2-2 {
+        width: 85px;
+        height: 30px;
+        margin-left: -40px;
+    }
+
+    .inputpage1-2-1 {
+        height: 30px;
+        width: 88px !important;
+        margin-top: 0px !important;
+    }
+
+    .fa-arrow-down:before {
+        margin-left: -33px;
+        content: "\f063";
+    }
+
+    .table-page1-1 {
+        margin-left: -40px;
+        width: 131%;
+    }
+
+    .table thead th {
+        font-size: 13px;
+    }
+}
+
+/*********************end page one*************** 
+***/
+
+
+@media(max-width: 991px) {
+
+    /*****commercials page 2 ********/
+    .commercial-leftpage2-1 {
+        display: none;
+    }
+
+    .commercial-rightpage2-1 {
+        display: none;
+    }
+
+    .table-page2-1 {
+        margin-left: -50px;
+        width: 141% !important;
+    }
+
+    .table-page2-1 thead th {
+        font-size: small;
+        padding: 3px 4px 3px 2px;
+    }
+
+    /******end page one max-width: 991px;*********/
+
+    .spaces-secondPage {
+        margin-top: 20px;
+    }
+
+    .spaces-secondPage input {
+        width: 71px !important;
+    }
+
+    .labelpage2-1-1 {
+        height: 25px;
+    }
+
+    .selectpage2-1-1 {
+        width: 140px;
+        height: 25px;
+    }
+
+    .labelpage2-1-2 {
+        width: 110px;
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .inputpage2-1-1 {
+        height: 25px;
+        width: 42% !important;
+        margin-top: 10px !important;
+    }
+
+    .labelpage2-1-3 {
+        width: 110px;
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .inputpage2-1-2 {
+        height: 25px;
+        width: 123px !important;
+        margin-top: 10px !important;
+    }
+
+    .labelpage2-1-4 {
+        width: 117px;
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .inputpage2-1-3 {
+        height: 25px;
+        width: 117px !important;
+        margin-top: 10px !important;
+    }
+
+    .labelpage2-1-5 {
+        width: 115px;
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .inputpage2-1-4 {
+        height: 25px;
+        width: 120px !important;
+        margin-top: 10px !important;
+    }
+
+    .arrowpage2.fa-arrow-down:before {
+        margin-left: 19px;
+        content: "\f063";
+    }
+
+    #included {
+        /*radio button*/
+        margin-left: -41px;
+    }
+
+    .all-accordionsPage2,
+    .all-accordionsPage3 {
+        text-align: center;
+        margin: auto;
+    }
+
+    .all-accordionsPage2 button {
+        background-color: #9dc15b;
+        color: white;
+        width: 410px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    /* .all-accordionsPage3 .price {
+        color: white;
+        width: 100px;
+        background-color: #9dc15b;
+    } */
+
+
+    .text-center h5 {
+        font-size: 16px;
+    }
+
+    .space-namePage-2 input {
+        width: 349px !important;
+        margin-left: 24px;
+        margin-right: 10px;
+    }
+
+    .windowHeight {
+        margin-top: 10px;
+    }
+}
+
+.card {
+    /* width: fit-content; */
+    border: 3px solid #9dc15b;
+}
+
+
+/*end media (max-width: 991px)*/
+
+/**********************************************page 3 ********************************/
+
+@media(min-width: 991px) {
+    .main-accordion2 {
+        background-color: #9dc15b;
+        color: white;
+        width: 426px !important;
+    }
+
+    /* .main-accordion {
+        width: 435px;
+        background-color: #9dc15b !important;
+        color: white;
+        border: 2px solid #343a40 !important;
+    } */
+
+    .main-accordion.second-page {
+        background-color: #9dc15b !important;
+        color: white;
+        width: 532px;
+    }
+
+    /* .price {
+        margin-top: 10px;
+        background-color: #9dc15b !important;
+        color: white;
+        border: 2px solid #343a40 !important;
+    } */
+
+}
+
+
+
+/************/
+
+@media(max-width: 991px) {
+    .electricity label {
+        margin: 0;
+        /* margin-left: 10px; */
+        font-size: 14px;
+    }
+
+    .labelpage3-1-1 {
+        margin-left: 58px;
+        height: 25px;
+    }
+
+    .main-accordion2 {
+        background-color: #9dc15b;
+        color: white;
+        width: 540px !important;
+    }
+
+
+}
+
+/*inside accordion*/
+@media(min-width: 992px) {
+    .labelpage3-1-2 {
+        height: 30px;
+    }
+
+    .selectpage3-1-2 {
+        width: 120px;
+    }
+
+    .labelpage3-1-3 {
+        width: 86px;
+        height: 30px;
+        margin-left: 6px;
+    }
+
+    .inputpage-3-1-1 {
+        height: 30px;
+        width: 10% !important;
+        margin-top: 0 !important;
+    }
+}
+
+.btn-link {
+
+    color: white;
+    text-decoration: none !important;
+    font-size: 22px;
+
+}
+
+@media(max-width: 991px) {
+    .labelpage3-1-2 {
+        height: 30px;
+        margin-left: -44px;
+    }
+
+    .selectpage3-1-2 {
+        width: 121px;
+        height: 30px;
+        margin-right: -60px;
+    }
+
+    .labelpage3-1-3 {
+        width: 84px;
+        height: 30px;
+    }
+
+    .inputpage-3-1-1 {
+        height: 30px;
+        width: 9% !important;
+        margin-top: 0 !important;
+    }
+
+    .arrowpage3-1.fa-arrow-down:before {
+        margin-left: -51px;
+        content: "\f063";
+    }
+
+    .table-page2-1 thead th {
+        font-size: small;
+        padding: 3px 4px 3px 2px;
+    }
+}
+
+/********************************************page 4***********************************************/
+@media(min-width: 992px) {
+
+    .buttonpage4-2,
+    .buttonpage4-3 {
+        color: #343a40;
+        border: #9dc15b;
+        height: 47px;
+        width: inherit;
+        background-color: #9dc15b !important;
+    }
+
+    .buttonpage4-2:hover,
+    .buttonpage4-3:hover {
+        color: white;
+        background-color: #343a40 !important;
+        border: 2px solid var(--main-green);
+    }
+}
+
+
+
+
+@media(max-width: 991px) {
+
+
+
+    .buttonpage4-2 {
+
+        color: #343a40;
+        border: 2px solid #9dc15b;
+        background-color: #9dc15b !important;
+    }
+
+    .buttonpage4-3 {
+        color: #343a40;
+        border: 2px solid #9dc15b;
+        background-color: #9dc15b !important;
+    }
+
+    .buttonpage4-2:hover,
+    .buttonpage4-3:hover {
+        color: white;
+        background-color: #343a40 !important;
+        border: 2px solid var(--main-green);
+    }
+}
