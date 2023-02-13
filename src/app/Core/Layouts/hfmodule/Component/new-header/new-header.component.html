@@ -1,127 +1,390 @@
-<!-- <div class="row support_panel px-5 dash" [ngClass]="getDashClass()" [class.none]="!isShow" id="actions" x>
-    <div class="container" style="padding-top: 0px;">
-      <div class="row">
-        <div class="col-sm-9">
-          <h6 class="dtopia_title">How to Shop</h6>
-          <div class="dtopia_content">
-            <div class="row">
-              <div class="col-sm-4">
-                <p>
-                  <span class="dtopia_step_num">1</span>
-                  <span class="dtopia_step">Login or create new account.</span>
-                </p>
-              </div>
-              <div class="col-sm-4">
-                <p>
-                  <span class="dtopia_step_num">2</span>
-                  <span class="dtopia_step">Review your order.</span>
-                </p>
-              </div>
-              <div class="col-sm-4">
-                <p>
-                  <span class="dtopia_step_num">3</span>
-                  <span class="dtopia_step">Payment methods</span>
-                </p>
-              </div>
-              <p class="support">If you still have problems, please let us know, by sending an email to
-                support@website.com . Thank you!</p>
+<!-- Begin:: Support Panel -->
+<div class="row support_panel px-5" [class.dash]="isUserModule" [ngClass]="getDashClass()" [class.none]="!isShow"
+  id="actions" x>
+  <div class="container-fluid" style="padding-top: 0px;">
+    <div class="row">
+      <div class="col-sm-9">
+        <h6 class="dtopia_title">How to Shop</h6>
+        <div class="dtopia_content">
+          <div class="row">
+            <div class="col-sm-4">
+              <p>
+                <span class="dtopia_step_num">1</span>
+                <span class="dtopia_step">Login or create new account.</span>
+              </p>
             </div>
+            <div class="col-sm-4">
+              <p>
+                <span class="dtopia_step_num">2</span>
+                <span class="dtopia_step">Review your order.</span>
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <p>
+                <span class="dtopia_step_num">3</span>
+                <span class="dtopia_step">Payment methods</span>
+              </p>
+            </div>
+            <p class="support">If you still have problems, please let us know, by sending an email to
+              support@website.com . Thank you!</p>
           </div>
         </div>
-        <div class="col-sm-3">
-          <h6 class="dtopia_title">Showroom Hours</h6>
-          <span class="hours">Mon-Fri 9:00AM - 6:00AM</span><br>
-          <span class="hours">Sat - 9:00AM-5:00PM</span><br>
-          <span class="hours">Sundays by appointment only!</span>
-        </div>
+      </div>
+      <div class="col-sm-3">
+        <h6 class="dtopia_title">Showroom Hours</h6>
+        <span class="hours">Mon-Fri 9:00AM - 6:00AM</span><br>
+        <span class="hours">Sat - 9:00AM-5:00PM</span><br>
+        <span class="hours">Sundays by appointment only!</span>
       </div>
     </div>
   </div>
-  <header class="main-bg dash" [ngClass]="getDashClass()">
-    <div class="container border-bottom  py-2">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <div class="d-flex gap-3">
-          <a target="_self" class="icon-facebook" title="Facebook">
-            <i class="fa fa-facebook text-white fs-5"></i>
-          </a>
-          <small class="text-white fw-200"> For Questions Call: 0900 800 900</small>
-        </div>
-        <div>
-          <ul class="d-flex flex-wrap justify-content-between align-items-center gap-3 p-0 mb-0 header-nav">
-            <li>
-              <div class="dropdown">
-                <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
-                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fas fa-globe"></i><span>Language</span>
-                </a>
-                <ul class="dropdown-menu border-0 shadow-sm">
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/eg.svg"
-                        class="lang-flag" alt="Arabic"><span class="language">Arabic</span></a></li>
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item"><img src="assets/images/us.svg"
-                        class="lang-flag" alt="English"><span class="language">English</span></a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="">
-              <a class="nav-link px-2 text-white" (click)="show()">Support
+</div>
+<header class="main-bg " [class.dash]="isUserModule" [ngClass]="getDashClass()">
+  <div class="container-fluid border-bottom  py-2">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex gap-3">
+        <a target="_self" class="icon-facebook" title="Facebook">
+          <i class="fa fa-facebook text-white fs-5"></i>
+        </a>
+        <small class="text-white fw-200 mx-2"> For Questions Call: 0900 800 900</small>
+      </div>
+      <div>
+        <ul class="d-flex flex-wrap justify-content-between align-items-center gap-3 p-0 mb-0 header-nav">
+          <li>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
+                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-globe mx-2"></i><span>Language</span>
               </a>
-            </li>
-            <li>
-              <div class="dropdown">
-                <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
-                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <div class="position-relative profile">
-                    <div class="active"></div><img src="assets/images/user-blank.png" alt="user"
-                      class="rounded-circle profile-img">
-                  </div><span>
-                    Hi, Amr</span>
-                </a>
-                <ul class="dropdown-menu border-0 shadow-sm">
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/eg.svg"
-                        class="lang-flag" alt="Arabic"><span class="language">My profile</span></a></li>
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/us.svg"
-                        class="lang-flag" alt="English"><span class="language">Setting</span></a></li>
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item"><img src="assets/images/us.svg"
-                        class="lang-flag" alt="English"><span class="language">Sign out</span></a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="">
-              <a class="nav-link px-2 text-white">Sign in
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img
+                      src="assets/images/images/flags/eg.svg" class="lang-flag" alt="Arabic"><span
+                      class="language">Arabic</span></a></li>
+                <li><a class="d-flex align-items-center gap-2 dropdown-item"><img
+                      src="assets/images/images/flags/us.svg" class="lang-flag" alt="English"><span
+                      class="language">English</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="">
+            <a class="nav-link px-2 text-white" (click)="show()">Support
+            </a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
+                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="position-relative profile">
+                  <div class="active"></div><img src="assets/images/user-blank.png" alt="user"
+                    class="rounded-circle profile-img">
+                </div><span>
+                  Hi, Amr</span>
               </a>
-            </li>
-          </ul>
-        </div>
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/flags/eg.svg"
+                      class="lang-flag" alt="Arabic"><span class="language">My profile</span></a></li>
+                <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/flags/us.svg"
+                      class="lang-flag" alt="English"><span class="language">Setting</span></a></li>
+                <li><a class="d-flex align-items-center gap-2 dropdown-item"><img src="assets/images/flags/us.svg"
+                      class="lang-flag" alt="English"><span class="language">Sign out</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="">
+            <a class="nav-link px-2 text-white">Sign in
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-  </header>
-  <nav class="navbar navbar-expand-lg main-bg dash" [ngClass]="getDashClass()">
+  </div>
+</header>
+<nav class="navbar navbar-expand-lg main-bg" [class.dash]="isUserModule" [ngClass]="getDashClass()">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <div class="dtopia_logo_header">
+        <img src="assets/images/D-Topia-1.svg" width="30px" height="30px" class="d-inline-block align-top" alt="">
+        <svg version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" preserveAspectRatio="none" width="14px" height="5px" viewBox="0 0 14.017 5.006"
+          enable-background="new 0 0 14.017 5.006" xml:space="preserve">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.016,0L7.008,5.006L0,0H14.016z"></path>
+        </svg>
+      </div>
+      <span class="brand-title">D-<span class="brand-letter">T</span>OPIA</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">DT-Options</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">DT-Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">DT-Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Contact DT</a>
+        </li>
+      </ul>
+      <div>
+        <form class="form-inline my-2 my-lg-0">
+          <a class="free-quote text-white" title="GET A FREE QUOTE" target="_self">
+            <strong>FREE</strong>QUOTE
+            <svg version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="none" width="14px"
+              height="5px" viewBox="0 0 14.017 5.006" enable-background="new 0 0 14.017 5.006" xml:space="preserve">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.016,0L7.008,5.006L0,0H14.016z"></path>
+            </svg>
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin:: Support Panel -->
+<!-- <div class="row support_panel px-5" [class.none]="!isShow" id="actions">
     <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <h6 class="dtopia_title">How to Shop</h6>
+                <div class="dtopia_content">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p>
+                                <span class="dtopia_step_num">1</span>
+                                <span class="dtopia_step">Login or create new account.</span>
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p>
+                                <span class="dtopia_step_num">2</span>
+                                <span class="dtopia_step">Review your order.</span>
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p>
+                                <span class="dtopia_step_num">3</span>
+                                <span class="dtopia_step">Payment methods</span>
+                            </p>
+                        </div>
+                        <p class="support">If you still have problems, please let us know, by sending an email to support@website.com . Thank you!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h6 class="dtopia_title">Showroom Hours</h6>
+                <span class="hours">Mon-Fri 9:00AM - 6:00AM</span><br>
+                <span class="hours">Sat - 9:00AM-5:00PM</span><br>
+                <span class="hours">Sundays by appointment only!</span>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Begin:: Options & Support -->
+<!-- <div class="row support_actions">
+    <div class="container" style="padding: 10px;">
+        <div class="row to_row">
+            <div class="col-sm-6 pull-left">
+                <div class="row for_social_icons">
+                    <div class="col-sm-1">
+                        <ul class="social-icons">
+                            <li><a target="_self" class="icon-facebook" title="Facebook"><span class="ti-facebook"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-11">
+                        <div class="questions">
+                            <span class="question">For Questions Call: 0900 800 900</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-sm-6 pull-right">
+                <div class="row">
+                    <div class="col-sm-3 t-right">
+                        <a class="actions actions-link-open none" id="actionLang" title="Language">
+                            <span class="ti-world"></span>
+                            <span class="ico_text" style="padding-left: 5px;">Language</span>
+                        </a>
+                        <div class="language-menu none">
+                            <a class="language-item dt-hover-ltr">
+                                <img src="assets/images/flags/eg.svg" class="lang-flag" alt="Arabic">
+                                Arabic
+                            </a>
+                            <a class="language-item dt-hover-ltr">
+                                <img src="assets/images/flags/us.svg" class="lang-flag" alt="English">
+                                English
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 t-right">
+                        <a class="actions" id="actionSup" (click)="show()" title="Support">
+                            <span class="ti-info"></span>
+                            <span class="ico_text">Support</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 t-right">
+                        <a class="actions greeting-link-open none" id="actionGreeting" title="User">
+                            <div class="position-relative">
+                              <img src="assets/images/user-blank.png" alt="" class="media-object img-circle">
+                            <span class="status bg-success position-absolute"></span>
+                            </div>
+                            <span class="ico_text" style="padding-left: 10px;">Hi, Amr</span>
+                        </a>
+                        <div class="greeting-menu none">
+                            <a class="greeting-item dt-hover-ltr">
+                                <span class="ti-user"></span>
+                                My Profile
+                            </a>
+                            <a class="greeting-item dt-hover-ltr">
+                                <span class="ti-settings"></span>
+                                Setting
+                            </a>
+                            <a class="greeting-item dt-hover-ltr">
+                                <span class="ti-shift-left"></span>
+                                Sign out
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 t-right">
+                        <a href="login.html" class="actions" title="Sgin in">
+                            <span class="ti-shift-right"></span>
+                            <span class="ico_text">Sign In</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div> -->
+<!-- <header class="main-bg dash" [ngClass]="getDashClass()">
+  <div class="container border-bottom  pb-2 pt-4">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex gap-3">
+        <a target="_self" class="icon-facebook" title="Facebook">
+          <i class="fa fa-facebook text-white fs-5"></i>
+        </a>
+        <small class="text-white fw-200"> For Questions Call: 0900 800 900</small>
+      </div>
+      <div>
+        <ul class="d-flex justify-content-between align-items-center gap-3 p-0 mb-0 header-nav">
+          <li>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
+                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-globe"></i><span>Language</span>
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/flags/eg.svg"
+                      class="lang-flag" alt="Arabic"><span class="language">Arabic</span></a></li>
+                <li><a class="d-flex align-items-center gap-2 dropdown-item"><img src="assets/images/flags/us.svg"
+                      class="lang-flag" alt="English"><span class="language">English</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" (click)="show()">Support
+            </a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
+                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="position-relative profile">
+                  <div class="active"></div><img src="assets/images/user-blank.png" alt="user"
+                    class="rounded-circle profile-img">
+                </div><span>
+                  Hi, Amr</span>
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm">
+                <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/flags/eg.svg"
+                      class="lang-flag" alt="Arabic"><span class="language">My profile</span></a></li>
+                <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/flags/us.svg"
+                      class="lang-flag" alt="English"><span class="language">Setting</span></a></li>
+                <li><a class="d-flex align-items-center gap-2 dropdown-item"><img src="assets/images/flags/us.svg"
+                      class="lang-flag" alt="English"><span class="language">Sign out</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2">Sign in
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header> -->
+<!-- Begin:: Separator -->
+<!-- <div class="row">
+    <div class="container" style="padding: 0px;">
+        <div class="separator"></div>
+    </div>
+</div> -->
+<!-- Begin:: Navbar -->
+<!-- <div class="row row_navbar">
+  <div class="container" style="padding: 0px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light container">
       <a class="navbar-brand">
         <div class="dtopia_logo_header">
           <img src="assets/images/D-Topia-1.svg" width="30px" height="30px" class="d-inline-block align-top" alt="">
-          <svg version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" preserveAspectRatio="none" width="14px" height="5px" viewBox="0 0 14.017 5.006"
-            enable-background="new 0 0 14.017 5.006" xml:space="preserve">
+          <svg version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="none" width="14px"
+            height="5px" viewBox="0 0 14.017 5.006" enable-background="new 0 0 14.017 5.006" xml:space="preserve">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M14.016,0L7.008,5.006L0,0H14.016z"></path>
           </svg>
         </div>
         <span class="brand-title">D-<span class="brand-letter">T</span>OPIA</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page">About Us</a>
+        <ul class="navbar-nav mr-auto" style="width: 100% !important;">
+          <li class="nav-item active">
+            <a class="nav-link">About Us <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link">DT-Options</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link">DT-Service</a>
+          <li class="nav-item dropdown">
+
+            <a class="nav-link nav-link-open" role="button" data-toggle="dropdown" aria-expanded="false">
+              DT-Service
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item dt-hover-ltr">Action</a>
+              <a class="dropdown-item dt-hover-ltr">Another action</a>
+
+              <a class="dropdown-item dt-hover-ltr">Something else here</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link">DT-Order</a>
@@ -129,367 +392,19 @@
           <li class="nav-item">
             <a class="nav-link">Contact DT</a>
           </li>
+
         </ul>
-        <div>
-          <form class="form-inline my-2 my-lg-0">
-            <a class="free-quote" title="GET A FREE QUOTE" target="_self">
-              <strong>FREE</strong>QUOTE
-              <svg version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="none" width="14px"
-                height="5px" viewBox="0 0 14.017 5.006" enable-background="new 0 0 14.017 5.006" xml:space="preserve">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.016,0L7.008,5.006L0,0H14.016z"></path>
-              </svg>
-            </a>
-          </form>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   Begin:: Support Panel
-   <div class="row support_panel px-5" [class.none]="!isShow" id="actions">
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-9">
-                  <h6 class="dtopia_title">How to Shop</h6>
-                  <div class="dtopia_content">
-                      <div class="row">
-                          <div class="col-sm-4">
-                              <p>
-                                  <span class="dtopia_step_num">1</span>
-                                  <span class="dtopia_step">Login or create new account.</span>
-                              </p>
-                          </div>
-                          <div class="col-sm-4">
-                              <p>
-                                  <span class="dtopia_step_num">2</span>
-                                  <span class="dtopia_step">Review your order.</span>
-                              </p>
-                          </div>
-                          <div class="col-sm-4">
-                              <p>
-                                  <span class="dtopia_step_num">3</span>
-                                  <span class="dtopia_step">Payment methods</span>
-                              </p>
-                          </div>
-                          <p class="support">If you still have problems, please let us know, by sending an email to support@website.com . Thank you!</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-3">
-                  <h6 class="dtopia_title">Showroom Hours</h6>
-                  <span class="hours">Mon-Fri 9:00AM - 6:00AM</span><br>
-                  <span class="hours">Sat - 9:00AM-5:00PM</span><br>
-                  <span class="hours">Sundays by appointment only!</span>
-              </div>
-          </div>
-      </div>
-  </div> -->
-<!-- Begin:: Options & Support -->
-<!-- <div class="row support_actions">
-      <div class="container" style="padding: 10px;">
-          <div class="row to_row">
-              <div class="col-sm-6 pull-left">
-                  <div class="row for_social_icons">
-                      <div class="col-sm-1">
-                          <ul class="social-icons">
-                              <li><a target="_self" class="icon-facebook" title="Facebook"><span class="ti-facebook"></span></a></li>
-                          </ul>
-                      </div>
-                      <div class="col-sm-11">
-                          <div class="questions">
-                              <span class="question">For Questions Call: 0900 800 900</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="clearfix"></div>
-              <div class="col-sm-6 pull-right">
-                  <div class="row">
-                      <div class="col-sm-3 t-right">
-                          <a class="actions actions-link-open none" id="actionLang" title="Language">
-                              <span class="ti-world"></span>
-                              <span class="ico_text" style="padding-left: 5px;">Language</span>
-                          </a>
-                          <div class="language-menu none">
-                              <a class="language-item dt-hover-ltr">
-                                  <img src="assets/images/flags/eg.svg" class="lang-flag" alt="Arabic">
-                                  Arabic
-                              </a>
-                              <a class="language-item dt-hover-ltr">
-                                  <img src="assets/images/flags/us.svg" class="lang-flag" alt="English">
-                                  English
-                              </a>
-                          </div>
-                      </div>
-                      <div class="col-sm-3 t-right">
-                          <a class="actions" id="actionSup" (click)="show()" title="Support">
-                              <span class="ti-info"></span>
-                              <span class="ico_text">Support</span>
-                          </a>
-                      </div>
-                      <div class="col-sm-3 t-right">
-                          <a class="actions greeting-link-open none" id="actionGreeting" title="User">
-                              <div class="position-relative">
-                                <img src="assets/images/user-blank.png" alt="" class="media-object img-circle">
-                              <span class="status bg-success position-absolute"></span>
-                              </div>
-                              <span class="ico_text" style="padding-left: 10px;">Hi, Amr</span>
-                          </a>
-                          <div class="greeting-menu none">
-                              <a class="greeting-item dt-hover-ltr">
-                                  <span class="ti-user"></span>
-                                  My Profile
-                              </a>
-                              <a class="greeting-item dt-hover-ltr">
-                                  <span class="ti-settings"></span>
-                                  Setting
-                              </a>
-                              <a class="greeting-item dt-hover-ltr">
-                                  <span class="ti-shift-left"></span>
-                                  Sign out
-                              </a>
-                          </div>
-                      </div>
-                      <div class="col-sm-3 t-right">
-                          <a href="login.html" class="actions" title="Sgin in">
-                              <span class="ti-shift-right"></span>
-                              <span class="ico_text">Sign In</span>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-              <div class="clearfix"></div>
-          </div>
-      </div>
-  </div> -->
-<!-- <header class="main-bg dash" [ngClass]="getDashClass()">
-    <div class="container border-bottom  pb-2 pt-4">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <div class="d-flex gap-3">
-          <a target="_self" class="icon-facebook" title="Facebook">
-            <i class="fa fa-facebook text-white fs-5"></i>
-          </a>
-          <small class="text-white fw-200"> For Questions Call: 0900 800 900</small>
-        </div>
-        <div>
-          <ul class="d-flex justify-content-between align-items-center gap-3 p-0 mb-0 header-nav">
-            <li>
-              <div class="dropdown">
-                <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
-                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fas fa-globe"></i><span>Language</span>
-                </a>
-                <ul class="dropdown-menu border-0 shadow-sm">
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/flags/eg.svg"
-                        class="lang-flag" alt="Arabic"><span class="language">Arabic</span></a></li>
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item"><img src="assets/images/flags/us.svg"
-                        class="lang-flag" alt="English"><span class="language">English</span></a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-2" (click)="show()">Support
-              </a>
-            </li>
-            <li>
-              <div class="dropdown">
-                <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
-                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <div class="position-relative profile">
-                    <div class="active"></div><img src="assets/images/user-blank.png" alt="user"
-                      class="rounded-circle profile-img">
-                  </div><span>
-                    Hi, Amr</span>
-                </a>
-                <ul class="dropdown-menu border-0 shadow-sm">
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/flags/eg.svg"
-                        class="lang-flag" alt="Arabic"><span class="language">My profile</span></a></li>
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img src="assets/images/flags/us.svg"
-                        class="lang-flag" alt="English"><span class="language">Setting</span></a></li>
-                  <li><a class="d-flex align-items-center gap-2 dropdown-item"><img src="assets/images/flags/us.svg"
-                        class="lang-flag" alt="English"><span class="language">Sign out</span></a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-2">Sign in
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header> -->
-<!-- Begin:: Separator -->
-<!-- <div class="row">
-      <div class="container" style="padding: 0px;">
-          <div class="separator"></div>
-      </div>
-  </div> -->
-<!-- Begin:: Navbar -->
-<!-- <div class="row row_navbar">
-    <div class="container" style="padding: 0px;">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-        <a class="navbar-brand">
-          <div class="dtopia_logo_header">
-            <img src="assets/images/D-Topia-1.svg" width="30px" height="30px" class="d-inline-block align-top" alt="">
+        <form class="form-inline my-2 my-lg-0">
+          <a class="free-quote" title="GET A FREE QUOTE" target="_self">
+            <strong>FREE</strong>QUOTE
             <svg version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="none" width="14px"
               height="5px" viewBox="0 0 14.017 5.006" enable-background="new 0 0 14.017 5.006" xml:space="preserve">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M14.016,0L7.008,5.006L0,0H14.016z"></path>
             </svg>
-          </div>
-          <span class="brand-title">D-<span class="brand-letter">T</span>OPIA</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto" style="width: 100% !important;">
-            <li class="nav-item active">
-              <a class="nav-link">About Us <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">DT-Options</a>
-            </li>
-            <li class="nav-item dropdown">
-
-              <a class="nav-link nav-link-open" role="button" data-toggle="dropdown" aria-expanded="false">
-                DT-Service
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item dt-hover-ltr">Action</a>
-                <a class="dropdown-item dt-hover-ltr">Another action</a>
-
-                <a class="dropdown-item dt-hover-ltr">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">DT-Order</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">Contact DT</a>
-            </li>
-
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <a class="free-quote" title="GET A FREE QUOTE" target="_self">
-              <strong>FREE</strong>QUOTE
-              <svg version="1.1" class="trisvg" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="none" width="14px"
-                height="5px" viewBox="0 0 14.017 5.006" enable-background="new 0 0 14.017 5.006" xml:space="preserve">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.016,0L7.008,5.006L0,0H14.016z"></path>
-              </svg>
-            </a>
-          </form>
-        </div>
-      </nav>
-    </div>
-  </div> -->
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light" [class.dash]="isUserModule" [ngClass]="getDashClass()">
-  <img src="assets/images/logo-08.png" alt="logo" width="50px" height="50px">
-  <span class="logotitle">D-<span class="ttext">T</span>opia</span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" (click)="GotoMain()">Main Page <span class="sr-only">(current)</span></a>
-      </li>
-      <!-- <li class="nav-item">
-                <a class="nav-link" href="#">DT-Options</a>
-            </li> -->
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" routerLinkActive="router-link-active">DT-Options </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" (click)="GotoIndexation()">Indexation</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" (click)="GotoDesignOffer()">Design Offer</a>
-          <!-- <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a> -->
-        </div>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">DT-Services </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item">D-Topia Store</a>
-          <!-- <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">D-Topia Offer</a> -->
-
-          <!-- <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a> -->
-        </div>
-      </li>
-      <!-- <li class="nav-item">
-                <a class="nav-link" href="DT-Order.html">DT-Order</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Contact-DT.html">Contact DT</a>
-            </li> -->
-    </ul>
-    <!--form for the modal-->
-
-    <form class="d-flex" style="width: 200px;">
-      <ul style="padding-left: 0px">
-
-        <ng-container *ngIf="IsLogin == false">
-          <a (click)="GotoLogin()">
-            <li style="display: inline-block; font-size: 19px" class="mr-1">
-              Log-In
-            </li>
           </a>
-        </ng-container>
-
-        <ng-container *ngIf="IsLogin == true">
-          <a>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Hi<span> {{ UserName }} </span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a (click)="GotoProfile()" class="dropdown-item">My Profile </a>
-                <div class="dropdown-divider"></div>
-                <a (click)="LogOut()" class="dropdown-item">Log-Out </a>
-              </div>
-            </li>
-          </a>
-        </ng-container>
-
-      </ul>
-    </form>
-    <!-- <ul style="padding: 0px !important;">
-            <li> <span> <a class="nav-link" href="#"> عربي </a></span></li>
-        </ul> -->
+        </form>
+      </div>
+    </nav>
   </div>
-</nav>
+</div> -->

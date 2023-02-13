@@ -9,9 +9,9 @@
   <!-- End::   Sidebar -->
 
   <div id="rows" class="rows">
-    <div class="offset-lg-2 offset-md-2 col-sm-8 brd">
+    <div class="m-auto col-sm-8 brd">
       <form [formGroup]="myForm">
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <!-- Input:: Name -->
           <div class="form-group">
             <input type="text" formControlName="cName" maxlength="250" class="form-control" id="nameInput">
@@ -79,7 +79,7 @@
             <label class="control-labels" for="aboutMeInput">Biography</label>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <!-- Input:: Country -->
           <div class="form-group">
             <select class="form-control" (change)="getGovernorate()" formControlName="cCountry" id="countrySelect">
