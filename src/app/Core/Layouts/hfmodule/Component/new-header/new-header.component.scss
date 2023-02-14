@@ -492,6 +492,7 @@ span.brand-letter {
 .navbar-nav .nav-link {
   position: relative;
   padding: 5px 8px;
+  cursor: pointer;
 }
 li.nav-item,
 li.nav-item.active {
@@ -1093,4 +1094,83 @@ span.get-connected {
 
 .dropdown-toggle::after {
   display: none;
+}
+
+.dropdown-toggle,
+.nav-link {
+  font-weight: 200;
+  font-size: 14px;
+  color: #fff;
+}
+.navbar-nav {
+  .dropdown-menu {
+    background-color: #2f2f2f !important;
+    margin-top: 5px !important;
+    right: 0 !important;
+    left: inherit !important;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-bottom: solid 10px #2f2f2f !important;
+      border-left: solid 10px transparent !important;
+      border-right: solid 10px transparent !important;
+      top: -9px;
+      left: 60%;
+    }
+    a {
+      color: #d5d5d5 !important;
+      font-weight: 300;
+      font-size: 13px;
+    }
+    li {
+      position: relative;
+      a:after {
+        content: "";
+        position: absolute;
+        border: 1px solid #99c440;
+        width: 20px;
+        bottom: 0px;
+      }
+    }
+
+    // li.nav-item:after {
+    //   display: none !important;
+    // }
+
+    .nav-link {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        border: 1px solid #99c440;
+        width: 20px;
+        bottom: -2px;
+      }
+    }
+
+    .dropdown-item {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0.7px;
+        background-color: #fff;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        color: rgba(255, 255, 255, 1) !important;
+        background-color: rgba(213, 213, 213, 0.1) !important;
+        transition: all 0.3s ease-in-out;
+        &::before {
+          width: 100%;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
 }

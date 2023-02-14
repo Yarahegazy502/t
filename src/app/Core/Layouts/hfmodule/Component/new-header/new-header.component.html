@@ -1,7 +1,7 @@
 <!-- Begin:: Support Panel -->
 <div class="row support_panel px-5" [class.dash]="isUserModule" [ngClass]="getDashClass()" [class.none]="!isShow"
   id="actions" x>
-  <div class="container-fluid" style="padding-top: 0px;">
+  <div class="container" style="padding-top: 0px;">
     <div class="row">
       <div class="col-sm-9">
         <h6 class="dtopia_title">How to Shop</h6>
@@ -40,7 +40,7 @@
   </div>
 </div>
 <header class="main-bg " [class.dash]="isUserModule" [ngClass]="getDashClass()">
-  <div class="container-fluid border-bottom  py-2">
+  <div class="container border-bottom  py-2">
     <div class="d-flex justify-content-between align-items-center flex-wrap">
       <div class="d-flex gap-3">
         <a target="_self" class="icon-facebook" title="Facebook">
@@ -53,8 +53,8 @@
           <li>
             <div class="dropdown">
               <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
-                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-globe mx-2"></i><span>Language</span>
+                type="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-globe mx-2"></i><span>Language</span>
               </a>
               <ul class="dropdown-menu border-0 shadow-sm">
                 <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2"><img
@@ -73,11 +73,11 @@
           <li>
             <div class="dropdown">
               <a class="btn dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
-                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                type="button" data-toggle="dropdown" aria-expanded="false">
                 <div class="position-relative profile">
                   <div class="active"></div><img src="assets/images/user-blank.png" alt="user"
                     class="rounded-circle profile-img">
-                </div><span>
+                </div><span class="ml-1">
                   Hi, Amr</span>
               </a>
               <ul class="dropdown-menu border-0 shadow-sm">
@@ -100,7 +100,7 @@
   </div>
 </header>
 <nav class="navbar navbar-expand-lg main-bg" [class.dash]="isUserModule" [ngClass]="getDashClass()">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand">
       <div class="dtopia_logo_header">
         <img src="assets/images/D-Topia-1.svg" width="30px" height="30px" class="d-inline-block align-top" alt="">
@@ -124,7 +124,19 @@
         <li class="nav-item">
           <a class="nav-link">DT-Options</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex justify-content-center align-items-center gap-2 text-white border-0 px-2"
+            data-toggle="dropdown" aria-expanded="false">
+            <span>DT-Service</span>
+          </a>
+          <ul class="dropdown-menu border-0 shadow-sm">
+            <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2">Action</a></li>
+            <li><a class="d-flex align-items-center gap-2 dropdown-item mb-2">Another action</a></li>
+            <li><a class="d-flex align-items-center gap-2 dropdown-item">Something else here</a></li>
+          </ul>
+        </li>
         <li class="nav-item">
+
           <a class="nav-link">DT-Service</a>
         </li>
         <li class="nav-item">
