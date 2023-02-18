@@ -1,44 +1,44 @@
 .btn-secondary {
-    background-color: #9dc15b;
-    border-color: #9dc15b;
-  }
-  
-  .text-black-50 {
-    color: rgba(0, 0, 0, 0.5) !important;
-  }
-  
-  ::ng-deep snack-bar-container.blue-snackbar {
-    background-color: #9dc15b;
-    color: black;
-  }
+  background-color: #9dc15b;
+  border-color: #9dc15b;
+}
 
-  .file-input {
-    display: none;
-  }
-  
-  .example-margin {
-    left: 50%;
-    margin-left: -4em;
-    // margin: 0 10px;
-    // align-items: center;
-  }
+.text-black-50 {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
 
-  .btn-link:hover {
-    color: #fff;
+::ng-deep snack-bar-container.blue-snackbar {
+  background-color: #9dc15b;
+  color: black;
+}
+
+.file-input {
+  display: none;
+}
+
+.example-margin {
+  left: 50%;
+  margin-left: -4em;
+  // margin: 0 10px;
+  // align-items: center;
+}
+
+.btn-link:hover {
+  color: #fff;
 }
 .footer {
-    clear: both;
-    position:absolute;
-    left: 0;
-    bottom:0;
+  clear: both;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
-.col-4.form-check.electricity.text-right{
-    direction: ltr;
+.col-4.form-check.electricity.text-right {
+  direction: ltr;
 }
 h4.text-right.m-2 {
-    border-bottom: 1px solid #9DC15B;
-    background: rgb(158 193 92 / 25%);
-    padding: 5px 10px;
+  border-bottom: 1px solid #9dc15b;
+  background: rgb(158 193 92 / 25%);
+  padding: 5px 10px;
 }
 
 .electricity label {
@@ -46,27 +46,13 @@ h4.text-right.m-2 {
   margin-right: 40px;
 }
 
-input[type="radio"], input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
   width: 35px !important;
   margin-right: 7px;
 }
-  
-  // .center {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   -moz-transform: translateX(-50%) translateY(-50%);
-  //   -webkit-transform: translateX(-50%) translateY(-50%);
-  //   transform: translateX(-50%) translateY(-50%);
-  // }
-  
-  // .overlay {
-  //   height: 100vh;
-  //   width: 100%;
-  //   background-color: rgba(0, 0, 0, 0.286);
-  //   z-index: 10;
-  //   top: 0;
-  //   left: 0;
-  //   position: fixed;
-  //}
-  
+
+.pagination > li {
+  margin-top: 0 !important;
+  min-width: 30px !important;
+}

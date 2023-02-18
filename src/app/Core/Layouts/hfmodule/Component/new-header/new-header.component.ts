@@ -27,8 +27,10 @@ export class NewHeaderComponent implements OnInit {
   // constructor(private dashboardService: DashboardService,
   //             private sharedService: SharedService) { }
 
-  constructor(private route: Router,
-    private elementRef: ElementRef) { }
+  constructor(
+    private route: Router,
+    private elementRef: ElementRef
+  ) { }
 
   ngOnInit(): void {
     this.isUserModule = this.route?.url?.includes('User');

@@ -1,15 +1,10 @@
 <div class="container-fluid bg-dark">
-  <h3 class="text-center text-light mb-0" style="font-size: 1.5rem ;">indexation</h3>
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-2">
-      <a
-        class="btn btn-secondary text-black-50 hover text-black-50 float-right mt-4"
-        role="button"
-        >Back</a
-      >
+  <h3 class="text-center text-light mb-0 py-3" style="font-size: 1.5rem ;">indexation</h3>
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-3">
+      <a class="btn btn-secondary text-black-50 hover text-black-50 float-right" role="button">Back</a>
     </div>
-    <div class="col-4">
+    <div class="col-md-4 col-6">
       <div class="container">
         <ul class="pagination">
           <li class="mt-3">
@@ -26,16 +21,11 @@
         </ul>
       </div>
     </div>
-    <div class="col-2">
+    <div class="col-md-2 col-3">
       <!-- <input type="button" class="btn btn-secondary text-black-30 hover text-black-30 mt-4" style="width: 20px;" value="Next" (click)="goToNextSteps()"> -->
-      <a
-        class="btn btn-secondary text-black-50 hover text-black-50 mt-4"
-        role="button"
-        (click)="getSecondStepData()"
-        >Next
+      <a class="btn btn-secondary text-black-50 hover text-black-50 " role="button" (click)="getSecondStepData()">Next
       </a>
     </div>
-    <div class="col-2"></div>
   </div>
   <br />
 </div>
@@ -90,14 +80,8 @@
     <div class="col-lg-6 all-accordionsPage2">
       <form [formGroup]="myForm">
         <div class="accordion-2" *ngFor="let RSID of RealSID; let i = index">
-          <button
-            class="btn btn main-accordion second-page"
-            type="button"
-            data-toggle="collapse"
-            attr.data-target="#collapseExample{{ i + 1 }}"
-            aria-expanded="false"
-            aria-controls="collapseExample"
-          >
+          <button class="btn btn main-accordion second-page" type="button" data-toggle="collapse"
+            attr.data-target="#collapseExample{{ i + 1 }}" aria-expanded="false" aria-controls="collapseExample">
             Space {{ i + 1 }} for {{ RSID.siteItemName }}
           </button>
           <div class="collapse" id="collapseExample{{ i + 1 }}">
@@ -105,36 +89,20 @@
               <div class="row mb-2">
                 <div class="space-namePage-2 ml-3">
                   <p>Space Name</p>
-                  <input
-                    type="text"
-                    maxlength="200"
-                    [formControlName]="'N' + '_' + (i + 1)"
-                  />
+                  <input type="text" maxlength="200" [formControlName]="'N' + '_' + (i + 1)" />
                 </div>
                 <div class="spaces-secondPage d-flex">
                   <div class="d-flex ml-3">
                     <p>Length</p>
-                    <input
-                      type="text"
-                      maxlength="5"
-                      [formControlName]="'L' + '_' + (i + 1)"
-                    />
+                    <input type="text" maxlength="5" [formControlName]="'L' + '_' + (i + 1)" />
                   </div>
                   <div class="d-flex ml-3">
                     <p>width</p>
-                    <input
-                      type="text"
-                      maxlength="5"
-                      [formControlName]="'W' + '_' + (i + 1)"
-                    />
+                    <input type="text" maxlength="5" [formControlName]="'W' + '_' + (i + 1)" />
                   </div>
                   <div class="d-flex ml-3">
                     <p>Height</p>
-                    <input
-                      type="text"
-                      maxlength="5"
-                      [formControlName]="'H' + '_' + (i + 1)"
-                    />
+                    <input type="text" maxlength="5" [formControlName]="'H' + '_' + (i + 1)" />
                   </div>
                 </div>
               </div>
@@ -168,32 +136,19 @@
                 </div>
               </div>
 
-              <div
-                class="row windowOne"
-                *ngFor="let num of counter(5); let c = index"
-              >
+              <div class="row windowOne" *ngFor="let num of counter(5); let c = index">
                 <div class="col-3">
                   <p>Window {{ c + 1 }}</p>
                 </div>
                 <div class="col-1"></div>
                 <div class="col-3">
-                  <input
-                    class="windowOneHeight"
-                    maxlength="7"
-                    type="text"
-                    [formControlName]="'WNH' + (c + 1) + '_' + (i + 1)"
-                    [value]="0"
-                  />
+                  <input class="windowOneHeight" maxlength="7" type="text"
+                    [formControlName]="'WNH' + (c + 1) + '_' + (i + 1)" [value]="0" />
                 </div>
                 <div class="col-1"></div>
                 <div class="col-3">
-                  <input
-                    class="windowOneHeight"
-                    maxlength="7"
-                    type="text"
-                    [formControlName]="'WNL' + (c + 1) + '_' + (i + 1)"
-                    [value]="0"
-                  />
+                  <input class="windowOneHeight" maxlength="7" type="text"
+                    [formControlName]="'WNL' + (c + 1) + '_' + (i + 1)" [value]="0" />
                   <div class="col-1"></div>
                 </div>
               </div>
@@ -228,30 +183,19 @@
                 </div>
               </div>
 
-              <div
-                class="row windowOne"
-                *ngFor="let num of counter(3); let c = index"
-              >
+              <div class="row windowOne" *ngFor="let num of counter(3); let c = index">
                 <div class="col-3">
                   <p>Door {{ c + 1 }}</p>
                 </div>
                 <div class="col-1"></div>
                 <div class="col-3">
-                  <input
-                    class="windowOneHeight"
-                    type="text"
-                    [formControlName]="'DNH' + (c + 1) + '_' + (i + 1)"
-                    [value]="0"
-                  />
+                  <input class="windowOneHeight" type="text" [formControlName]="'DNH' + (c + 1) + '_' + (i + 1)"
+                    [value]="0" />
                 </div>
                 <div class="col-1"></div>
                 <div class="col-3">
-                  <input
-                    class="windowOneHeight"
-                    type="text"
-                    [formControlName]="'DNL' + (c + 1) + '_' + (i + 1)"
-                    [value]="0"
-                  />
+                  <input class="windowOneHeight" type="text" [formControlName]="'DNL' + (c + 1) + '_' + (i + 1)"
+                    [value]="0" />
                   <div class="col-1"></div>
                 </div>
               </div>
@@ -287,12 +231,7 @@
   <table align="center">
     <tr>
       <td *ngFor="let P of PS">
-        <input
-          type="radio"
-          formControlName="cProjectStatus"
-          name="cProjectStatus"
-          [value]="P.projectStatusID"
-        />
+        <input type="radio" formControlName="cProjectStatus" name="cProjectStatus" [value]="P.projectStatusID" />
         <b>{{ P.projectStatusName }}</b>
       </td>
     </tr>
@@ -312,21 +251,11 @@
         <table align="center">
           <tr>
             <td>
-              <input
-                type="radio"
-                formControlName="cEngSupervision"
-                name="cEngSupervision"
-                value="1"
-              />
+              <input type="radio" formControlName="cEngSupervision" name="cEngSupervision" value="1" />
               <b>يشمل</b>
             </td>
             <td>
-              <input
-                type="radio"
-                formControlName="cEngSupervision"
-                name="cEngSupervision"
-                value="0"
-              />
+              <input type="radio" formControlName="cEngSupervision" name="cEngSupervision" value="0" />
               <b>لا يشمل</b>
             </td>
           </tr>

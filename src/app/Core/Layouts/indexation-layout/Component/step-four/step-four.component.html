@@ -3,11 +3,7 @@
   <div class="row">
     <div class="col-2"></div>
     <div class="col-2">
-      <a
-        class="btn btn-secondary text-black-50 hover text-black-50 float-right mt-4"
-        role="button"
-        >Back</a
-      >
+      <a class="btn btn-secondary text-black-50 hover text-black-50 float-right mt-4" role="button">Back</a>
     </div>
     <div class="col-4">
       <div class="container">
@@ -22,10 +18,7 @@
       </div>
     </div>
     <div class="col-2">
-      <a
-        class="btn btn-secondary text-black-50 hover text-black-50 mt-4"
-        role="button"
-        >Next
+      <a class="btn btn-secondary text-black-50 hover text-black-50 mt-4" role="button">Next
       </a>
     </div>
     <div class="col-2"></div>
@@ -33,19 +26,13 @@
   <br />
 </div>
 
-<h3
-  class="text-center mb-4"
-  style="color: white; background-color: #9dc15b; font-size: 20px"
->
+<h3 class="text-center mb-4" style="color: white; background-color: #9dc15b; font-size: 20px">
   أشكال المقايسة النهائية
 </h3>
 
 <div class="row justify-content-center align-items-center">
   <div style="width: 650px" class="alert alert-dark" role="alert">
-    <h4
-      style="text-align: right; text-decoration: underline"
-      class="alert-heading"
-    >
+    <h4 style="text-align: right; text-decoration: underline" class="alert-heading">
       ملاحظات عامة
     </h4>
 
@@ -104,36 +91,18 @@
     <div class="col-8">
       <form [formGroup]="ChoiceForm">
         <div class="form-check ml-5">
-          <input
-            class="form-check-input"
-            type="radio"
-            id="flexRadioDefault1"
-            formControlName="cIndxFormChoice"
-            (change)="DisplayIndexationDataForm($event)"
-            value="1"
-          />
+          <input class="form-check-input" type="radio" id="flexRadioDefault1" formControlName="cIndxFormChoice"
+            (change)="DisplayIndexationDataForm($event)" value="1" />
           <h3 style="display: inline-block">تكلفة المقايسة كبنود</h3>
         </div>
         <div class="form-check ml-5">
-          <input
-            class="form-check-input"
-            type="radio"
-            id="flexRadioDefault2"
-            formControlName="cIndxFormChoice"
-            (change)="DisplayIndexationDataForm($event)"
-            value="2"
-          />
+          <input class="form-check-input" type="radio" id="flexRadioDefault2" formControlName="cIndxFormChoice"
+            (change)="DisplayIndexationDataForm($event)" value="2" />
           <h3 style="display: inline-block">تكلفة المقايسة كفراغات</h3>
         </div>
         <div class="form-check ml-5">
-          <input
-            class="form-check-input"
-            type="radio"
-            id="flexRadioDefault3"
-            formControlName="cIndxFormChoice"
-            (change)="DisplayIndexationDataForm($event)"
-            value="3"
-          />
+          <input class="form-check-input" type="radio" id="flexRadioDefault3" formControlName="cIndxFormChoice"
+            (change)="DisplayIndexationDataForm($event)" value="3" />
           <h3 style="display: inline-block">تكلفة المقايسة كاسعار تفصيلية</h3>
         </div>
         <!-- <div class=" form-check ml-5">
@@ -200,88 +169,44 @@
       </div> -->
     </div>
 
-    <div class="col-8">
-      <!-- 
+    <div class="col-lg-8">
+      <!--
                 ========================================
              -->
       <form [formGroup]="FixForm">
-        <h4 class="project-info1">بيانات الوحدة</h4>
+        <h4 class="project-info1 text-center">بيانات الوحدة</h4>
         <div class="address-details d-flex">
           <div class="input-group m-2">
-            <span class="input-group-text" id="inputGroup-sizing-default"
-              >Address</span
-            >
-            <input
-              type="text"
-              formControlName="cAddress"
-              readonly
-              class="form-control"
-              aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"
-            />
+            <span class="input-group-text" id="inputGroup-sizing-default">Address</span>
+            <input type="text" formControlName="cAddress" readonly class="form-control"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
           </div>
           <div class="input-group m-2">
-            <span class="input-group-text" id="inputGroup-sizing-default"
-              >Floor</span
-            >
-            <input
-              type="text"
-              formControlName="cFloor"
-              readonly
-              class="form-control"
-              aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"
-            />
+            <span class="input-group-text" id="inputGroup-sizing-default">Floor</span>
+            <input type="text" formControlName="cFloor" readonly class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" />
 
-            <span class="input-group-text" id="inputGroup-sizing-default"
-              >Area(m2)</span
-            >
-            <input
-              type="text"
-              formControlName="cArea"
-              readonly
-              class="form-control"
-              aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"
-            />
+            <span class="input-group-text" id="inputGroup-sizing-default">Area(m2)</span>
+            <input type="text" formControlName="cArea" readonly class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" />
           </div>
         </div>
         <div class="unit-type d-flex">
           <div class="input-group m-2">
-            <span class="input-group-text" id="inputGroup-sizing-default"
-              >Site Type</span
-            >
-            <input
-              type="text"
-              formControlName="cSiteType"
-              readonly
-              class="form-control"
-              aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"
-            />
+            <span class="input-group-text" id="inputGroup-sizing-default">Site Type</span>
+            <input type="text" formControlName="cSiteType" readonly class="form-control"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
           </div>
         </div>
 
         <div class="unit-type d-flex">
           <div class="input-group m-2">
             <span class="input-group-text">حالة المشروع</span>
-            <input
-              type="text"
-              formControlName="cProjectStatus"
-              readonly
-              aria-label="First name"
-              class="form-control"
-              placeholder="condition-1"
-            />
+            <input type="text" formControlName="cProjectStatus" readonly aria-label="First name" class="form-control"
+              placeholder="condition-1" />
             <span class="input-group-text">الإشراف</span>
-            <input
-              type="text"
-              formControlName="cEngSupervision"
-              readonly
-              aria-label="First name"
-              class="form-control"
-              placeholder="Included"
-            />
+            <input type="text" formControlName="cEngSupervision" readonly aria-label="First name" class="form-control"
+              placeholder="Included" />
           </div>
         </div>
 
@@ -294,16 +219,8 @@
             </div>
             <ng-container *ngFor="let itm of strSpaceData">
               <div class="col-lg-2">
-                <input
-                  type="text"
-                  style="width: 110px"
-                  [value]="itm.name"
-                  readonly
-                  class="form-control"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default"
-                  placeholder="Room"
-                />
+                <input type="text" style="width: 110px" [value]="itm.name" readonly class="form-control"
+                  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Room" />
               </div>
               <div class="col-lg-1">
                 <p class="text-center mt-2">
@@ -314,32 +231,19 @@
           </div>
         </ng-container>
 
-        <ng-container
-          *ngIf="strSpaceData.length >= 3 && strSpaceData.length % 3 == 0"
-        >
-          <div
-            class="row d-flex mt-4"
-            *ngFor="
+        <ng-container *ngIf="strSpaceData.length >= 3 && strSpaceData.length % 3 == 0">
+          <div class="row d-flex mt-4" *ngFor="
               let num of GetNumbers(GetIntegerNumber(strSpaceData.length / 3));
               let i = index
-            "
-          >
+            ">
             <ng-container *ngIf="strSpaceData.length <= 3 && i == 0">
               <div class="col-lg-3">
                 <h4 class="m-1">مكونات الوحدة</h4>
               </div>
               <ng-container *ngFor="let itm of strSpaceData">
                 <div class="col-lg-2">
-                  <input
-                    type="text"
-                    style="width: 110px"
-                    [value]="itm.name"
-                    readonly
-                    class="form-control"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default"
-                    placeholder="Room"
-                  />
+                  <input type="text" style="width: 110px" [value]="itm.name" readonly class="form-control"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Room" />
                 </div>
                 <div class="col-lg-1">
                   <p class="text-center mt-2">
@@ -356,16 +260,9 @@
               <ng-container *ngFor="let itm of strSpaceData; let y = index">
                 <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                   <div class="col-lg-2">
-                    <input
-                      type="text"
-                      style="width: 110px"
-                      [value]="itm.name"
-                      readonly
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                      placeholder="Room"
-                    />
+                    <input type="text" style="width: 110px" [value]="itm.name" readonly class="form-control"
+                      aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room" />
                   </div>
                   <div class="col-lg-1">
                     <p class="text-center mt-2">
@@ -380,16 +277,9 @@
               <ng-container *ngFor="let itm of strSpaceData; let y = index">
                 <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                   <div class="col-lg-2">
-                    <input
-                      type="text"
-                      style="width: 110px"
-                      [value]="itm.name"
-                      readonly
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                      placeholder="Room"
-                    />
+                    <input type="text" style="width: 110px" [value]="itm.name" readonly class="form-control"
+                      aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room" />
                   </div>
                   <div class="col-lg-1">
                     <p class="text-center mt-2">
@@ -404,16 +294,9 @@
               <ng-container *ngFor="let itm of strSpaceData; let y = index">
                 <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                   <div class="col-lg-2">
-                    <input
-                      type="text"
-                      style="width: 110px"
-                      [value]="itm.name"
-                      readonly
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                      placeholder="Room"
-                    />
+                    <input type="text" style="width: 110px" [value]="itm.name" readonly class="form-control"
+                      aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room" />
                   </div>
                   <div class="col-lg-1">
                     <p class="text-center mt-2">
@@ -426,34 +309,21 @@
           </div>
         </ng-container>
 
-        <ng-container
-          *ngIf="strSpaceData.length >= 3 && strSpaceData.length % 3 > 0"
-        >
-          <div
-            class="row d-flex mt-4"
-            *ngFor="
+        <ng-container *ngIf="strSpaceData.length >= 3 && strSpaceData.length % 3 > 0">
+          <div class="row d-flex mt-4" *ngFor="
               let num of GetNumbers(
                 GetIntegerNumber(strSpaceData.length / 3) + 1
               );
               let i = index
-            "
-          >
+            ">
             <ng-container *ngIf="strSpaceData.length <= 3 && i == 0">
               <div class="col-lg-3">
                 <h4 class="m-1">مكونات الوحدة</h4>
               </div>
               <ng-container *ngFor="let itm of strSpaceData">
                 <div class="col-lg-2">
-                  <input
-                    type="text"
-                    style="width: 110px"
-                    [value]="itm.name"
-                    readonly
-                    class="form-control"
-                    aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default"
-                    placeholder="Room"
-                  />
+                  <input type="text" style="width: 110px" [value]="itm.name" readonly class="form-control"
+                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Room" />
                 </div>
                 <div class="col-lg-1">
                   <p class="text-center mt-2">
@@ -470,16 +340,9 @@
               <ng-container *ngFor="let itm of strSpaceData; let y = index">
                 <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                   <div class="col-lg-2">
-                    <input
-                      type="text"
-                      style="width: 110px"
-                      [value]="itm.name"
-                      readonly
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                      placeholder="Room"
-                    />
+                    <input type="text" style="width: 110px" [value]="itm.name" readonly class="form-control"
+                      aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room" />
                   </div>
                   <div class="col-lg-1">
                     <p class="text-center mt-2">
@@ -497,16 +360,9 @@
               <ng-container *ngFor="let itm of strSpaceData; let y = index">
                 <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                   <div class="col-lg-2">
-                    <input
-                      type="text"
-                      style="width: 110px"
-                      [value]="itm.name"
-                      readonly
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                      placeholder="Room"
-                    />
+                    <input type="text" style="width: 110px" [value]="itm.name" readonly class="form-control"
+                      aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room" />
                   </div>
                   <div class="col-lg-1">
                     <p class="text-center mt-2">
@@ -524,16 +380,9 @@
               <ng-container *ngFor="let itm of strSpaceData; let y = index">
                 <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                   <div class="col-lg-2">
-                    <input
-                      type="text"
-                      style="width: 110px"
-                      [value]="itm.name"
-                      readonly
-                      class="form-control"
-                      aria-label="Sizing example input"
-                      aria-describedby="inputGroup-sizing-default"
-                      placeholder="Room"
-                    />
+                    <input type="text" style="width: 110px" [value]="itm.name" readonly class="form-control"
+                      aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                      placeholder="Room" />
                   </div>
                   <div class="col-lg-1">
                     <p class="text-center mt-2">
@@ -548,7 +397,7 @@
 
         <!-- Dynamic -->
       </form>
-      <!-- 
+      <!--
                 ========================================
              -->
 
@@ -560,48 +409,19 @@
           </div>
           <br />
 
-          <div
-            class="input-group mb-2"
-            *ngFor="let itm of strRepProjectAssay_TotalItems"
-          >
-            <input
-              type="text"
-              [value]="itm.indexationItemName"
-              readonly
-              class="form-control text-left"
-              aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"
-              placeholder=""
-            />
-            <input
-              type="text"
-              [value]="itm.total"
-              readonly
-              class="form-control text-right"
-              aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"
-              placeholder=""
-            />
+          <div class="input-group mb-2" *ngFor="let itm of strRepProjectAssay_TotalItems">
+            <input type="text" [value]="itm.indexationItemName" readonly class="form-control text-left"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" />
+            <input type="text" [value]="itm.total" readonly class="form-control text-right"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" />
           </div>
 
           <div class="input-group mb-2">
-            <input
-              type="text"
-              readonly
-              class="form-control text-left font-weight-bold"
-              aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"
-              placeholder="Items Total"
-            />
-            <input
-              type="text"
-              [value]="dblIndexationTotal"
-              readonly
-              class="form-control text-right font-weight-bold"
-              aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"
-              placeholder=""
-            />
+            <input type="text" readonly class="form-control text-left font-weight-bold"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+              placeholder="Items Total" />
+            <input type="text" [value]="dblIndexationTotal" readonly class="form-control text-right font-weight-bold"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="" />
           </div>
         </div>
       </ng-container>
@@ -748,7 +568,7 @@
                     <input type="text" aria-label="First name" class="form-control" placeholder="333">
                     <span class="input-group-text">Price Price</span>
                     <input type="text" aria-label="First name" class="form-control" placeholder="333">
-                </div>                 
+                </div>
              </ng-container> -->
 
       <ng-container *ngIf="dblIndxChoiceNo == 2">
@@ -759,28 +579,11 @@
           </div>
         </div>
         <br />
-        <div
-          class="input-group mb-2"
-          *ngFor="let itm of strRepProjectAssay_TotalSpaces"
-        >
-          <input
-            type="text"
-            [value]="itm.spaceDataName"
-            readonly
-            class="form-control text-left"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-            placeholder="RECEPTION"
-          />
-          <input
-            type="text"
-            [value]="itm.total"
-            readonly
-            class="form-control text-right"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-            placeholder="120.000Le"
-          />
+        <div class="input-group mb-2" *ngFor="let itm of strRepProjectAssay_TotalSpaces">
+          <input type="text" [value]="itm.spaceDataName" readonly class="form-control text-left"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="RECEPTION" />
+          <input type="text" [value]="itm.total" readonly class="form-control text-right"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="120.000Le" />
         </div>
       </ng-container>
 
@@ -793,33 +596,17 @@
         </div>
 
         <form [formGroup]="SiteForm">
-          <div
-            class="col-lg-12 col-md-12 col-sm-12 input-group mb-3 mt-3 section-1"
-          >
+          <div class="col-lg-12 col-md-12 col-sm-12 input-group mb-3 mt-3 section-1">
             <span class="input-group-text text-center">إسم الفراغ</span>
-            <select
-              class="form-select mr-2 selectpage3-1-1"
-              id="inputGroupSelect01"
-              formControlName="cSpaceData"
-              (click)="DisplaySpaceDetail()"
-            >
+            <select class="form-select mr-2 selectpage3-1-1" id="inputGroupSelect01" formControlName="cSpaceData"
+              (click)="DisplaySpaceDetail()">
               <option value="0">::: اختر إسم الفراغ :::</option>
-              <option
-                *ngFor="let SD of cmbstrSpaceData"
-                [value]="SD.spaceDataID"
-              >
+              <option *ngFor="let SD of cmbstrSpaceData" [value]="SD.spaceDataID">
                 {{ SD.name }}
               </option>
             </select>
-            <input
-              type="text"
-              readonly
-              [value]="dblSpaceTotal"
-              class="form-control"
-              formControlName="cSpaceTotal"
-              aria-label="Sizing example input"
-              aria-describedby="inputGroup-sizing-default"
-            />
+            <input type="text" readonly [value]="dblSpaceTotal" class="form-control" formControlName="cSpaceTotal"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
           </div>
         </form>
 
@@ -832,9 +619,7 @@
                   <span class="span-right"> {{ IndxItm.total }} (جم) </span>
                 </div>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 1"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 1">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -848,17 +633,15 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr
-                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
-                      >
+                      <tr *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs">
                         <th>{{ IndxItmD.itemCount }}</th>
                         <th>{{ IndxItmD.indexationItemDetailName }}</th>
                         <td>{{ IndxItmD.supplyPrice }}</td>
                         <td>{{ IndxItmD.workmanShipPrice }}</td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              IndxItmD.itemCount | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          IndxItmD.itemCount | number: "1.2-2"
                           }}
                         </td>
                         <td>
@@ -866,9 +649,9 @@
                         </td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              IndxItmD.itemCount +
-                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          IndxItmD.itemCount +
+                          IndxItmD.superVisionPrice | number: "1.2-2"
                           }}
                         </td>
                       </tr>
@@ -876,9 +659,7 @@
                   </table>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 1 && IndxItm.calculatePrice == 2"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 1 && IndxItm.calculatePrice == 2">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -892,9 +673,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr
-                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
-                      >
+                      <tr *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs">
                         <th>
                           {{ GetWallArea(space.spaceID) | number: "1.2-2" }}
                         </th>
@@ -903,8 +682,8 @@
                         <td>{{ IndxItmD.workmanShipPrice }}</td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              GetWallArea(space.spaceID) | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          GetWallArea(space.spaceID) | number: "1.2-2"
                           }}
                         </td>
                         <td>
@@ -912,9 +691,9 @@
                         </td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              GetWallArea(space.spaceID) +
-                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          GetWallArea(space.spaceID) +
+                          IndxItmD.superVisionPrice | number: "1.2-2"
                           }}
                         </td>
                       </tr>
@@ -922,9 +701,7 @@
                   </table>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 3 && IndxItm.calculatePrice == 6"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 3 && IndxItm.calculatePrice == 6">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -938,9 +715,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr
-                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
-                      >
+                      <tr *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs">
                         <th>
                           {{ GetDoorArea(space.spaceID) | number: "1.2-2" }}
                         </th>
@@ -949,8 +724,8 @@
                         <td>{{ IndxItmD.workmanShipPrice }}</td>
                         <td>
                           {{
-                            IndxItmD.supplyPrice + IndxItmD.workmanShipPrice
-                              | number: "1.2-2"
+                          IndxItmD.supplyPrice + IndxItmD.workmanShipPrice
+                          | number: "1.2-2"
                           }}
                         </td>
                         <td>
@@ -958,9 +733,9 @@
                         </td>
                         <td>
                           {{
-                            IndxItmD.supplyPrice +
-                              IndxItmD.workmanShipPrice +
-                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          IndxItmD.supplyPrice +
+                          IndxItmD.workmanShipPrice +
+                          IndxItmD.superVisionPrice | number: "1.2-2"
                           }}
                         </td>
                       </tr>
@@ -968,9 +743,7 @@
                   </table>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 2 && IndxItm.calculatePrice == 5"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 2 && IndxItm.calculatePrice == 5">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -984,9 +757,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr
-                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
-                      >
+                      <tr *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs">
                         <th>
                           {{ GetWindowArea(space.spaceID) | number: "1.2-2" }}
                         </th>
@@ -995,8 +766,8 @@
                         <td>{{ IndxItmD.workmanShipPrice }}</td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              GetWindowArea(space.spaceID) | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          GetWindowArea(space.spaceID) | number: "1.2-2"
                           }}
                         </td>
                         <td>
@@ -1004,9 +775,9 @@
                         </td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              GetWindowArea(space.spaceID) +
-                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          GetWindowArea(space.spaceID) +
+                          IndxItmD.superVisionPrice | number: "1.2-2"
                           }}
                         </td>
                       </tr>
@@ -1014,9 +785,7 @@
                   </table>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 7"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 7">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -1030,17 +799,15 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr
-                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
-                      >
+                      <tr *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs">
                         <th>{{ IndxItmD.itemCount }}</th>
                         <th>{{ IndxItmD.indexationItemDetailName }}</th>
                         <td>{{ IndxItmD.supplyPrice }}</td>
                         <td>{{ IndxItmD.workmanShipPrice }}</td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              IndxItmD.itemCount | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          IndxItmD.itemCount | number: "1.2-2"
                           }}
                         </td>
                         <td>
@@ -1048,9 +815,9 @@
                         </td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              IndxItmD.itemCount +
-                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          IndxItmD.itemCount +
+                          IndxItmD.superVisionPrice | number: "1.2-2"
                           }}
                         </td>
                       </tr>
@@ -1058,9 +825,7 @@
                   </table>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 8"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 8">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -1074,21 +839,17 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <ng-container
-                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
-                      >
-                        <tr
-                          *ngFor="
+                      <ng-container *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs">
+                        <tr *ngFor="
                             let IndxItmDPrice of IndxItmD.indexationDataDetailDPrices
-                          "
-                        >
+                          ">
                           <th>
                             {{
-                              GetDependCount(
-                                space.spaceID,
-                                IndxItm.indxItmID,
-                                IndxItmDPrice.indexationItemDetailID
-                              )
+                            GetDependCount(
+                            space.spaceID,
+                            IndxItm.indxItmID,
+                            IndxItmDPrice.indexationItemDetailID
+                            )
                             }}
                           </th>
                           <th>{{ IndxItmDPrice.indexationItemDetailName }}</th>
@@ -1096,30 +857,30 @@
                           <td>{{ IndxItmDPrice.workmanShipPrice }}</td>
                           <td>
                             {{
-                              (IndxItmDPrice.supplyPrice +
-                                IndxItmDPrice.workmanShipPrice) *
-                                GetDependCount(
-                                  space.spaceID,
-                                  IndxItm.indxItmID,
-                                  IndxItmDPrice.indexationItemDetailID
-                                ) | number: "1.2-2"
+                            (IndxItmDPrice.supplyPrice +
+                            IndxItmDPrice.workmanShipPrice) *
+                            GetDependCount(
+                            space.spaceID,
+                            IndxItm.indxItmID,
+                            IndxItmDPrice.indexationItemDetailID
+                            ) | number: "1.2-2"
                             }}
                           </td>
                           <td>
                             {{
-                              IndxItmDPrice.superVisionPrice | number: "1.2-2"
+                            IndxItmDPrice.superVisionPrice | number: "1.2-2"
                             }}
                           </td>
                           <td>
                             {{
-                              (IndxItmDPrice.supplyPrice +
-                                IndxItmDPrice.workmanShipPrice) *
-                                GetDependCount(
-                                  space.spaceID,
-                                  IndxItm.indxItmID,
-                                  IndxItmDPrice.indexationItemDetailID
-                                ) +
-                                IndxItmDPrice.superVisionPrice | number: "1.2-2"
+                            (IndxItmDPrice.supplyPrice +
+                            IndxItmDPrice.workmanShipPrice) *
+                            GetDependCount(
+                            space.spaceID,
+                            IndxItm.indxItmID,
+                            IndxItmDPrice.indexationItemDetailID
+                            ) +
+                            IndxItmDPrice.superVisionPrice | number: "1.2-2"
                             }}
                           </td>
                         </tr>
@@ -1128,9 +889,7 @@
                   </table>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 3"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 3">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -1144,15 +903,13 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr
-                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
-                      >
+                      <tr *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs">
                         <th>
                           {{
-                            GetCeilingArea(
-                              space.spaceID,
-                              IndxItm.indexationItemID
-                            ) | number: "1.2-2"
+                          GetCeilingArea(
+                          space.spaceID,
+                          IndxItm.indexationItemID
+                          ) | number: "1.2-2"
                           }}
                         </th>
                         <th>{{ IndxItmD.indexationItemDetailName }}</th>
@@ -1160,11 +917,11 @@
                         <td>{{ IndxItmD.workmanShipPrice }}</td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              GetCeilingArea(
-                                space.spaceID,
-                                IndxItm.indexationItemID
-                              ) | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          GetCeilingArea(
+                          space.spaceID,
+                          IndxItm.indexationItemID
+                          ) | number: "1.2-2"
                           }}
                         </td>
                         <td>
@@ -1172,12 +929,12 @@
                         </td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              GetCeilingArea(
-                                space.spaceID,
-                                IndxItm.indexationItemID
-                              ) +
-                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          GetCeilingArea(
+                          space.spaceID,
+                          IndxItm.indexationItemID
+                          ) +
+                          IndxItmD.superVisionPrice | number: "1.2-2"
                           }}
                         </td>
                       </tr>
@@ -1185,9 +942,7 @@
                   </table>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 1 && IndxItm.calculatePrice == 4"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 1 && IndxItm.calculatePrice == 4">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -1201,17 +956,15 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr
-                        *ngFor="
+                      <tr *ngFor="
                           let IndxItmD of IndxItm.indexationDataDetailDs;
                           let v = index
-                        "
-                      >
+                        ">
                         <ng-container *ngIf="v == 0 || v == 1">
                           <th>
                             {{
-                              GetWallOneAndTwoArea(space.spaceID)
-                                | number: "1.2-2"
+                            GetWallOneAndTwoArea(space.spaceID)
+                            | number: "1.2-2"
                             }}
                           </th>
                           <th>{{ IndxItmD.indexationItemDetailName }}</th>
@@ -1219,10 +972,10 @@
                           <td>{{ IndxItmD.workmanShipPrice }}</td>
                           <td>
                             {{
-                              (IndxItmD.supplyPrice +
-                                IndxItmD.workmanShipPrice) *
-                                GetWallOneAndTwoArea(space.spaceID)
-                                | number: "1.2-2"
+                            (IndxItmD.supplyPrice +
+                            IndxItmD.workmanShipPrice) *
+                            GetWallOneAndTwoArea(space.spaceID)
+                            | number: "1.2-2"
                             }}
                           </td>
                           <td>
@@ -1230,18 +983,18 @@
                           </td>
                           <td>
                             {{
-                              (IndxItmD.supplyPrice +
-                                IndxItmD.workmanShipPrice) *
-                                GetWallOneAndTwoArea(space.spaceID) +
-                                IndxItmD.superVisionPrice | number: "1.2-2"
+                            (IndxItmD.supplyPrice +
+                            IndxItmD.workmanShipPrice) *
+                            GetWallOneAndTwoArea(space.spaceID) +
+                            IndxItmD.superVisionPrice | number: "1.2-2"
                             }}
                           </td>
                         </ng-container>
                         <ng-container *ngIf="v == 2 || v == 3">
                           <th>
                             {{
-                              GetWallThreeAndFourArea(space.spaceID)
-                                | number: "1.2-2"
+                            GetWallThreeAndFourArea(space.spaceID)
+                            | number: "1.2-2"
                             }}
                           </th>
                           <th>{{ IndxItmD.indexationItemDetailName }}</th>
@@ -1249,10 +1002,10 @@
                           <td>{{ IndxItmD.workmanShipPrice }}</td>
                           <td>
                             {{
-                              (IndxItmD.supplyPrice +
-                                IndxItmD.workmanShipPrice) *
-                                GetWallThreeAndFourArea(space.spaceID)
-                                | number: "1.2-2"
+                            (IndxItmD.supplyPrice +
+                            IndxItmD.workmanShipPrice) *
+                            GetWallThreeAndFourArea(space.spaceID)
+                            | number: "1.2-2"
                             }}
                           </td>
                           <td>
@@ -1260,10 +1013,10 @@
                           </td>
                           <td>
                             {{
-                              (IndxItmD.supplyPrice +
-                                IndxItmD.workmanShipPrice) *
-                                GetWallThreeAndFourArea(space.spaceID) +
-                                IndxItmD.superVisionPrice | number: "1.2-2"
+                            (IndxItmD.supplyPrice +
+                            IndxItmD.workmanShipPrice) *
+                            GetWallThreeAndFourArea(space.spaceID) +
+                            IndxItmD.superVisionPrice | number: "1.2-2"
                             }}
                           </td>
                         </ng-container>
@@ -1272,9 +1025,7 @@
                   </table>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 4"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 4">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -1288,9 +1039,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr
-                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
-                      >
+                      <tr *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs">
                         <th>
                           {{ GetFloorArea(space.spaceID) | number: "1.2-2" }}
                         </th>
@@ -1299,8 +1048,8 @@
                         <td>{{ IndxItmD.workmanShipPrice }}</td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              GetFloorArea(space.spaceID) | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          GetFloorArea(space.spaceID) | number: "1.2-2"
                           }}
                         </td>
                         <td>
@@ -1308,9 +1057,9 @@
                         </td>
                         <td>
                           {{
-                            (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
-                              GetFloorArea(space.spaceID) +
-                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          (IndxItmD.supplyPrice + IndxItmD.workmanShipPrice) *
+                          GetFloorArea(space.spaceID) +
+                          IndxItmD.superVisionPrice | number: "1.2-2"
                           }}
                         </td>
                       </tr>
@@ -1318,9 +1067,7 @@
                   </table>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 2"
-                >
+                <ng-container *ngIf="IndxItm.indxType == 0 && IndxItm.calculatePrice == 2">
                   <table class="table table-bordered">
                     <thead class="thead-light">
                       <tr>
@@ -1334,17 +1081,15 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr
-                        *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs"
-                      >
+                      <tr *ngFor="let IndxItmD of IndxItm.indexationDataDetailDs">
                         <th>1</th>
                         <th>{{ IndxItmD.indexationItemDetailName }}</th>
                         <td>{{ IndxItmD.supplyPrice }}</td>
                         <td>{{ IndxItmD.workmanShipPrice }}</td>
                         <td>
                           {{
-                            IndxItmD.supplyPrice + IndxItmD.workmanShipPrice
-                              | number: "1.2-2"
+                          IndxItmD.supplyPrice + IndxItmD.workmanShipPrice
+                          | number: "1.2-2"
                           }}
                         </td>
                         <td>
@@ -1352,9 +1097,9 @@
                         </td>
                         <td>
                           {{
-                            IndxItmD.supplyPrice +
-                              IndxItmD.workmanShipPrice +
-                              IndxItmD.superVisionPrice | number: "1.2-2"
+                          IndxItmD.supplyPrice +
+                          IndxItmD.workmanShipPrice +
+                          IndxItmD.superVisionPrice | number: "1.2-2"
                           }}
                         </td>
                       </tr>
@@ -1915,12 +1660,7 @@
     <div class="col-4"></div>
     <div class="col-4">
       <div class="order">
-        <button
-          (click)="GoToProfile()"
-          class="btn btn-primary buttonpage4-2"
-          type="button"
-          style="width: 200px"
-        >
+        <button (click)="GoToProfile()" class="btn btn-primary buttonpage4-2 m-0" type="button" style="width: 200px">
           Go To My Profile
         </button>
       </div>

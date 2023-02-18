@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { SharedService } from 'src/app/Shared/Services/shared.service';
 
@@ -14,12 +15,16 @@ export class NewFooterComponent implements OnInit {
   @Input() collapsed: boolean = false;
   @Input() screenWidth: any = 0;
 
+  isUserModule: boolean = false;
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(
+    private elementRef: ElementRef,
+    private route: Router,
+  ) { }
 
   ngOnInit(): void {
     this.loadScript();
-
+    this.isUserModule = this.route?.url?.includes('User');
   }
 
 

@@ -1,15 +1,10 @@
 <div class="container-fluid bg-dark">
-  <h5 class="text-center text-light mb-0" style="font-size: 1.5rem ;">indexation</h5>
-  <div class="row">
-    <div class="col-2"></div>
-    <div class="col-2">
-      <a
-        class="btn btn-secondary text-black-50 hover text-black-50 float-right mt-4"
-        role="button"
-        >Back</a
-      >
+  <h5 class="text-center text-light mb-0 py-3" style="font-size: 1.5rem ;">indexation</h5>
+  <div class="row justify-content-center">
+    <div class="col-md-2 col-3">
+      <a class="btn btn-secondary text-black-50 hover text-black-50 float-right mt-4" role="button">Back</a>
     </div>
-    <div class="col-4">
+    <div class="col-md-4 col-6">
       <div class="container">
         <ul class="pagination">
           <li class="mt-3">
@@ -21,15 +16,11 @@
         </ul>
       </div>
     </div>
-    <div class="col-2">
-      <a
-        class="btn btn-secondary text-black-50 hover text-black-50 mt-4"
-        role="button"
-        (click)="getThirdStepData()"
-        >Next
+    <div class="col-md-2 col-3">
+      <a class="btn btn-secondary text-black-50 hover text-black-50 mt-4" role="button"
+        (click)="getThirdStepData()">Next
       </a>
     </div>
-    <div class="col-2"></div>
   </div>
   <br />
 </div>
@@ -51,73 +42,38 @@
         <div class="col-lg-12 col-md-12 col-sm-12 input-group mb-3 section-1">
           <span class="input-group-text text-center">إسم الفراغ</span>
 
-          <select
-            (change)="GetIndexationItem()"
-            formControlName="cSpaceData"
-            class="form-select mr-2 selectpage3-1-1"
-            id="inputGroupSelect01"
-          >
+          <select (change)="GetIndexationItem()" formControlName="cSpaceData" class="form-select mr-2 selectpage3-1-1"
+            id="inputGroupSelect01">
             <option value="0">::: اختر إسم الفراغ :::</option>
             <option *ngFor="let SD of strSpaceData" [value]="SD.spaceDataID">
               {{ SD.name }}
             </option>
           </select>
-          <input
-            type="text"
-            style="color: red; font-weight: bold"
-            formControlName="cTotalPrice"
-            readonly
-            class="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-          />
+          <input type="text" style="color: red; font-weight: bold" formControlName="cTotalPrice" readonly
+            class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
         </div>
 
         <div class="measure">
           <div class="row m-auto">
             <div class="col-lg-4 col-md-4 col-sm-4 pl-0">
               <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default"
-                  >Length</span
-                >
-                <input
-                  type="text"
-                  formControlName="cLength"
-                  readonly
-                  class="form-control"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default"
-                />
+                <span class="input-group-text" id="inputGroup-sizing-default">Length</span>
+                <input type="text" formControlName="cLength" readonly class="form-control"
+                  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
               </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
               <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default"
-                  >Width</span
-                >
-                <input
-                  type="text"
-                  formControlName="cWidth"
-                  readonly
-                  class="form-control"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default"
-                />
+                <span class="input-group-text" id="inputGroup-sizing-default">Width</span>
+                <input type="text" formControlName="cWidth" readonly class="form-control"
+                  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
               </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 pr-1">
               <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default"
-                  >Height</span
-                >
-                <input
-                  type="text"
-                  formControlName="cHeight"
-                  readonly
-                  class="form-control"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default"
-                />
+                <span class="input-group-text" id="inputGroup-sizing-default">Height</span>
+                <input type="text" formControlName="cHeight" readonly class="form-control"
+                  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
               </div>
             </div>
           </div>
@@ -126,77 +82,46 @@
 
       <form [formGroup]="myForm">
         <div *ngFor="let ISI of strIndexationSiteItem; let k = index">
-          <ng-container
-            *ngIf="
+          <ng-container *ngIf="
               ISI.indexationItem.type == 2 &&
               ISI.indexationItem.indxType == 1 &&
               IsDisplayWall == '1'
-            "
-          >
+            ">
             <div class="accordion-3">
-              <button
-                class="btn btn main-accordion2"
-                type="button"
-                data-toggle="collapse"
-                attr.data-target="#collapseExample{{ k + 1 }}"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
+              <button class="btn btn main-accordion2" type="button" data-toggle="collapse"
+                attr.data-target="#collapseExample{{ k + 1 }}" aria-expanded="false" aria-controls="collapseExample">
                 {{ ISI.indexationItem.name }}
               </button>
-              <input
-                type="text"
-                readonly
-                value="0"
-                [formControlName]="'P_' + (k + 1)"
-              />
+              <input type="text" readonly value="0" [formControlName]="'P_' + (k + 1)" />
             </div>
           </ng-container>
 
           <ng-container *ngIf="ISI.indexationItem.type != 2">
             <div class="accordion-3">
-              <button
-                class="btn btn main-accordion2"
-                type="button"
-                data-toggle="collapse"
-                attr.data-target="#collapseExample{{ k + 1 }}"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
+              <button class="btn btn main-accordion2" type="button" data-toggle="collapse"
+                attr.data-target="#collapseExample{{ k + 1 }}" aria-expanded="false" aria-controls="collapseExample">
                 {{ ISI.indexationItem.name }}
               </button>
-              <input
-                type="text"
-                readonly
-                value="0"
-                [formControlName]="'P_' + (k + 1)"
-              />
+              <input type="text" readonly value="0" [formControlName]="'P_' + (k + 1)" />
             </div>
           </ng-container>
 
           <div class="collapse" id="collapseExample{{ k + 1 }}">
             <!-- إختيار واحد فقط -->
-            <div
-              class="card card-body"
-              *ngIf="
+            <div class="card card-body" *ngIf="
                 ISI.indexationItem.type == 1 && ISI.indexationItem.indxType != 1
-              "
-            >
+              ">
               <div *ngIf="ISI.indexationItem.indxType == 3">
-                <ng-container
-                  *ngFor="
+                <ng-container *ngFor="
                     let door of GetSpaceWindowDoorData(
                       this.fixForm.get('cSpaceData')?.value
                     );
                     let c = index
-                  "
-                >
-                  <ng-container
-                    *ngIf="
+                  ">
+                  <ng-container *ngIf="
                       door.flagID.toUpperCase() ==
                       'E93DE226-73A3-4559-EB98-08D9E0649AF0'
-                    "
-                  >
+                    ">
                     <h5 class="text-center" style="font-size: medium">
                       <b>
                         <u>
@@ -214,20 +139,16 @@
               </div>
 
               <div *ngIf="ISI.indexationItem.indxType == 2">
-                <ng-container
-                  *ngFor="
+                <ng-container *ngFor="
                     let door of GetSpaceWindowDoorData(
                       this.fixForm.get('cSpaceData')?.value
                     );
                     let c = index
-                  "
-                >
-                  <ng-container
-                    *ngIf="
+                  ">
+                  <ng-container *ngIf="
                       door.flagID.toUpperCase() ==
                       'AB5152F9-7035-433D-EB97-08D9E0649AF0'
-                    "
-                  >
+                    ">
                     <h5 class="text-center" style="font-size: medium">
                       <b>
                         <u>
@@ -244,27 +165,17 @@
                 <hr />
               </div>
 
-              <ng-container
-                *ngIf="ISI.indexationItem.indexationItemDetails.length < 3"
-              >
+              <ng-container *ngIf="ISI.indexationItem.indexationItemDetails.length < 3">
                 <div class="row mb-2">
-                  <ng-container
-                    *ngFor="let itm of ISI.indexationItem.indexationItemDetails"
-                  >
+                  <ng-container *ngFor="let itm of ISI.indexationItem.indexationItemDetails">
                     <div class="col-4 form-check electricity">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        (ngModelChange)="
+                      <input class="form-check-input" type="radio" (ngModelChange)="
                           CalculateItemPrice(
                             $event,
                             itm.indexationItemDetailID,
                             k
                           )
-                        "
-                        [formControlName]="'R_' + (k + 1)"
-                        [value]="itm.indexationItemDetailID"
-                      />
+                        " [formControlName]="'R_' + (k + 1)" [value]="itm.indexationItemDetailID" />
                       <label class="form-check-label" for="flexRadioDefault">
                         {{ itm.name }}
                       </label>
@@ -273,48 +184,33 @@
                 </div>
               </ng-container>
 
-              <ng-container
-                *ngIf="
+              <ng-container *ngIf="
                   ISI.indexationItem.indexationItemDetails.length >= 3 &&
                   ISI.indexationItem.indexationItemDetails.length % 3 == 0
-                "
-              >
-                <div
-                  class="row mb-2"
-                  *ngFor="
+                ">
+                <div class="row mb-2" *ngFor="
                     let num of GetNumbers(
                       GetIntegerNumber(
                         ISI.indexationItem.indexationItemDetails.length / 3
                       )
                     );
                     let i = index
-                  "
-                >
-                  <ng-container
-                    *ngIf="
+                  ">
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length <= 3 &&
                       i == 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails
-                      "
-                    >
+                      ">
                       <div class="col-4 form-check electricity">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          (ngModelChange)="
+                        <input class="form-check-input" type="radio" (ngModelChange)="
                             CalculateItemPrice(
                               $event,
                               itm.indexationItemDetailID,
                               k
                             )
-                          "
-                          [formControlName]="'R_' + (k + 1)"
-                          [value]="itm.indexationItemDetailID"
-                        />
+                          " [formControlName]="'R_' + (k + 1)" [value]="itm.indexationItemDetailID" />
                         <label class="form-check-label" for="flexRadioDefault">
                           {{ itm.name }}
                         </label>
@@ -322,37 +218,24 @@
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length > 3 &&
                       i == 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                         <div class="col-4 form-check electricity">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            (ngModelChange)="
+                          <input class="form-check-input" type="radio" (ngModelChange)="
                               CalculateItemPrice(
                                 $event,
                                 itm.indexationItemDetailID,
                                 k
                               )
-                            "
-                            [formControlName]="'R_' + (k + 1)"
-                            [value]="itm.indexationItemDetailID"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="flexRadioDefault"
-                          >
+                            " [formControlName]="'R_' + (k + 1)" [value]="itm.indexationItemDetailID" />
+                          <label class="form-check-label" for="flexRadioDefault">
                             {{ itm.name }}
                           </label>
                         </div>
@@ -360,37 +243,24 @@
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length - i * 3 >=
                         3 && i > 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                         <div class="col-4 form-check electricity">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            (ngModelChange)="
+                          <input class="form-check-input" type="radio" (ngModelChange)="
                               CalculateItemPrice(
                                 $event,
                                 itm.indexationItemDetailID,
                                 k
                               )
-                            "
-                            [formControlName]="'R_' + (k + 1)"
-                            [value]="itm.indexationItemDetailID"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="flexRadioDefault"
-                          >
+                            " [formControlName]="'R_' + (k + 1)" [value]="itm.indexationItemDetailID" />
+                          <label class="form-check-label" for="flexRadioDefault">
                             {{ itm.name }}
                           </label>
                         </div>
@@ -398,37 +268,24 @@
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length - i * 3 <
                         3 && i > 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                         <div class="col-4 form-check electricity">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            (ngModelChange)="
+                          <input class="form-check-input" type="radio" (ngModelChange)="
                               CalculateItemPrice(
                                 $event,
                                 itm.indexationItemDetailID,
                                 k
                               )
-                            "
-                            [formControlName]="'R_' + (k + 1)"
-                            [value]="itm.indexationItemDetailID"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="flexRadioDefault"
-                          >
+                            " [formControlName]="'R_' + (k + 1)" [value]="itm.indexationItemDetailID" />
+                          <label class="form-check-label" for="flexRadioDefault">
                             {{ itm.name }}
                           </label>
                         </div>
@@ -438,48 +295,33 @@
                 </div>
               </ng-container>
 
-              <ng-container
-                *ngIf="
+              <ng-container *ngIf="
                   ISI.indexationItem.indexationItemDetails.length >= 3 &&
                   ISI.indexationItem.indexationItemDetails.length % 3 > 0
-                "
-              >
-                <div
-                  class="row mb-2"
-                  *ngFor="
+                ">
+                <div class="row mb-2" *ngFor="
                     let num of GetNumbers(
                       GetIntegerNumber(
                         ISI.indexationItem.indexationItemDetails.length / 3
                       ) + 1
                     );
                     let i = index
-                  "
-                >
-                  <ng-container
-                    *ngIf="
+                  ">
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length <= 3 &&
                       i == 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails
-                      "
-                    >
+                      ">
                       <div class="col-4 form-check electricity">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          (ngModelChange)="
+                        <input class="form-check-input" type="radio" (ngModelChange)="
                             CalculateItemPrice(
                               $event,
                               itm.indexationItemDetailID,
                               k
                             )
-                          "
-                          [formControlName]="'R_' + (k + 1)"
-                          [value]="itm.indexationItemDetailID"
-                        />
+                          " [formControlName]="'R_' + (k + 1)" [value]="itm.indexationItemDetailID" />
                         <label class="form-check-label" for="flexRadioDefault">
                           {{ itm.name }}
                         </label>
@@ -487,37 +329,24 @@
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length > 3 &&
                       i == 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                         <div class="col-4 form-check electricity">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            (ngModelChange)="
+                          <input class="form-check-input" type="radio" (ngModelChange)="
                               CalculateItemPrice(
                                 $event,
                                 itm.indexationItemDetailID,
                                 k
                               )
-                            "
-                            [formControlName]="'R_' + (k + 1)"
-                            [value]="itm.indexationItemDetailID"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="flexRadioDefault"
-                          >
+                            " [formControlName]="'R_' + (k + 1)" [value]="itm.indexationItemDetailID" />
+                          <label class="form-check-label" for="flexRadioDefault">
                             {{ itm.name }}
                           </label>
                         </div>
@@ -525,37 +354,24 @@
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length - i * 3 >
                         3 && i > 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                         <div class="col-4 form-check electricity">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            (ngModelChange)="
+                          <input class="form-check-input" type="radio" (ngModelChange)="
                               CalculateItemPrice(
                                 $event,
                                 itm.indexationItemDetailID,
                                 k
                               )
-                            "
-                            [formControlName]="'R_' + (k + 1)"
-                            [value]="itm.indexationItemDetailID"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="flexRadioDefault"
-                          >
+                            " [formControlName]="'R_' + (k + 1)" [value]="itm.indexationItemDetailID" />
+                          <label class="form-check-label" for="flexRadioDefault">
                             {{ itm.name }}
                           </label>
                         </div>
@@ -563,37 +379,24 @@
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length - i * 3 <
                         3 && i > 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                         <div class="col-4 form-check electricity">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            (ngModelChange)="
+                          <input class="form-check-input" type="radio" (ngModelChange)="
                               CalculateItemPrice(
                                 $event,
                                 itm.indexationItemDetailID,
                                 k
                               )
-                            "
-                            [formControlName]="'R_' + (k + 1)"
-                            [value]="itm.indexationItemDetailID"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="flexRadioDefault"
-                          >
+                            " [formControlName]="'R_' + (k + 1)" [value]="itm.indexationItemDetailID" />
+                          <label class="form-check-label" for="flexRadioDefault">
                             {{ itm.name }}
                           </label>
                         </div>
@@ -606,359 +409,223 @@
 
             <!-- إدخال عدد -->
             <div class="card card-body" *ngIf="ISI.indexationItem.type == 3">
-              <ng-container
-                *ngIf="ISI.indexationItem.indexationItemDetails.length < 3"
-              >
+              <ng-container *ngIf="ISI.indexationItem.indexationItemDetails.length < 3">
                 <div class="row mb-2">
-                  <ng-container
-                    *ngFor="let itm of ISI.indexationItem.indexationItemDetails"
-                  >
-                    <label
-                      class="input-group-text labelpage3-1-3"
-                      for="inputGroupSelect01"
-                    >
+                  <ng-container *ngFor="let itm of ISI.indexationItem.indexationItemDetails">
+                    <label class="input-group-text labelpage3-1-3" for="inputGroupSelect01">
                       {{ itm.name }}
                     </label>
-                    <input
-                      class="inputpage-3-1-1"
-                      type="text"
-                      maxlength="2"
-                      (ngModelChange)="
+                    <input class="inputpage-3-1-1" type="text" maxlength="2" (ngModelChange)="
                         CalculateItemPrice(
                           $event,
                           itm.indexationItemDetailID,
                           k
                         )
-                      "
-                      [formControlName]="itm.indexationItemDetailID"
-                      value="1"
-                    />
+                      " [formControlName]="itm.indexationItemDetailID" value="1" />
                   </ng-container>
                 </div>
               </ng-container>
 
-              <ng-container
-                *ngIf="
+              <ng-container *ngIf="
                   ISI.indexationItem.indexationItemDetails.length >= 3 &&
                   ISI.indexationItem.indexationItemDetails.length % 3 == 0
-                "
-              >
-                <div
-                  class="row mb-2"
-                  *ngFor="
+                ">
+                <div class="row mb-2" *ngFor="
                     let num of GetNumbers(
                       GetIntegerNumber(
                         ISI.indexationItem.indexationItemDetails.length / 3
                       )
                     );
                     let i = index
-                  "
-                >
-                  <ng-container
-                    *ngIf="
+                  ">
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length <= 3 &&
                       i == 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails
-                      "
-                    >
-                      <label
-                        class="input-group-text labelpage3-1-3"
-                        for="inputGroupSelect01"
-                      >
+                      ">
+                      <label class="input-group-text labelpage3-1-3" for="inputGroupSelect01">
                         {{ itm.name }}
                       </label>
-                      <input
-                        class="inputpage-3-1-1"
-                        type="text"
-                        maxlength="2"
-                        (ngModelChange)="
+                      <input class="inputpage-3-1-1" type="text" maxlength="2" (ngModelChange)="
                           CalculateItemPrice(
                             $event,
                             itm.indexationItemDetailID,
                             k
                           )
-                        "
-                        [formControlName]="itm.indexationItemDetailID"
-                        value="1"
-                      />
+                        " [formControlName]="itm.indexationItemDetailID" value="1" />
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length > 3 &&
                       i == 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
-                        <label
-                          class="input-group-text labelpage3-1-3"
-                          for="inputGroupSelect01"
-                        >
+                        <label class="input-group-text labelpage3-1-3" for="inputGroupSelect01">
                           {{ itm.name }}
                         </label>
-                        <input
-                          class="inputpage-3-1-1"
-                          type="text"
-                          maxlength="2"
-                          (ngModelChange)="
+                        <input class="inputpage-3-1-1" type="text" maxlength="2" (ngModelChange)="
                             CalculateItemPrice(
                               $event,
                               itm.indexationItemDetailID,
                               k
                             )
-                          "
-                          [formControlName]="itm.indexationItemDetailID"
-                          value="1"
-                        />
+                          " [formControlName]="itm.indexationItemDetailID" value="1" />
                       </ng-container>
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length - i * 3 >=
                         3 && i > 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
-                        <label
-                          class="input-group-text labelpage3-1-3"
-                          for="inputGroupSelect01"
-                        >
+                        <label class="input-group-text labelpage3-1-3" for="inputGroupSelect01">
                           {{ itm.name }}
                         </label>
-                        <input
-                          class="inputpage-3-1-1"
-                          type="text"
-                          maxlength="2"
-                          (ngModelChange)="
+                        <input class="inputpage-3-1-1" type="text" maxlength="2" (ngModelChange)="
                             CalculateItemPrice(
                               $event,
                               itm.indexationItemDetailID,
                               k
                             )
-                          "
-                          [formControlName]="itm.indexationItemDetailID"
-                          value="1"
-                        />
+                          " [formControlName]="itm.indexationItemDetailID" value="1" />
                       </ng-container>
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length - i * 3 <
                         3 && i > 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
-                        <label
-                          class="input-group-text labelpage3-1-3"
-                          for="inputGroupSelect01"
-                        >
+                        <label class="input-group-text labelpage3-1-3" for="inputGroupSelect01">
                           {{ itm.name }}
                         </label>
-                        <input
-                          class="inputpage-3-1-1"
-                          type="text"
-                          maxlength="2"
-                          (ngModelChange)="
+                        <input class="inputpage-3-1-1" type="text" maxlength="2" (ngModelChange)="
                             CalculateItemPrice(
                               $event,
                               itm.indexationItemDetailID,
                               k
                             )
-                          "
-                          [formControlName]="itm.indexationItemDetailID"
-                          value="1"
-                        />
+                          " [formControlName]="itm.indexationItemDetailID" value="1" />
                       </ng-container>
                     </ng-container>
                   </ng-container>
                 </div>
               </ng-container>
 
-              <ng-container
-                *ngIf="
+              <ng-container *ngIf="
                   ISI.indexationItem.indexationItemDetails.length >= 3 &&
                   ISI.indexationItem.indexationItemDetails.length % 3 > 0
-                "
-              >
-                <div
-                  class="row mb-2"
-                  *ngFor="
+                ">
+                <div class="row mb-2" *ngFor="
                     let num of GetNumbers(
                       GetIntegerNumber(
                         ISI.indexationItem.indexationItemDetails.length / 3
                       ) + 1
                     );
                     let i = index
-                  "
-                >
-                  <ng-container
-                    *ngIf="
+                  ">
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length <= 3 &&
                       i == 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails
-                      "
-                    >
-                      <label
-                        class="input-group-text labelpage3-1-3"
-                        for="inputGroupSelect01"
-                      >
+                      ">
+                      <label class="input-group-text labelpage3-1-3" for="inputGroupSelect01">
                         {{ itm.name }}
                       </label>
-                      <input
-                        class="inputpage-3-1-1"
-                        type="text"
-                        maxlength="2"
-                        (ngModelChange)="
+                      <input class="inputpage-3-1-1" type="text" maxlength="2" (ngModelChange)="
                           CalculateItemPrice(
                             $event,
                             itm.indexationItemDetailID,
                             k
                           )
-                        "
-                        [formControlName]="itm.indexationItemDetailID"
-                        value="1"
-                      />
+                        " [formControlName]="itm.indexationItemDetailID" value="1" />
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length > 3 &&
                       i == 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
-                        <label
-                          class="input-group-text labelpage3-1-3"
-                          for="inputGroupSelect01"
-                        >
+                        <label class="input-group-text labelpage3-1-3" for="inputGroupSelect01">
                           {{ itm.name }}
                         </label>
-                        <input
-                          class="inputpage-3-1-1"
-                          type="text"
-                          maxlength="2"
-                          (ngModelChange)="
+                        <input class="inputpage-3-1-1" type="text" maxlength="2" (ngModelChange)="
                             CalculateItemPrice(
                               $event,
                               itm.indexationItemDetailID,
                               k
                             )
-                          "
-                          [formControlName]="itm.indexationItemDetailID"
-                          value="1"
-                        />
+                          " [formControlName]="itm.indexationItemDetailID" value="1" />
                       </ng-container>
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length - i * 3 >
                         3 && i > 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
-                        <label
-                          class="input-group-text labelpage3-1-3"
-                          for="inputGroupSelect01"
-                        >
+                        <label class="input-group-text labelpage3-1-3" for="inputGroupSelect01">
                           {{ itm.name }}
                         </label>
-                        <input
-                          class="inputpage-3-1-1"
-                          type="text"
-                          maxlength="2"
-                          (ngModelChange)="
+                        <input class="inputpage-3-1-1" type="text" maxlength="2" (ngModelChange)="
                             CalculateItemPrice(
                               $event,
                               itm.indexationItemDetailID,
                               k
                             )
-                          "
-                          [formControlName]="itm.indexationItemDetailID"
-                          value="1"
-                        />
+                          " [formControlName]="itm.indexationItemDetailID" value="1" />
                       </ng-container>
                     </ng-container>
                   </ng-container>
 
-                  <ng-container
-                    *ngIf="
+                  <ng-container *ngIf="
                       ISI.indexationItem.indexationItemDetails.length - i * 3 <
                         3 && i > 0
-                    "
-                  >
-                    <ng-container
-                      *ngFor="
+                    ">
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails;
                         let y = index
-                      "
-                    >
+                      ">
                       <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
-                        <label
-                          class="input-group-text labelpage3-1-3"
-                          for="inputGroupSelect01"
-                        >
+                        <label class="input-group-text labelpage3-1-3" for="inputGroupSelect01">
                           {{ itm.name }}
                         </label>
-                        <input
-                          class="inputpage-3-1-1"
-                          type="text"
-                          maxlength="2"
-                          (ngModelChange)="
+                        <input class="inputpage-3-1-1" type="text" maxlength="2" (ngModelChange)="
                             CalculateItemPrice(
                               $event,
                               itm.indexationItemDetailID,
                               k
                             )
-                          "
-                          [formControlName]="itm.indexationItemDetailID"
-                          value="1"
-                        />
+                          " [formControlName]="itm.indexationItemDetailID" value="1" />
                       </ng-container>
                     </ng-container>
                   </ng-container>
@@ -968,29 +635,23 @@
 
             <!-- أعمال محارة (إختيار من متعدد) -->
             <ng-container *ngIf="IsDisplayWall == '1'">
-              <div
-                class="card card-body"
-                *ngIf="
+              <div class="card card-body" *ngIf="
                   ISI.indexationItem.type == 2 &&
                   ISI.indexationItem.indxType == 1
-                "
-              >
+                ">
                 <label class="form-check-label" for="flexCheckDefault">
                   إجمالى مساحة أعمال المحارة بالمتر المسطح :
                   {{
-                    CalculateWallArea(this.fixForm.get("cSpaceData")?.value, k)
+                  CalculateWallArea(this.fixForm.get("cSpaceData")?.value, k)
                   }}
                 </label>
               </div>
             </ng-container>
 
             <!-- الحوائط (إختيار واحد فقط) -->
-            <div
-              class="card card-body"
-              *ngIf="
+            <div class="card card-body" *ngIf="
                 ISI.indexationItem.type == 1 && ISI.indexationItem.indxType == 1
-              "
-            >
+              ">
               <ng-container *ngFor="let num of GetNumbers(4); let v = index">
                 <ng-container *ngIf="v == 0 || v == 1">
                   <h5 class="text-center" style="font-size: medium">
@@ -998,11 +659,11 @@
                       <u>
                         حائط ({{ v + 1 }}) طول
                         {{
-                          GetSpaceLength(this.fixForm.get("cSpaceData")?.value)
+                        GetSpaceLength(this.fixForm.get("cSpaceData")?.value)
                         }}
                         م * ارتفاع
                         {{
-                          GetSpaceHeight(this.fixForm.get("cSpaceData")?.value)
+                        GetSpaceHeight(this.fixForm.get("cSpaceData")?.value)
                         }}
                         م
                       </u>
@@ -1016,11 +677,11 @@
                       <u>
                         حائط ({{ v + 1 }}) عرض
                         {{
-                          GetSpaceWidth(this.fixForm.get("cSpaceData")?.value)
+                        GetSpaceWidth(this.fixForm.get("cSpaceData")?.value)
                         }}
                         م * ارتفاع
                         {{
-                          GetSpaceHeight(this.fixForm.get("cSpaceData")?.value)
+                        GetSpaceHeight(this.fixForm.get("cSpaceData")?.value)
                         }}
                         م
                       </u>
@@ -1028,29 +689,19 @@
                   </h5>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="ISI.indexationItem.indexationItemDetails.length < 3"
-                >
+                <ng-container *ngIf="ISI.indexationItem.indexationItemDetails.length < 3">
                   <div class="row mb-2">
-                    <ng-container
-                      *ngFor="
+                    <ng-container *ngFor="
                         let itm of ISI.indexationItem.indexationItemDetails
-                      "
-                    >
+                      ">
                       <div class="col-4 form-check electricity">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          (ngModelChange)="
+                        <input class="form-check-input" type="radio" (ngModelChange)="
                             CalculateItemPrice(
                               $event,
                               itm.indexationItemDetailID,
                               k
                             )
-                          "
-                          [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
-                          [value]="itm.indexationItemDetailID"
-                        />
+                          " [formControlName]="'R' + (v + 1) + '_' + (k + 1)" [value]="itm.indexationItemDetailID" />
                         <label class="form-check-label" for="flexRadioDefault">
                           {{ itm.name }}
                         </label>
@@ -1059,89 +710,59 @@
                   </div>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="
+                <ng-container *ngIf="
                     ISI.indexationItem.indexationItemDetails.length >= 3 &&
                     ISI.indexationItem.indexationItemDetails.length % 3 == 0
-                  "
-                >
-                  <div
-                    class="row mb-2"
-                    *ngFor="
+                  ">
+                  <div class="row mb-2" *ngFor="
                       let num of GetNumbers(
                         GetIntegerNumber(
                           ISI.indexationItem.indexationItemDetails.length / 3
                         )
                       );
                       let i = index
-                    "
-                  >
-                    <ng-container
-                      *ngIf="
+                    ">
+                    <ng-container *ngIf="
                         ISI.indexationItem.indexationItemDetails.length <= 3 &&
                         i == 0
-                      "
-                    >
-                      <ng-container
-                        *ngFor="
+                      ">
+                      <ng-container *ngFor="
                           let itm of ISI.indexationItem.indexationItemDetails
-                        "
-                      >
+                        ">
                         <div class="col-4 form-check electricity">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            (ngModelChange)="
+                          <input class="form-check-input" type="radio" (ngModelChange)="
                               CalculateItemPrice(
                                 $event,
                                 itm.indexationItemDetailID,
                                 k
                               )
-                            "
-                            [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
-                            [value]="itm.indexationItemDetailID"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="flexRadioDefault"
-                          >
+                            " [formControlName]="'R' + (v + 1) + '_' + (k + 1)" [value]="itm.indexationItemDetailID" />
+                          <label class="form-check-label" for="flexRadioDefault">
                             {{ itm.name }}
                           </label>
                         </div>
                       </ng-container>
                     </ng-container>
 
-                    <ng-container
-                      *ngIf="
+                    <ng-container *ngIf="
                         ISI.indexationItem.indexationItemDetails.length > 3 &&
                         i == 0
-                      "
-                    >
-                      <ng-container
-                        *ngFor="
+                      ">
+                      <ng-container *ngFor="
                           let itm of ISI.indexationItem.indexationItemDetails;
                           let y = index
-                        "
-                      >
+                        ">
                         <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                           <div class="col-4 form-check electricity">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              (ngModelChange)="
+                            <input class="form-check-input" type="radio" (ngModelChange)="
                                 CalculateItemPrice(
                                   $event,
                                   itm.indexationItemDetailID,
                                   k
                                 )
-                              "
-                              [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
-                              [value]="itm.indexationItemDetailID"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="flexRadioDefault"
-                            >
+                              " [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
+                              [value]="itm.indexationItemDetailID" />
+                            <label class="form-check-label" for="flexRadioDefault">
                               {{ itm.name }}
                             </label>
                           </div>
@@ -1149,38 +770,26 @@
                       </ng-container>
                     </ng-container>
 
-                    <ng-container
-                      *ngIf="
+                    <ng-container *ngIf="
                         ISI.indexationItem.indexationItemDetails.length -
                           i * 3 >=
                           3 && i > 0
-                      "
-                    >
-                      <ng-container
-                        *ngFor="
+                      ">
+                      <ng-container *ngFor="
                           let itm of ISI.indexationItem.indexationItemDetails;
                           let y = index
-                        "
-                      >
+                        ">
                         <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                           <div class="col-4 form-check electricity">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              (ngModelChange)="
+                            <input class="form-check-input" type="radio" (ngModelChange)="
                                 CalculateItemPrice(
                                   $event,
                                   itm.indexationItemDetailID,
                                   k
                                 )
-                              "
-                              [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
-                              [value]="itm.indexationItemDetailID"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="flexRadioDefault"
-                            >
+                              " [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
+                              [value]="itm.indexationItemDetailID" />
+                            <label class="form-check-label" for="flexRadioDefault">
                               {{ itm.name }}
                             </label>
                           </div>
@@ -1188,38 +797,26 @@
                       </ng-container>
                     </ng-container>
 
-                    <ng-container
-                      *ngIf="
+                    <ng-container *ngIf="
                         ISI.indexationItem.indexationItemDetails.length -
                           i * 3 <
                           3 && i > 0
-                      "
-                    >
-                      <ng-container
-                        *ngFor="
+                      ">
+                      <ng-container *ngFor="
                           let itm of ISI.indexationItem.indexationItemDetails;
                           let y = index
-                        "
-                      >
+                        ">
                         <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                           <div class="col-4 form-check electricity">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              (ngModelChange)="
+                            <input class="form-check-input" type="radio" (ngModelChange)="
                                 CalculateItemPrice(
                                   $event,
                                   itm.indexationItemDetailID,
                                   k
                                 )
-                              "
-                              [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
-                              [value]="itm.indexationItemDetailID"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="flexRadioDefault"
-                            >
+                              " [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
+                              [value]="itm.indexationItemDetailID" />
+                            <label class="form-check-label" for="flexRadioDefault">
                               {{ itm.name }}
                             </label>
                           </div>
@@ -1229,89 +826,59 @@
                   </div>
                 </ng-container>
 
-                <ng-container
-                  *ngIf="
+                <ng-container *ngIf="
                     ISI.indexationItem.indexationItemDetails.length >= 3 &&
                     ISI.indexationItem.indexationItemDetails.length % 3 > 0
-                  "
-                >
-                  <div
-                    class="row mb-2"
-                    *ngFor="
+                  ">
+                  <div class="row mb-2" *ngFor="
                       let num of GetNumbers(
                         GetIntegerNumber(
                           ISI.indexationItem.indexationItemDetails.length / 3
                         ) + 1
                       );
                       let i = index
-                    "
-                  >
-                    <ng-container
-                      *ngIf="
+                    ">
+                    <ng-container *ngIf="
                         ISI.indexationItem.indexationItemDetails.length <= 3 &&
                         i == 0
-                      "
-                    >
-                      <ng-container
-                        *ngFor="
+                      ">
+                      <ng-container *ngFor="
                           let itm of ISI.indexationItem.indexationItemDetails
-                        "
-                      >
+                        ">
                         <div class="col-4 form-check electricity">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            (ngModelChange)="
+                          <input class="form-check-input" type="radio" (ngModelChange)="
                               CalculateItemPrice(
                                 $event,
                                 itm.indexationItemDetailID,
                                 k
                               )
-                            "
-                            [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
-                            [value]="itm.indexationItemDetailID"
-                          />
-                          <label
-                            class="form-check-label"
-                            for="flexRadioDefault"
-                          >
+                            " [formControlName]="'R' + (v + 1) + '_' + (k + 1)" [value]="itm.indexationItemDetailID" />
+                          <label class="form-check-label" for="flexRadioDefault">
                             {{ itm.name }}
                           </label>
                         </div>
                       </ng-container>
                     </ng-container>
 
-                    <ng-container
-                      *ngIf="
+                    <ng-container *ngIf="
                         ISI.indexationItem.indexationItemDetails.length > 3 &&
                         i == 0
-                      "
-                    >
-                      <ng-container
-                        *ngFor="
+                      ">
+                      <ng-container *ngFor="
                           let itm of ISI.indexationItem.indexationItemDetails;
                           let y = index
-                        "
-                      >
+                        ">
                         <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                           <div class="col-4 form-check electricity">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              (ngModelChange)="
+                            <input class="form-check-input" type="radio" (ngModelChange)="
                                 CalculateItemPrice(
                                   $event,
                                   itm.indexationItemDetailID,
                                   k
                                 )
-                              "
-                              [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
-                              [value]="itm.indexationItemDetailID"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="flexRadioDefault"
-                            >
+                              " [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
+                              [value]="itm.indexationItemDetailID" />
+                            <label class="form-check-label" for="flexRadioDefault">
                               {{ itm.name }}
                             </label>
                           </div>
@@ -1319,38 +886,26 @@
                       </ng-container>
                     </ng-container>
 
-                    <ng-container
-                      *ngIf="
+                    <ng-container *ngIf="
                         ISI.indexationItem.indexationItemDetails.length -
                           i * 3 >
                           3 && i > 0
-                      "
-                    >
-                      <ng-container
-                        *ngFor="
+                      ">
+                      <ng-container *ngFor="
                           let itm of ISI.indexationItem.indexationItemDetails;
                           let y = index
-                        "
-                      >
+                        ">
                         <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                           <div class="col-4 form-check electricity">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              (ngModelChange)="
+                            <input class="form-check-input" type="radio" (ngModelChange)="
                                 CalculateItemPrice(
                                   $event,
                                   itm.indexationItemDetailID,
                                   k
                                 )
-                              "
-                              [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
-                              [value]="itm.indexationItemDetailID"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="flexRadioDefault"
-                            >
+                              " [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
+                              [value]="itm.indexationItemDetailID" />
+                            <label class="form-check-label" for="flexRadioDefault">
                               {{ itm.name }}
                             </label>
                           </div>
@@ -1358,38 +913,26 @@
                       </ng-container>
                     </ng-container>
 
-                    <ng-container
-                      *ngIf="
+                    <ng-container *ngIf="
                         ISI.indexationItem.indexationItemDetails.length -
                           i * 3 <
                           3 && i > 0
-                      "
-                    >
-                      <ng-container
-                        *ngFor="
+                      ">
+                      <ng-container *ngFor="
                           let itm of ISI.indexationItem.indexationItemDetails;
                           let y = index
-                        "
-                      >
+                        ">
                         <ng-container *ngIf="y >= i * 3 && y < i * 3 + 3">
                           <div class="col-4 form-check electricity">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              (ngModelChange)="
+                            <input class="form-check-input" type="radio" (ngModelChange)="
                                 CalculateItemPrice(
                                   $event,
                                   itm.indexationItemDetailID,
                                   k
                                 )
-                              "
-                              [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
-                              [value]="itm.indexationItemDetailID"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="flexRadioDefault"
-                            >
+                              " [formControlName]="'R' + (v + 1) + '_' + (k + 1)"
+                              [value]="itm.indexationItemDetailID" />
+                            <label class="form-check-label" for="flexRadioDefault">
                               {{ itm.name }}
                             </label>
                           </div>

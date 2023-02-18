@@ -84,53 +84,55 @@
 
 <div class="container-fluid">
   <div id="rows" class="rows">
-      <div class="offset-lg-4 offset-md-4 col-sm-4">
-          <form [formGroup]="myForm" style="width: 21rem;">
-              <div class="text-center">
-                  <img src="assets/images/D-Topia-1.svg" alt="logo" width="30px" height="30px">
-                  <span class="form-logo">Sign In</span>
-              </div>
-              <!-- Username -->
-              <div class="form-group">
-                  <input type="text" formControlName="cUserName" maxlength="100" class="form-control" placeholder="Enter Email" id="usernameInput">
-                  <label class="control-label" for="usernameInput">E-mail</label>
-              </div>
-              <!-- E-mail -->
-              <div class="form-group">
-                  <input type="password" formControlName="cPassword" maxlength="100" class="form-control" placeholder="Enter Password" id="emailInput">
-                  <label class="control-label" for="emailInput">Password</label>
-              </div>
-              <!-- Password -->
-              <!-- <div class="form-group">
+    <div class="offset-lg-4 offset-md-4 col-sm-4">
+      <form [formGroup]="myForm" style="width: 21rem;">
+        <div class="text-center">
+          <img src="assets/images/D-Topia-1.svg" alt="logo" width="30px" height="30px">
+          <span class="form-logo">Sign In</span>
+        </div>
+        <!-- Username -->
+        <div class="form-group">
+          <input type="text" formControlName="cUserName" maxlength="100" class="form-control" placeholder="Enter Email"
+            id="usernameInput">
+          <label class="control-label" for="usernameInput">E-mail</label>
+        </div>
+        <!-- E-mail -->
+        <div class="form-group">
+          <input type="password" formControlName="cPassword" maxlength="100" class="form-control"
+            placeholder="Enter Password" id="emailInput">
+          <label class="control-label" for="emailInput">Password</label>
+        </div>
+        <!-- Password -->
+        <!-- <div class="form-group">
                   <input type="password" class="form-control" placeholder="Enter Password" id="passwordInput">
                   <label class="control-label" for="passwordInput">Password</label>
               </div> -->
 
-              <p></p>
-              <p></p>
-              <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
 
-              <!-- Remember me -->
-              <div class="clearfix" style="display: flex;">
-                  <!-- <a href="forgot-password.html" class="inline-block pull-left text-primary" style="flex: 1;    margin-bottom: 20px;">Forgot Password</a> -->
-              </div>
+        <!-- Remember me -->
+        <div class="clearfix" style="display: flex;">
+          <!-- <a href="forgot-password.html" class="inline-block pull-left text-primary" style="flex: 1;    margin-bottom: 20px;">Forgot Password</a> -->
+        </div>
 
-              <!-- Input:: Login -->
-              <button type="button" (click)="SaveData()" class="btn btn-primary"> Sign In </button>
+        <!-- Input:: Login -->
+        <button type="button" (click)="SaveData()" class="btn btn-primary"> Sign In </button>
 
-              <!-- <hr>
+        <!-- <hr>
 
               <p class="text-muted">Sign in with your Facebook or Google accounts</p>
               <div class="clearfix">
                   <div class="pull-left">
                     <button type="button" class="btn btn-outline btn-rounded btn-primary" style="color: #1877F2;border-color: #1877F2 !important;font-size: 14px;font-weight: 300;display: flex;justify-content: center;align-items: center;">
-                      <i class="ti-facebook mr-5" style="font-size: 14px;"></i> 
+                      <i class="ti-facebook mr-5" style="font-size: 14px;"></i>
                       <span style="color: #1877F2 !important;">Facebook</span>
                   </button>
                   </div>
                   <div class="pull-right">
                     <button type="button" class="btn btn-outline btn-rounded btn-info" style="font-size: 14px !important;font-weight: 300 !important;display: flex;justify-content: center;align-items: center;">
-                      <i class="ti-google mr-5" style="color: #EA4335 !important;"></i> 
+                      <i class="ti-google mr-5" style="color: #EA4335 !important;"></i>
                       <div style="letter-spacing: -2px;margin-left: 10px;">
                           <span style="color: #4285F4 !important;">G</span>
                           <span style="color: #EA4335 !important;">o</span>
@@ -143,16 +145,16 @@
                   </div>
                 </div> -->
 
-                <p></p>
+        <p></p>
 
-                <hr>
+        <hr>
 
-                <div class="clearfix">
-                  <p class="text-muted mb-0 pull-left">Want new account?</p>
-                  <a routerLink="/Auth/Register" class="inline-block pull-right text-primary">Sign Up</a>
-                </div>
-          </form>
-      </div>
+        <div class="clearfix">
+          <p class="text-muted mb-0 pull-left">Want new account?</p>
+          <a routerLink="/Auth/Register" class="inline-block pull-right text-primary">Sign Up</a>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 
